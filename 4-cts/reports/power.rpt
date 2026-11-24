@@ -1,0 +1,97 @@
+*----------------------------------------------------------------------------------------
+*	Innovus 21.18-s099_1 (64bit) 07/18/2023 13:03 (Linux 3.10.0-693.el7.x86_64)
+*	
+*
+* 	Date & Time:	2026-Nov-22 10:58:03 (2026-Nov-22 16:58:03 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: pe
+*
+*	Liberty Libraries used: 
+*	        view_tt: /misc/scratch/ar76269/pe-apprentice/3-place/outputs/pe.place.db/libs/mmmc/sky130_fd_sc_hd__tt_025C_1v80.lib
+*
+*	Power Domain used: 
+*              Rail:        VDD      Voltage:        1.8 
+*
+*       Power View : view_tt
+*
+*       User-Defined Activity : N.A.
+*
+*       Activity File: N.A.
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: 0.200000
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs 
+*
+*       report_power -outfile /misc/scratch/ar76269/pe-apprentice/4-cts/reports/power.rpt
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:        2.66553015 	   49.4943%
+Total Switching Power:       2.71999873 	   50.5056%
+Total Leakage Power:         0.00000582 	    0.0001%
+Total Power:                 5.38553471 
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                        0.9569      0.2309   1.292e-06       1.188       22.06 
+Macro                                  0           0           0           0           0 
+IO                                     0           0           0           0           0 
+Combinational                       1.61       2.272   4.168e-06       3.882       72.08 
+Clock (Combinational)            0.06581      0.1911    2.28e-08      0.2569        4.77 
+Clock (Sequential)               0.03317     0.02582   2.431e-08       0.059       1.096 
+-----------------------------------------------------------------------------------------
+Total                              2.666        2.72   5.507e-06       5.386         100 
+-----------------------------------------------------------------------------------------
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+VDD                       1.8      2.666        2.72   5.507e-06       5.386         100 
+
+
+Clock                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+clk                              0.09899      0.2169   4.712e-08      0.3159       5.866 
+-----------------------------------------------------------------------------------------
+Total (excluding duplicates)     0.09899      0.2169   4.712e-08      0.3159       5.866 
+-----------------------------------------------------------------------------------------
+Clock: clk
+Clock Period: 0.003100 usec 
+Clock Toggle Rate:   645.1613 Mhz 
+Clock Static Probability:  0.5000
+
+
+
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*                Highest Average Power:       CTS_ccl_a_buf_00001 (sky130_fd_sc_hd__clkbuf_16):           0.1328 
+*                Highest Leakage Power:   MULT_TC_OP_g50934__2346 (sky130_fd_sc_hd__fah_1):        2.143e-08 
+*          Total Cap:      1.43012e-11 F
+*          Total instances in design:  1407
+*          Total instances in design with no power:     0
+*          Total instances in design with no activity:     0
+*          Total Fillers and Decap:    98
+-----------------------------------------------------------------------------------------
+

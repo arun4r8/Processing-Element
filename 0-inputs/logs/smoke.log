@@ -1,0 +1,77 @@
+xrun(64): 22.09-s007: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s007: Started on Nov 04, 2026 at 01:26:22 CST
+xrun
+	-64bit
+	-sv
+	+define+NO_SHM
+	-top pe_smoke_tb
+	-F ../filelist.f
+		rtl/fxp.sv
+		rtl/pe.sv
+	../tb/pe_smoke_tb.sv
+	-l smoke.log
+file: ../rtl/fxp.sv
+	module worklib.fxp_add:sv
+		errors: 0, warnings: 0
+	module worklib.fxp_mul:sv
+		errors: 0, warnings: 0
+file: ../rtl/pe.sv
+	module worklib.pe:sv
+		errors: 0, warnings: 0
+file: ../tb/pe_smoke_tb.sv
+	module worklib.pe_smoke_tb:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		pe_smoke_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.fxp_add:sv <0x441a7ceb>
+			streams:   3, words:   873
+		worklib.fxp_mul:sv <0x4a0db4c2>
+			streams:   2, words:   388
+		worklib.pe:sv <0x37e22a47>
+			streams:  15, words:  5665
+		worklib.pe_smoke_tb:sv <0x43f619ec>
+			streams:  21, words: 21098
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 4       4
+		Registers:              30      30
+		Scalar wires:           12       -
+		Vectored wires:         20       -
+		Always blocks:           5       5
+		Initial blocks:          4       4
+		Cont. assignments:       6       7
+		Pseudo assignments:     18      18
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.pe_smoke_tb:sv
+Loading snapshot worklib.pe_smoke_tb:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /usr/local/packages/cadence_2022/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+
+=== 1. reset leaves every output defined ===
+  [ ok ] pe_psum_out                    0 (0.0000)
+  [ ok ] pe_input_out                   0 (0.0000)
+  [ ok ] pe_weight_out                  0 (0.0000)
+
+=== 2. load weight 3.0, switch it in, 2.0 * 3.0 + 1.0 = 7.0 ===
+  [ ok ] pe_psum_out                    1792 (7.0000)
+
+=== 3. load 5.0 without switching, answer must still be 7.0 ===
+  [ ok ] pe_psum_out                    1792 (7.0000)
+
+=== 4. now switch, 2.0 * 5.0 + 1.0 = 11.0 ===
+  [ ok ] pe_psum_out                    2816 (11.0000)
+
+ SMOKE TEST PASSED, 0 errors
+
+Simulation complete via $finish(1) at time 110 NS + 0
+../tb/pe_smoke_tb.sv:85     $finish;
+xcelium> exit
+TOOL:	xrun(64)	22.09-s007: Exiting on Nov 04, 2026 at 01:26:22 CST  (total: 00:00:00)

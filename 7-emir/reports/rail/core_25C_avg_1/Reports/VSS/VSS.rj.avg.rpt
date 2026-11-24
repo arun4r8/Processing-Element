@@ -1,0 +1,65 @@
+# Design: pe
+# Net name: VSS
+# EM rule deck: /misc/scratch/ar76269/pe-apprentice/7-emir/em.models
+# EM analysis: Avg
+#
+# Thickness (um): 
+#   met5  1.200000
+#   met4  0.800000
+#   met3  0.800000
+#   met2  0.350000
+#   met1  0.350000
+#   li1  1.000000
+#   Poly  1.000000
+#   N_SOURCE_DRAIN  1.000000
+#   P_SOURCE_DRAIN  1.000000
+#   CSUBSTRATE  1.000000
+# Temperature: 25.0 (C)
+# Jmax_factor: 
+#   met5  1.000000
+#   via4  1.000000
+#   met4  1.000000
+#   via3  1.000000
+#   met3  1.000000
+#   via2  1.000000
+#   met2  1.000000
+#   via  1.000000
+#   met1  1.000000
+#   mcon  1.000000
+#   li1  1.000000
+#   licon  1.000000
+#   CONT  1.000000
+#   Poly  1.000000
+#   N_SOURCE_DRAIN  1.000000
+#   P_SOURCE_DRAIN  1.000000
+#   CSUBSTRATE  1.000000
+#   REDUCED  1.000000
+# Jmax_life: 
+#   met5  1.000000
+#   via4  1.000000
+#   met4  1.000000
+#   via3  1.000000
+#   met3  1.000000
+#   via2  1.000000
+#   met2  1.000000
+#   via  1.000000
+#   met1  1.000000
+#   mcon  1.000000
+#   li1  1.0
+#   licon  1.0
+#   CONT  1.0
+#   Poly  1.0
+#   N_SOURCE_DRAIN  1.0
+#   P_SOURCE_DRAIN  1.0
+#   CSUBSTRATE  1.0
+#   REDUCED  1.0
+#
+# The current or EM limit at via layer is reported as the value per cut for a via cluster
+# EM Reporting Threshold: 0.9
+# Total Violations: 0                       
+#
+# Report format:
+# Short (Blech) Length with N/A indicates a loop in layout, and benefit factor would be 1.0.
+# I/Ilimit  I(mA)      Ilimit(mA)    Layer          Location            ShortLength    Width  ViaArea  Via   Fix Width/  Current    Benefit  J(A/cm^2)  Jmax(A/cm^2)  ResistorID 
+#                                                   {X1 Y1 X2 Y2}       (um)           (um)   (nm^2)   Cuts  Via         Direction  Factor  
+#

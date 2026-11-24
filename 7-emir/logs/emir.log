@@ -1,0 +1,1289 @@
+
+Cadence Voltus(TM) IC Power Integrity Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v22.12-s082_1, built Thu May 4 21:55:47 PDT 2023
+Options:	-stylus -no_gui -files ../emir.tcl -log emir 
+Date:		Wed Nov 11 11:25:07 2026
+Host:		yoshi.ece.utexas.edu (x86_64 w/Linux 4.18.0-553.183.1.el8_10.x86_64) (16cores*64cpus*Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz 22528KB)
+OS:		Red Hat Enterprise Linux 8.10 (Ootpa)
+
+License:
+		[11:25:07.446337] Configured Lic search path (21.01-s002): /usr/local/packages/cadence_2022/license.dat
+
+		vtsxl	Voltus Power Integrity Solution XL	22.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+
+
+Change the soft stacksize limit to 0.2%RAM (771 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_2461037_oha9hq'.
+#@ Processing -execute option
+@voltus 1> 
+#@ Processing -files option
+Sourcing tcl/tk file '../emir.tcl' ...
+@voltus 1> source ../emir.tcl
+#@ Begin verbose source ../emir.tcl (pre)
+@file 1: # ââ Signoff power, IR drop and EM ââââââââââââââââââââââââââââââââââââââââââââ
+@file 2: # Static analysis at the tt view.
+@file 3:
+@file 4: # ââ Paths ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@file 5: set stage_dir [file dirname [file normalize [info script]]]
+@file 6: set qrc       $stage_dir/../pdk/sky130/qrc/qrcTechFile
+@file 7: set in_dir    $stage_dir/../0-inputs
+@file 8: set route_out $stage_dir/../5-route/outputs
+@file 9: set pgv_dir   $stage_dir/logs/pgv
+@file 10: set rpt_dir   $stage_dir/reports
+@file 11:
+@@file 12: set_multi_cpu_usage -local_cpu 2
+@file 13:
+@@file 14: read_db $route_out/pe.route.db
+Set Default Input Pin Transition as 0.1 ps.
+**WARN: (IMPSYC-141):	You have set -timerMode to 1 so the setting in the config file will be ignored.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+AAE_INFO: switching -siAware from false to true ...
+AAE_INFO: The setting is changed from false to true in setDelayCalMode -SIAware
+Set Default Input Pin Transition as 0.1 ps.
+Set Using Default Delay Limit as 1000.
+**WARN: (IMPSYC-6134):	Setting analysis mode to setup does not have any impact on timing analysis as simultaneous setup/hold mode analysis is on. Use '-late' option to report setup timing reports.
+**WARN: (IMPDBTCL-321):	The attribute 'timing_enable_separate_device_slew_effect_sensitivities' still works but will be obsolete in a future major release. You should remove it from your script before the next major release to avoid errors.
+Loading design 'pe' saved by 'Innovus' '21.18-s099_1' on 'Wed Nov 11 10:26:18 2026'.
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+Starting library reading in 'Multi-threaded flow' (with '2' threads)
+Reading   timing library /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib.
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_8'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_6'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_4'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_bleeder_1'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__diode_2'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_8'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_6'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_4'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_3'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_12'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+Read 428 cells in library sky130_fd_sc_hd__tt_025C_1v80.
+Library reading multithread flow ended.
+tc_tt
+rc_nom
+
+Loading LEF file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/libs/lef/sky130_fd_sc_hd__nom.tlef ...
+
+Loading LEF file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/libs/lef/sky130_fd_sc_hd.lef ...
+WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/libs/lef/sky130_fd_sc_hd.lef at line 2.
+**WARN: (IMPLF-108):	There is no overlap layer defined in any LEF file
+so you are unable to create rectilinear partition in a hierarchical flow.
+Set DBUPerIGU to M1 pitch 460.
+**WARN: (IMPLF-201):	Pin 'X' in macro 'sky130_fd_sc_hd__probec_p_8' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'X' in macro 'sky130_fd_sc_hd__probe_p_8' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'LO' in macro 'sky130_fd_sc_hd__macro_sparecell' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'HI' in macro 'sky130_fd_sc_hd__conb_1' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'LO' in macro 'sky130_fd_sc_hd__conb_1' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/viewDefinition.tcl
+#% Begin Load netlist data ... (date=11/11 11:25:25, mem=1296.7M)
+*** Begin netlist parsing (mem=1335.1M) ***
+Reading verilogBinary netlist '/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/vbin/pe.v.bin'
+Reading binary database version 2 in multi-threaded mode
+
+*** Memory Usage v#1 (Current mem = 1495.148M, initial mem = 638.520M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1495.1M) ***
+#% End Load netlist data ... (date=11/11 11:25:26, total cpu=0:00:00.4, real=0:00:01.0, peak res=1399.1M, current mem=1388.2M)
+Top level cell is pe.
+Building hierarchical netlist for Cell pe ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+** info: there are 440 modules.
+** info: there are 1370 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1831.594M, initial mem = 638.520M) ***
+*info: set bottom ioPad orient R0
+Adjust met3 preferred direction offset from 0.34 to 0.17.
+Adjust met4 preferred direction offset from 0.46 to 0.23.
+Adjust met5 preferred direction offset from 1.7 to 0.17.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in preferred direction.
+Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
+Set Default Input Pin Transition as 0.1 ps.
+Loading preference file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/gui.pref.tcl ...
+**WARN: (UI-156):	preference name 'MinFPModuleSize' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'MinFlightLineWidth' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'MaxFlightLineNetTerms' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'LevelFlight' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'DirectionSink' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'DirectionSource' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'ShowNumberBlockConnection' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'StrecthRestriction' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'StretchRectilinear' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'MoveRestriction' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'DisplayRelFPlan' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'LegalizeMacro' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'DisplayFPlanFlightLine' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'DisplayPinName' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'ExclusiveFlight' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'ShowToUnplace' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'FlightLineInMove' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'ShowConnectionInOutNumber' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'ConnectionColorType' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (UI-156):	preference name 'OnlyBundleNetFlight' is not supported in Voltus IC Power Integrity Solution.
+**WARN: (EMS-27):	Message (UI-156) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPSYC-6134):	Setting analysis mode to setup does not have any impact on timing analysis as simultaneous setup/hold mode analysis is on. Use '-late' option to report setup timing reports.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+**WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+Change floorplan default-technical-site to 'unithd'.
+Total number of combinational cells: 319
+Total number of sequential cells: 68
+Total number of tristate cells: 13/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/mmmc/modes/func/func.sdc
+
+Total number of level shifter cells: 7
+Total number of power gating cells: 0
+Total number of isolation cells: 11
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 10
+List of usable buffers: sky130_fd_sc_hd__buf_1 sky130_fd_sc_hd__buf_12 sky130_fd_sc_hd__buf_16 sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_4 sky130_fd_sc_hd__buf_6 sky130_fd_sc_hd__buf_8 sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_16 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8 sky130_fd_sc_hd__dlymetal6s2s_1 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__probe_p_8
+Total number of usable buffers: 15
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: sky130_fd_sc_hd__bufinv_16 sky130_fd_sc_hd__clkinv_1 sky130_fd_sc_hd__bufinv_8 sky130_fd_sc_hd__clkinv_16 sky130_fd_sc_hd__clkinv_2 sky130_fd_sc_hd__clkinv_4 sky130_fd_sc_hd__clkinv_8 sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__clkinvlp_2 sky130_fd_sc_hd__clkinvlp_4 sky130_fd_sc_hd__inv_12 sky130_fd_sc_hd__inv_16 sky130_fd_sc_hd__inv_2 sky130_fd_sc_hd__inv_4 sky130_fd_sc_hd__inv_6 sky130_fd_sc_hd__inv_8
+Total number of usable inverters: 16
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: sky130_fd_sc_hd__bufbuf_16 sky130_fd_sc_hd__bufbuf_8 sky130_fd_sc_hd__clkdlybuf4s15_1 sky130_fd_sc_hd__clkdlybuf4s15_2 sky130_fd_sc_hd__clkdlybuf4s18_1 sky130_fd_sc_hd__clkdlybuf4s18_2 sky130_fd_sc_hd__clkdlybuf4s25_1 sky130_fd_sc_hd__clkdlybuf4s50_1 sky130_fd_sc_hd__clkdlybuf4s25_2 sky130_fd_sc_hd__clkdlybuf4s50_2 sky130_fd_sc_hd__dlygate4sd2_1 sky130_fd_sc_hd__dlygate4sd1_1 sky130_fd_sc_hd__dlygate4sd3_1 sky130_fd_sc_hd__dlymetal6s6s_1 sky130_fd_sc_hd__dlymetal6s4s_1
+Total number of identified usable delay cells: 15
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+Reading floorplan file - /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.fp.gz (mem = 2150.8M).
+#% Begin Load floorplan data ... (date=11/11 11:25:27, mem=1941.8M)
+*info: reset 1481 existing net BottomPreferredLayer and AvoidDetour
+Deleting old partition specification.
+Set FPlanBox to (0 0 155020 154700)
+Adjust met3 preferred direction offset from 0.34 to 0.17.
+Adjust met4 preferred direction offset from 0.46 to 0.23.
+Adjust met5 preferred direction offset from 1.7 to 0.17.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in preferred direction.
+Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
+ ... processed partition successfully.
+Reading binary special route file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.fp.spr.gz (Created by Innovus v21.18-s099_1 on Wed Nov 11 10:26:11 2026, version: 1)
+Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1942.9M, current mem=1942.9M)
+There are 5 nets with weight being set
+There are 5 nets with bottomPreferredRoutingLayer being set
+There are 22 nets with avoidDetour being set
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Delete all existing relative floorplan constraints.
+#% End Load floorplan data ... (date=11/11 11:25:27, total cpu=0:00:00.1, real=0:00:00.0, peak res=1956.0M, current mem=1955.9M)
+#% Begin Load SymbolTable ... (date=11/11 11:25:27, mem=1955.9M)
+#% End Load SymbolTable ... (date=11/11 11:25:27, total cpu=0:00:00.0, real=0:00:01.0, peak res=1956.2M, current mem=1956.2M)
+Loading place ...
+#% Begin Load placement data ... (date=11/11 11:25:28, mem=1956.2M)
+Reading placement file - /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.place.gz.
+** Reading stdCellPlacement_binary (Created by Innovus v21.18-s099_1 on Wed Nov 11 10:26:11 2026, version# 2) ...
+Read Views for adaptive view pruning ...
+Read 0 views from Binary DB for adaptive view pruning
+*** applyConnectGlobalNets disabled.
+*** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=2166.8M) ***
+Total net length = 2.776e+04 (1.572e+04 1.204e+04) (ext = 7.205e+03)
+#% End Load placement data ... (date=11/11 11:25:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=1957.8M, current mem=1957.7M)
+Reading PG file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.pg.gz, version#2, (Created by Innovus v21.18-s099_1 on       Wed Nov 11 10:26:11 2026)
+*** Completed restorePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=2163.8M) ***
+#% Begin Load routing data ... (date=11/11 11:25:28, mem=1958.1M)
+Reading routing file - /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.route.gz.
+Reading Innovus routing data (Created by Innovus v21.18-s099_1 on Wed Nov 11 10:26:11 2026 Format: 20.1) ...
+*** Total 1479 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2163.8M) ***
+#% End Load routing data ... (date=11/11 11:25:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=1961.5M, current mem=1960.5M)
+Reading property file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.prop
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2167.8M) ***
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
+Loading preRoute extraction data from directory '/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/extraction/' ...
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: view_tt
+    RC-Corner Name        : rc_nom
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner Technology file: '/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/libs/mmmc/rc_nom/qrcTechFile'
+Initializing multi-corner resistance tables ...
+#% Begin Load power constraints ... (date=11/11 11:25:28, mem=1963.1M)
+source /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe_power_constraints.tcl
+'set_default_switching_activity' finished successfully.
+#% End Load power constraints ... (date=11/11 11:25:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=1969.9M, current mem=1969.9M)
+dc_tt
+#% Begin load AAE data ... (date=11/11 11:25:28, mem=1985.6M)
+AAE DB initialization (MEM=2216.3 CPU=0:00:00.0 REAL=0:00:00.0) 
+#% End load AAE data ... (date=11/11 11:25:29, total cpu=0:00:00.5, real=0:00:01.0, peak res=1992.5M, current mem=1992.5M)
+Restoring CCOpt config...
+  Extracting original clock gating for clk...
+    clock_tree clk contains 112 sinks and 2 clock gates.
+  Extracting original clock gating for clk done.
+  The skew group clk/func was created. It contains 112 sinks and 1 sources.
+  The skew group clk/func was created. It contains 112 sinks and 1 sources.
+Restoring CCOpt config done.
+**WARN: (IMPCTE-107):	The following globals have been obsoleted since version . They will be removed in the next release. 
+timing_enable_separate_device_slew_effect_sensitivities
+Ending "read_design" (total cpu=0:00:04.3, real=0:00:05.0, peak res=2017.2M, current mem=2000.9M)
+@@file 15: read_spef -rc_corner rc_nom $route_out/pe.spef
+
+SPEF files for RC Corner rc_nom:
+Top-level spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef'.
+Start spef parsing (MEM=2217.3).
+Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 10 %
+Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 20 %
+Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 30 %
+Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 40 %
+Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 50 %
+Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 60 %
+Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 70 %
+Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 80 %
+Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 90 %
+Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 100 %
+SPEF file /misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef.
+Number of Resistors     : 6030
+Number of Ground Caps   : 7280
+Number of Coupling Caps : 1284
+
+End spef parsing (MEM=2230.3 CPU=0:00:00.1 REAL=0:00:00.0).
+5 nets are missing in SPEF file. The names of these nets are saved in ./rc_nom.missing_nets.rpt.
+@file 16:
+@file 17: # ââ Power ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@file 18: # Writes the per-instance currents that rail analysis reads
+@@file 19: set_db power_method static
+@@file 20: set_db power_view view_tt
+** WARN:  (VOLTUS_POWR-3212): The 'set_power_analysis_mode -leakage_power_view |-dynamic_power_view|-analysis_view' will be obsolete in 18.20 release. Use 'set_analysis_view -leakage <> | -dynamic <>' to set leakage and dynamic power views.
+
+@@file 21: set_db power_write_static_currents true
+@@file 22: read_activity_file -format VCD -scope pe_activity_tb.dut $in_dir/outputs/pe.vcd
+'read_activity_file' finished successfully.
+@@file 23: report_power -out_dir $rpt_dir/power
+env CDS_WORKAREA is set to /misc/scratch/ar76269/pe-apprentice/7-emir/logs
+
+Power Net Detected:
+        Voltage	    Name
+             0V	    VSS
+           1.8V	    VDD
+Using Power View: view_tt.
+Multithreaded Timing Analysis is initialized with 2 threads
+
+AAE_INFO: opIsDesignInPostRouteState() is 1
+AAE_INFO: resetNetProps viewIdx 0 
+Starting SI iteration 1 using Infinite Timing Windows
+Start slew iteration 
+#################################################################################
+# Design Name: pe
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+Start delay calculation (fullDC) (2 T). (MEM=3307.88)
+End delay calculation. (MEM=3554.12 CPU=0:00:00.1 REAL=0:00:00.0)
+/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/mmmc/modes/func/func.sdc
+/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/mmmc/modes/func/func.sdc
+End delay calculation (fullDC). (MEM=3554.12 CPU=0:00:00.2 REAL=0:00:01.0)
+update aggressor slew in non distributed run
+End Slew iteration 
+Start delay calculation (fullDC) (2 T). (MEM=3554.12)
+AAE_INFO-618: Total number of nets in the design is 1481,  100.0 percent of the nets selected for SI analysis
+End delay calculation. (MEM=3677.88 CPU=0:00:00.4 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=3677.88 CPU=0:00:00.4 REAL=0:00:00.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2898.9M)
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2898.9M)
+Starting SI iteration 2
+Start delay calculation (fullDC) (2 T). (MEM=2816.88)
+AAE_INFO-618: Total number of nets in the design is 1481,  0.3 percent of the nets selected for SI analysis
+End delay calculation. (MEM=2949.24 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2949.24 CPU=0:00:00.1 REAL=0:00:00.0)
+Load RC corner of view view_tt
+
+Begin Power Analysis
+
+             0V	    VSS
+           1.8V	    VDD
+
+Begin Processing Timing Library for Power Calculation
+
+Ended Processing Timing Library for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2260.97MB/4224.10MB/2261.02MB)
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2261.02MB/4224.10MB/2261.02MB)
+
+Begin Processing Timing Window Data for Power Calculation
+
+clk(322.581MHz) CK: assigning clock clk to net clk
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2261.02MB/4224.10MB/2261.02MB)
+
+Parsing VCD file
+/misc/scratch/ar76269/pe-apprentice/7-emir/../0-inputs/outputs/pe.vcd
+
+Starting Reading VCD variables
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT)
+
+Finished Reading VCD variables
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT)
+   With this vcd command,  99383 value changes and 1.2288e-05 second
+simulation time were counted for power consumption calculation.
+
+  Filename (activity)                    :
+/misc/scratch/ar76269/pe-apprentice/7-emir/../0-inputs/outputs/pe.vcd
+  Names in file that matched to design   : 120/651
+  Annotation coverage for this file
+   (Unique nets matched/Total nets)       : 120/1477 = 8.12458%
+
+  531 nets were found in the VCD file(s) but were not in
+  the design.  These nets are not reported because
+  'set_power_analysis_mode' -report_missing_nets' is set to false
+(default).
+
+  Total annotation coverage for all files of type VCD: 120/1477 = 8.12458%
+  Percent of VCD annotated nets with zero toggles: 14/1477 = 0.947867%
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2275.90MB/4228.11MB/2275.90MB)
+
+Begin Processing Signal Activity
+
+
+Starting Levelizing
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT)
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 10%
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 20%
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 30%
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 40%
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 50%
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 60%
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 70%
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 80%
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 90%
+
+Finished Levelizing
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT)
+
+Starting Activity Propagation
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT)
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 10%
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 20%
+
+Finished Activity Propagation
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT)
+
+Activity annotation summary:
+        Primary Inputs : 54/54 = 100%
+          Flop outputs : 25/140 = 17.8571%
+  Memory/Macro outputs : 0/0 = 0%
+      Tristate outputs : 0/0 = 0%
+            Total Nets : 120/1477 = 8.12458%
+
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2275.90MB/4228.11MB/2275.90MB)
+
+Begin Power Computation
+
+      ----------------------------------------------------------
+      # of cell(s) missing both power/leakage table: 0
+      # of cell(s) missing power table: 1
+      # of cell(s) missing leakage table: 0
+      ----------------------------------------------------------
+CellName                                  Missing Table(s)
+sky130_fd_sc_hd__conb_1                   internal power, 
+
+
+
+Starting Calculating power
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT)
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 10%
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 20%
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 30%
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 40%
+2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 50%
+2026-Nov-11 11:25:32 (2026-Nov-11 17:25:32 GMT): 60%
+2026-Nov-11 11:25:32 (2026-Nov-11 17:25:32 GMT): 70%
+2026-Nov-11 11:25:32 (2026-Nov-11 17:25:32 GMT): 80%
+2026-Nov-11 11:25:32 (2026-Nov-11 17:25:32 GMT): 90%
+
+Finished Calculating power
+2026-Nov-11 11:25:32 (2026-Nov-11 17:25:32 GMT)
+      # of MSMV cell(s) missing power_level: 0
+Ended Power Computation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2278.23MB/4252.11MB/2278.23MB)
+
+Begin Processing User Attributes
+
+Begin Processing set_power
+Ended Processing set_power: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=2278.23MB/4252.11MB/2278.23MB)
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2278.23MB/4252.11MB/2278.23MB)
+
+Ended Power Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2278.23MB/4252.11MB/2278.23MB)
+
+Begin Boundary Leakage Calculation
+Ended Boundary Leakage Calculation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=2278.45MB/4252.11MB/2278.45MB)
+Begin Static Power Report Generation
+*
+
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:        3.42147705 	   51.5629%
+Total Switching Power:       3.21406146 	   48.4370%
+Total Leakage Power:         0.00000580 	    0.0001%
+Total Power:                 6.63554431
+-----------------------------------------------------------------------------------------
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__nand3b_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__or2_0 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__inv_2 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__o31ai_2 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__clkbuf_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__mux2i_4 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__a2bb2oi_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__fa_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__dfbbp_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__and2_4 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__o21a_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__o21bai_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__buf_12 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__maj3_2 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__o2bb2ai_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__mux2_2 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__a21boi_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__buf_6 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__nand2b_4 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__clkinv_4 has no power pin defined in LEF/PGV.
+
+** WARN:  (EMS-27): Message (VOLTUS_POWR-3424) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+
+** INFO:  (VOLTUS_POWR-3465): There are 0 decaps and 0 fillers in the design
+
+Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=2279.03MB/4252.11MB/2279.03MB)
+
+
+Output file is /misc/scratch/ar76269/pe-apprentice/7-emir/reports/power/power
+@file 24:
+@file 25: # ââ Power grid library âââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@file 26: # Tech only: wire and via resistance from the QRC file, no cell models
+@@file 27: set_pg_library_mode -cell_type techonly -default_power_voltage 1.8 -extraction_tech_file $qrc
+@@file 28: write_pg_library -out_dir $pgv_dir
+Started PGV Library Generator at 11:25:31 11/11/2026
+
+** INFO:  (VOLTUS_LGEN-3599): Library generation settings: 
+	Mode: TECH 
+	Capacitance: area_cap 
+	Current Distribution: estimation 
+	Grid Port Definition: LEF 
+	Grid Current Sinks: LEF pin 
+	Power Gate: no
+
+** INFO:  (VOLTUS_LGEN-3598): Processing LEF files: 
+/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/libs/lef/sky130_fd_sc_hd__nom.tlef
+/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/libs/lef/sky130_fd_sc_hd.lef
+
+** INFO:  (VOLTUS_LGEN-3611): No lef leyarmap specified. Tool has
+internally generated the mapping between technology layers and lef layers
+using information in technology file and technology lef. To specify your
+own layer mapping, use set_pg_library_mode -lef_layermap.
+
+  TECH-LAYER    LEF-LAYER
+  li1    li1
+  mcon    mcon
+  met1    met1
+  via    via
+  met2    met2
+  via2    via2
+  met3    met3
+  via3    via3
+  met4    met4
+  via4    via4
+  met5    met5
+
+
+** WARN:  (VOLTUS_LGEN-3086): Couldn't locate LEF layer pwell in layer map.
+Ignoring this data.
+
+** WARN:  (VOLTUS_LGEN-3086): Couldn't locate LEF layer nwell in layer map.
+Ignoring this data.
+
+** WARN:  (VOLTUS_LGEN-3087): The following LEF layers were referenced
+while parsing the LEF file
+/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/libs/lef/sky130_fd_sc_hd.lef,
+but they do not have an entry in the layer map set_pg_library_mode
+-lef_layermap. Data on these layers was ignored:
+nwell
+pwell
+
+
+** INFO:  (VOLTUS_LGEN-3606): 
+Power Grid View Generation Statistics:
+        # Total number of cells: 437 
+        # TECH view created: 437 (100%)
+Finished PGV Library Generator at 11:25:43 11/11/2026 (cpu=0:00:01, real=0:00:12, peak mem=0.00MB)
+Current Voltus resource usage: (total cpu=0:00:00, real=0:00:00, mem=0.00MB)
+@file 29:
+@file 30: # ââ Rail analysis ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@file 31: # 5% drop limit; supply enters at every via4 on the grid
+@@file 32: set_pg_nets -net VDD -voltage 1.8 -threshold 1.71
+@@file 33: set_pg_nets -net VSS -voltage 0.0 -threshold 0.09
+@@file 34: set_rail_analysis_domain -domain_name core -power_nets VDD -ground_nets VSS
+@@file 35: set_power_pads -net VDD -auto_voltage_source_creation true -layer via4
+@@file 36: set_power_pads -net VSS -auto_voltage_source_creation true -layer via4
+@@file 37: set_power_data -format current [list $rpt_dir/power/static_VDD.ptiavg $rpt_dir/power/static_VSS.ptiavg]
+@file 38:
+@file 39: # EM limits are in em.models; the QRC file has none
+@@file 40: set_rail_analysis_config -method static -accuracy hd -analysis_view view_tt \
+    -power_grid_libraries $pgv_dir/techonly.cl -extraction_tech_file $qrc \
+    -em_models $stage_dir/em.models -ignore_shorts true
+view_tt
+**WARN: (VOLTUS-1007):	The distributed processing (DP) mode will be made obsolete in a future release and it is recommended to use the Extensively Parallel (XP) mode. The obsolete DP mode still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your scripts to use the set_rail_analysis_mode -enable_xp true..
+view_tt
+**WARN: (VOLTUS-1179):	Settings of all PG nets have been reset to default due to change in the analysis view using set_rail_analysis_mode. Re-run set_pg_nets to set threshold values based on design requirements.
+@@file 43: report_rail -type domain -output_dir $rpt_dir/rail core
+voltus_rail: WARNING: 32bit executable version of "voltus_rail" not found... the 64bit version will  be used instead.
+
+
+Started Rail Analysis at 11:25:42 11/11/2026
+
+ 
+Opening dproc sockets
+connection complete
+
+Multi-CPU Configuration:
+	#CPU: 2
+	Mode: local
+	Host: yoshi.ece.utexas.edu
+
+
+Start distributed processes ...
+INFO (PRL-36): The timeout for a remote job to respond is 3600 seconds.
+
+Submit command for task runs will be: local
+INFO (PRL-725): EDP: start server on yoshi.ece.utexas.edu:52527
+
+INFO (PRL-819): Connected to yoshi.ece.utexas.edu 58609 1 ( PID=2468433 ). Wait time was 1 seconds
+
+INFO (PRL-819): Connected to yoshi.ece.utexas.edu 46453 0 ( PID=2468425 ). Wait time was 1 seconds
+
+INFO (PRL-742): EDP: all 2 edp slave(s) are launched
+
+
+Running OCI  extraction for /tmp/ssv_tmpdir_2461037_oha9hq/eps_out_2461037.def.gz ...
+
+Extraction option setup as:
+setenv gray_data NONE
+setenv enable_cluster_overhang_via false
+setenv enable_dfm_mask_conflict_shape false
+Begin Preparing Data for Parasitic Extraction
+Extracting following DFM effects:
+MetalFill        : n/a
+WEE Effects      : r_only
+Erosion Effects  : n/a
+T/B Enlargements : n/a
+R(w) Effects     : n/a
+R(w,s) Effects   : n/a
+R(sw,st) Effects : n/a
+TC(w) Effects    : n/a
+Some effects indicate n/a because of non-availability of relevant input data (or) requested to be off.
+Ended Preparing Data for Parasitic Extraction: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=38.70MB/23210.23MB/3108.67MB)
+
+Extraction option setup as:
+setenv gray_data NONE
+setenv enable_cluster_overhang_via false
+setenv enable_dfm_mask_conflict_shape false
+Begin Parasitic Extraction
+Extracting Progress:
+    0% at 11:25:49 11/11/2026
+   50% at 11:25:55 11/11/2026
+  100% at 11:25:55 11/11/2026
+Ended Parasitic Extraction: (cpu=0:00:07, real=0:00:05, mem(process/total/peak)=23.99MB/21660.96MB/3108.67MB)
+
+
+Analyze Rail Settings:
+	Temp directory: /tmp/ssv_tmpdir_2461037_oha9hq
+	Output directory: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail
+	Run directory: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/
+
+
+(proc 1) Invoking: "/usr/local/packages/cadence_2022/SSV221/tools.lnx86/ssvtools/bin/64bit/voltus_rail_smg -cmd /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/voltus_rail_smg.VDD.cmd -l /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/voltus_rail_smg.VDD.log" ...
+(proc 0) Invoking: "/usr/local/packages/cadence_2022/SSV221/tools.lnx86/ssvtools/bin/64bit/voltus_rail_smg -cmd /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/voltus_rail_smg.VSS.cmd -l /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/voltus_rail_smg.VSS.log" ...
+(proc 0) Begin Merging power grid
+(proc 1) Begin Merging power grid
+(proc 1) Tech reference temperature: 30
+(proc 1) Target temperature: 25
+(proc 1) 
+(proc 0) Tech reference temperature: 30
+(proc 0) Target temperature: 25
+(proc 0) 
+(proc 0) Set Layer via4 for the Auto Ploc Vsrc feature
+(proc 1) Set Layer via4 for the Auto Ploc Vsrc feature
+(proc 0) Grid Statistics of Net VSS:
+(proc 0) - NODE
+(proc 0)   Total node: 4828
+(proc 0)     Top Level grid node: 4828
+(proc 0)       Top level interface node: 3235
+(proc 0)     Missing interface node: 0
+(proc 0)     Cell internal node: 0
+(proc 0) - ELEM
+(proc 0)   Total element: 5133
+(proc 0)     Top Level grid element: 5133
+(proc 0)     Cell internal element: 0
+(proc 0) - INST
+(proc 0)   Instance logically connected: 3235
+(proc 0)     Tech: 3235
+(proc 0)     StdCell: 0
+(proc 0)     Macro:
+(proc 0)       Early: 0
+(proc 0)       IR: 0
+(proc 0)     Current Region:  0
+(proc 0)   Dropped instance due to missing/incomplete cell library: 0
+(proc 0) - TAP
+(proc 0)   Total tap: 3235
+(proc 0) 
+(proc 0) Ended Merging power grid: (cpu=0:00:01, real=0:00:00, mem(process/total/peak)=27.84MB/21708.56MB/3108.67MB)
+(proc 1) Grid Statistics of Net VDD:
+(proc 1) - NODE
+(proc 1)   Total node: 4847
+(proc 1)     Top Level grid node: 4847
+(proc 1)       Top level interface node: 3235
+(proc 1)     Missing interface node: 0
+(proc 1)     Cell internal node: 0
+(proc 1) - ELEM
+(proc 1)   Total element: 5152
+(proc 1)     Top Level grid element: 5152
+(proc 1)     Cell internal element: 0
+(proc 1) - INST
+(proc 1)   Instance logically connected: 3235
+(proc 1)     Tech: 3235
+(proc 1)     StdCell: 0
+(proc 1)     Macro:
+(proc 1)       Early: 0
+(proc 1)       IR: 0
+(proc 1)     Current Region:  0
+(proc 1)   Dropped instance due to missing/incomplete cell library: 0
+(proc 1) - TAP
+(proc 1)   Total tap: 3235
+(proc 1) 
+(proc 1) Ended Merging power grid: (cpu=0:00:01, real=0:00:00, mem(process/total/peak)=34.28MB/20875.64MB/3108.67MB)
+
+Begin Preparing Data for Rail Analysis
+
+Net VSS
+  Power Pin Location File: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/VSS/VSS_vsrcs.rpt
+  # Voltage Source Added/Total (%): 14/14 (100.00%)
+
+  Power Database: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/power/static_VSS.ptiavg
+  # Current Taps Matched/Total (%): 2838/2838 (100.00%)
+  # Instances Matched: 2838
+
+Net VDD
+  Power Pin Location File: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/VDD/VDD_vsrcs.rpt
+  # Voltage Source Added/Total (%): 14/14 (100.00%)
+
+  Power Database: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/power/static_VDD.ptiavg
+  # Current Taps Matched/Total (%): 2838/2838 (100.00%)
+  # Instances Matched: 2838
+
+Begin PowerGrid Integrity Analysis
+
+Begin Redistribute Disconnected Cap
+Ended Redistribute Disconnected Cap: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=210.67MB/23130.79MB/3108.67MB)
+
+Ended PowerGrid Integrity Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=210.92MB/23130.79MB/3108.67MB)
+
+Ended Preparing Data for Rail Analysis: (cpu=0:00:00, real=0:00:01, mem(process/total/peak)=211.09MB/23130.79MB/3108.67MB)
+
+
+Begin Steady-State Analysis
+Ended Steady-State Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=218.17MB/25445.54MB/3108.67MB)
+
+
+Begin Report Generation
+The report generation will be performed on multiple processes and the voltus.log will be updated once all the reports are generated.
+
+
+Net VSS:
+
+
+Begin Preparing Database for Report Generation
+
+Circuit profile:
+                                                      Current    Voltage
+Layer Name                       Nodes   Resistors    Sources    Sources
+----- --------------------  ----------  ----------  ---------  ---------
+0     met5                          18          16          0         14
+1     via4                           0          14          0          0
+2     met4                         303         296          0          0
+3     via3                           0         225          0          0
+4     met3                         575         400          0          0
+5     via2                           0         225          0          0
+6     met2                         675         500          0          0
+7     via                            0         225          0          0
+8     met1                        3257        3232       2982          0
+                            ----------  ----------  ---------  ---------
+9     Circuit total               4829        5133       2982         14
+Ended Preparing Database for Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=427.89MB/30511.97MB/3909.19MB)
+
+Initializing Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=427.89MB/30511.97MB/3909.19MB)
+
+Begin IR Drop (Linear) Report Generation
+  Voltage: 0
+  Threshold: 0.09
+  Minimum, Average, Maximum IR Drop: 0.000V, 0.423mV, 1.012mV
+    Range 1(   0.885mV  -     1.012mV ):        10 (  0.21%)
+    Range 2(   0.759mV  -     0.885mV ):        62 (  1.28%)
+    Range 3(   0.632mV  -     0.759mV ):       332 (  6.88%)
+    Range 4(   0.506mV  -     0.632mV ):      1241 ( 25.70%)
+    Range 5(   0.379mV  -     0.506mV ):      1135 ( 23.51%)
+    Range 6(   0.253mV  -     0.379mV ):      1303 ( 26.99%)
+    Range 7(   0.126mV  -     0.253mV ):       670 ( 13.88%)
+    Range 8(    0.000V  -     0.126mV ):        75 (  1.55%)
+    Layer with maximum IR Drop:  met1
+      met5: 1.5709e-12 [0 - 0]
+      met4: 0.00047216 [7.4807e-05 - 0.00054697]
+      met3: 0.00049388 [0.0001181 - 0.00061199]
+      met2: 0.00060328 [0.0001211 - 0.00072438]
+      met1: 0.00088739 [0.0001243 - 0.0010117]
+  IR Report: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/VSS.main.rpt
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/ir_linear.gif
+Ended IR Drop (Linear) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=467.21MB/30511.97MB/3997.33MB)
+
+
+Begin IR Drop (Limit) Report Generation
+  Voltage: 0
+  Threshold: 0.09
+  Minimum, Average, Maximum IR Drop: 0.000V, 0.423mV, 1.012mV
+    Range 1(  90.000mV  -    90.009mV ):         0 (  0.00%)
+    Range 2(  82.500mV  -    90.000mV ):         0 (  0.00%)
+    Range 3(  75.000mV  -    82.500mV ):         0 (  0.00%)
+    Range 4(  67.500mV  -    75.000mV ):         0 (  0.00%)
+    Range 5(  60.000mV  -    67.500mV ):         0 (  0.00%)
+    Range 6(  52.500mV  -    60.000mV ):         0 (  0.00%)
+    Range 7(  45.000mV  -    52.500mV ):         0 (  0.00%)
+    Range 8(  -1.000uV  -    45.000mV ):      4828 (100.00%)
+    Layer with maximum IR Drop:  met1
+      met5: 1.5709e-12 [0 - 0]
+      met4: 0.00047216 [7.4807e-05 - 0.00054697]
+      met3: 0.00049388 [0.0001181 - 0.00061199]
+      met2: 0.00060328 [0.0001211 - 0.00072438]
+      met1: 0.00088739 [0.0001243 - 0.0010117]
+  IR Report: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/VSS.main.rpt
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/ir_limit.gif
+Ended IR Drop (Limit) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=471.21MB/30511.97MB/4005.33MB)
+
+
+Begin Tap Current Report Generation
+  Minimum, Average, Maximum Tap Current: -0.140mA, -1.236uA, 0.000A
+  Total Current: -3.686mA
+    Range 1(  -1.000GA  -    -1.000mA ):         0 (  0.00%)
+    Range 2(  -1.000mA  -  -100.000uA ):         2 (  0.07%)
+    Range 3(-100.000uA  -   -10.000uA ):        48 (  1.61%)
+    Range 4( -10.000uA  -    -1.000uA ):       821 ( 27.53%)
+    Range 5(  -1.000uA  -  -100.000nA ):       412 ( 13.82%)
+    Range 6(-100.000nA  -   -10.000nA ):        17 (  0.57%)
+    Range 7( -10.000nA  -    -1.000nA ):         0 (  0.00%)
+    Range 8(  -1.000nA  -      0.000A ):      1682 ( 56.41%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/tc.gif
+Ended Tap Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=471.21MB/30511.97MB/4005.40MB)
+
+
+Begin Instance Based IR Drop Report Generation
+  Minimum, Average, Maximum Instance Based IR Drop: 0.133mV, 0.479mV, 1.012mV
+    Range 1(  90.000mV  -    90.009mV ):         0 (  0.00%)
+    Range 2(  82.500mV  -    90.000mV ):         0 (  0.00%)
+    Range 3(  75.000mV  -    82.500mV ):         0 (  0.00%)
+    Range 4(  67.500mV  -    75.000mV ):         0 (  0.00%)
+    Range 5(  60.000mV  -    67.500mV ):         0 (  0.00%)
+    Range 6(  52.500mV  -    60.000mV ):         0 (  0.00%)
+    Range 7(  45.000mV  -    52.500mV ):         0 (  0.00%)
+    Range 8(  -1.000uV  -    45.000mV ):      2982 (100.00%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/iv.gif
+Ended Instance Based IR Drop Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=471.82MB/30511.97MB/4006.50MB)
+
+
+Begin Effective Instance Voltage Report Generation
+Ended Effective Instance Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=471.82MB/30511.97MB/4006.50MB)
+
+
+Begin Voltage Source Current Report Generation
+  Minimum, Average, Maximum Voltage Source Current: 0.199mA, 0.263mA, 0.356mA
+  Total Current: 3.686mA
+    Range 1(   0.336mA  -     0.356mA ):         2 ( 14.29%)
+    Range 2(   0.316mA  -     0.336mA ):         0 (  0.00%)
+    Range 3(   0.297mA  -     0.316mA ):         2 ( 14.29%)
+    Range 4(   0.277mA  -     0.297mA ):         2 ( 14.29%)
+    Range 5(   0.258mA  -     0.277mA ):         1 (  7.14%)
+    Range 6(   0.238mA  -     0.258mA ):         1 (  7.14%)
+    Range 7(   0.218mA  -     0.238mA ):         2 ( 14.29%)
+    Range 8(   0.199mA  -     0.218mA ):         4 ( 28.57%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/vc.gif
+Ended Voltage Source Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=473.82MB/30511.97MB/4020.70MB)
+
+
+Begin Resistor Current Report Generation
+  Minimum, Average, Maximum Resistor Current: 0.000A, 17.235uA, 0.361mA
+    Range 1(   1.000mA  -     1.000GA ):         0 (  0.00%)
+    Range 2( 100.000uA  -     1.000mA ):       137 (  2.67%)
+    Range 3(  10.000uA  -   100.000uA ):      2295 ( 44.71%)
+    Range 4(   1.000uA  -    10.000uA ):      1696 ( 33.04%)
+    Range 5(   0.100uA  -     1.000uA ):       186 (  3.62%)
+    Range 6(  10.000nA  -     0.100uA ):        38 (  0.74%)
+    Range 7(   1.000nA  -    10.000nA ):         1 (  0.02%)
+    Range 8(    0.000A  -     1.000nA ):       780 ( 15.20%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/rc.gif
+Ended Resistor Current Report Generation: (cpu=0:00:00, real=0:00:01, mem(process/total/peak)=554.02MB/30511.97MB/4170.97MB)
+
+
+Begin Resistor Voltage Report Generation
+  Minimum, Average, Maximum Resistor Voltage: 0.000V, 6.734uV, 0.134mV
+    Range 1(   0.117mV  -     0.134mV ):         3 (  0.06%)
+    Range 2(   0.100mV  -     0.117mV ):        13 (  0.25%)
+    Range 3(  83.733uV  -     0.100mV ):         5 (  0.10%)
+    Range 4(  66.986uV  -    83.733uV ):        17 (  0.33%)
+    Range 5(  50.240uV  -    66.986uV ):        25 (  0.49%)
+    Range 6(  33.493uV  -    50.240uV ):       107 (  2.08%)
+    Range 7(  16.747uV  -    33.493uV ):       458 (  8.92%)
+    Range 8(    0.000V  -    16.747uV ):      4505 ( 87.77%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/rv.gif
+Ended Resistor Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=556.02MB/30511.97MB/4174.97MB)
+
+
+Begin Power Gate I/Idsat Report Generation
+  No data found
+Ended Power Gate I/Idsat Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=556.04MB/30511.97MB/4174.98MB)
+
+
+Begin Power Gate Voltage Report Generation
+  No data found.
+Ended Power Gate Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=556.04MB/30511.97MB/4174.98MB)
+
+
+Begin Current Density (J/JMAX) Report Generation
+  Minimum, Average, Maximum Current Density (J/JMAX): 0.000, 9.875m, 0.143
+    Range 1(    1.000  -     1.000G ):         0 (  0.00%)
+    Range 2(    0.857  -      1.000 ):         0 (  0.00%)
+    Range 3(    0.714  -      0.857 ):         0 (  0.00%)
+    Range 4(    0.571  -      0.714 ):         0 (  0.00%)
+    Range 5(    0.429  -      0.571 ):         0 (  0.00%)
+    Range 6(    0.286  -      0.429 ):         0 (  0.00%)
+    Range 7(    0.143  -      0.286 ):         0 (  0.00%)
+    Range 8(    0.000  -      0.143 ):      4749 (100.00%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/rj.gif
+*** Note:384 resistors skipped by EM rules.
+Ended Current Density (J/JMAX) Report Generation: (cpu=0:00:02, real=0:00:02, mem(process/total/peak)=930.20MB/33074.39MB/4926.60MB)
+
+
+Begin Voltage Across Vias and Contacts Report Generation
+Ended Voltage Across Vias and Contacts Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.20MB/33074.39MB/4926.60MB)
+
+
+Begin Weak Grid Connectivity Report
+Ended Weak Grid Connectivity Report: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.20MB/33074.39MB/4926.60MB)
+
+
+Begin Grid Integrity Report Generation
+  # Missing Cell Power-Grid Views: 0
+  # Physically Disconnected Instances: 0
+  # Instances with Floating Power Pins: 0
+  # Disconnected Wire Segments: 0
+  # Weakly Connected Metal Segments: 0
+  # Dropped Voltage Sources: 0
+Ended Grid Integrity Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.32MB/33074.39MB/4926.73MB)
+
+** WARN: (VOLTUS_RAIL-2074): The layer li1 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer licon has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer CONT has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer Poly has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer N_SOURCE_DRAIN has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer P_SOURCE_DRAIN has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer CSUBSTRATE has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer REDUCED has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+
+*** Info: model parameter "vcwidth" has been used to
+          calculate the area of one or more via resistors.
+
+
+
+Net VDD:
+
+
+Begin Preparing Database for Report Generation
+
+Circuit profile:
+                                                      Current    Voltage
+Layer Name                       Nodes   Resistors    Sources    Sources
+----- --------------------  ----------  ----------  ---------  ---------
+0     met5                          18          16          0         14
+1     via4                           0          14          0          0
+2     met4                         303         296          0          0
+3     via3                           0         225          0          0
+4     met3                         575         400          0          0
+5     via2                           0         225          0          0
+6     met2                         675         500          0          0
+7     via                            0         225          0          0
+8     met1                        3276        3251       3001          0
+                            ----------  ----------  ---------  ---------
+9     Circuit total               4848        5152       3001         14
+Ended Preparing Database for Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=428.15MB/30511.97MB/3929.64MB)
+
+Initializing Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=428.15MB/30511.97MB/3929.64MB)
+
+Begin IR Drop (Linear) Report Generation
+  Voltage: 1.8
+  Threshold: 1.71
+  Minimum, Average, Maximum IR Drop: 1.799V, 1.800V, 1.800V
+    Range 1(    1.799V  -      1.799V ):         7 (  0.14%)
+    Range 2(    1.799V  -      1.799V ):        66 (  1.36%)
+    Range 3(    1.799V  -      1.799V ):       496 ( 10.23%)
+    Range 4(    1.799V  -      1.800V ):      1118 ( 23.07%)
+    Range 5(    1.800V  -      1.800V ):      1054 ( 21.75%)
+    Range 6(    1.800V  -      1.800V ):      1280 ( 26.41%)
+    Range 7(    1.800V  -      1.800V ):       720 ( 14.85%)
+    Range 8(    1.800V  -      1.800V ):       106 (  2.19%)
+    Layer with maximum IR Drop:  met1
+      met5: 0 [1.8 - 1.8]
+      met4: 0.00042665 [1.7995 - 1.7999]
+      met3: 0.00045609 [1.7994 - 1.7999]
+      met2: 0.00057113 [1.7993 - 1.7999]
+      met1: 0.00082743 [1.7991 - 1.7999]
+  IR Report: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/VDD.main.rpt
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/ir_linear.gif
+Ended IR Drop (Linear) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=464.52MB/30511.97MB/3997.33MB)
+
+
+Begin IR Drop (Limit) Report Generation
+  Voltage: 1.8
+  Threshold: 1.71
+  Minimum, Average, Maximum IR Drop: 1.799V, 1.800V, 1.800V
+    Range 1(    1.710V  -      1.710V ):         0 (  0.00%)
+    Range 2(    1.710V  -      1.718V ):         0 (  0.00%)
+    Range 3(    1.718V  -      1.725V ):         0 (  0.00%)
+    Range 4(    1.725V  -      1.733V ):         0 (  0.00%)
+    Range 5(    1.733V  -      1.740V ):         0 (  0.00%)
+    Range 6(    1.740V  -      1.748V ):         0 (  0.00%)
+    Range 7(    1.748V  -      1.755V ):         0 (  0.00%)
+    Range 8(    1.755V  -      1.800V ):      4847 (100.00%)
+    Layer with maximum IR Drop:  met1
+      met5: 0 [1.8 - 1.8]
+      met4: 0.00042665 [1.7995 - 1.7999]
+      met3: 0.00045609 [1.7994 - 1.7999]
+      met2: 0.00057113 [1.7993 - 1.7999]
+      met1: 0.00082743 [1.7991 - 1.7999]
+  IR Report: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/VDD.main.rpt
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/ir_limit.gif
+Ended IR Drop (Limit) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=468.52MB/30511.97MB/4005.33MB)
+
+
+Begin Tap Current Report Generation
+  Minimum, Average, Maximum Tap Current: 0.000A, 1.228uA, 0.140mA
+  Total Current: 3.686mA
+    Range 1(   1.000mA  -     1.000GA ):         0 (  0.00%)
+    Range 2( 100.000uA  -     1.000mA ):         2 (  0.07%)
+    Range 3(  10.000uA  -   100.000uA ):        47 (  1.57%)
+    Range 4(   1.000uA  -    10.000uA ):       824 ( 27.46%)
+    Range 5( 100.000nA  -     1.000uA ):       412 ( 13.73%)
+    Range 6(  10.000nA  -   100.000nA ):        17 (  0.57%)
+    Range 7(   1.000nA  -    10.000nA ):         0 (  0.00%)
+    Range 8(    0.000A  -     1.000nA ):      1699 ( 56.61%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/tc.gif
+Ended Tap Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=468.59MB/30511.97MB/4006.01MB)
+
+
+Begin Instance Based IR Drop Report Generation
+  Minimum, Average, Maximum Instance Based IR Drop: 1.799V, 1.800V, 1.800V
+    Range 1(    1.710V  -      1.710V ):         0 (  0.00%)
+    Range 2(    1.710V  -      1.717V ):         0 (  0.00%)
+    Range 3(    1.717V  -      1.725V ):         0 (  0.00%)
+    Range 4(    1.725V  -      1.732V ):         0 (  0.00%)
+    Range 5(    1.732V  -      1.740V ):         0 (  0.00%)
+    Range 6(    1.740V  -      1.747V ):         0 (  0.00%)
+    Range 7(    1.747V  -      1.755V ):         0 (  0.00%)
+    Range 8(    1.755V  -      1.800V ):      3001 (100.00%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/iv.gif
+Ended Instance Based IR Drop Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=469.07MB/30511.97MB/4006.50MB)
+
+
+Begin Effective Instance Voltage Report Generation
+
+ Avg EIV:
+  Minimum, Average, Maximum Effective Instance Voltage: 1.798V, 1.799V, 1.800V
+    Range 1(    1.798V  -      1.798V ):         4 (  0.12%)
+    Range 2(    1.798V  -      1.798V ):        46 (  1.42%)
+    Range 3(    1.798V  -      1.799V ):       126 (  3.89%)
+    Range 4(    1.799V  -      1.799V ):       834 ( 25.78%)
+    Range 5(    1.799V  -      1.799V ):       796 ( 24.61%)
+    Range 6(    1.799V  -      1.799V ):       746 ( 23.06%)
+    Range 7(    1.799V  -      1.800V ):       437 ( 13.51%)
+    Range 8(    1.800V  -      1.800V ):       246 (  7.60%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD_VSS.avg_div.gif
+  GIF Limit plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD_VSS.avg_limit_div.gif
+  **** Note: Histogram and gif file are generated based on elapsed EIV results.
+Ended Effective Instance Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=483.28MB/30511.97MB/4090.91MB)
+
+
+Begin Voltage Source Current Report Generation
+  Minimum, Average, Maximum Voltage Source Current: -0.357mA, -0.263mA, -0.206mA
+  Total Current: -3.687mA
+    Range 1(  -0.357mA  -    -0.338mA ):         2 ( 14.29%)
+    Range 2(  -0.338mA  -    -0.319mA ):         0 (  0.00%)
+    Range 3(  -0.319mA  -    -0.300mA ):         2 ( 14.29%)
+    Range 4(  -0.300mA  -    -0.281mA ):         2 ( 14.29%)
+    Range 5(  -0.281mA  -    -0.262mA ):         0 (  0.00%)
+    Range 6(  -0.262mA  -    -0.243mA ):         1 (  7.14%)
+    Range 7(  -0.243mA  -    -0.225mA ):         2 ( 14.29%)
+    Range 8(  -0.225mA  -    -0.206mA ):         5 ( 35.71%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/vc.gif
+Ended Voltage Source Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=483.34MB/30511.97MB/4094.97MB)
+
+
+Begin Resistor Current Report Generation
+  Minimum, Average, Maximum Resistor Current: 0.000A, 17.400uA, 1.818mA
+    Range 1(   1.000mA  -     1.000GA ):         1 (  0.02%)
+    Range 2( 100.000uA  -     1.000mA ):       139 (  2.70%)
+    Range 3(  10.000uA  -   100.000uA ):      2335 ( 45.32%)
+    Range 4(   1.000uA  -    10.000uA ):      1552 ( 30.12%)
+    Range 5(   0.100uA  -     1.000uA ):       149 (  2.89%)
+    Range 6(  10.000nA  -     0.100uA ):         0 (  0.00%)
+    Range 7(   1.000nA  -    10.000nA ):         0 (  0.00%)
+    Range 8(    0.000A  -     1.000nA ):       976 ( 18.94%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/rc.gif
+Ended Resistor Current Report Generation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=555.34MB/31793.18MB/4448.69MB)
+
+
+Begin Resistor Voltage Report Generation
+  Minimum, Average, Maximum Resistor Voltage: 0.000V, 6.421uV, 0.134mV
+    Range 1(   0.118mV  -     0.134mV ):         6 (  0.12%)
+    Range 2(   0.101mV  -     0.118mV ):         7 (  0.14%)
+    Range 3(  83.968uV  -     0.101mV ):         5 (  0.10%)
+    Range 4(  67.174uV  -    83.968uV ):        14 (  0.27%)
+    Range 5(  50.381uV  -    67.174uV ):        18 (  0.35%)
+    Range 6(  33.587uV  -    50.381uV ):       102 (  1.98%)
+    Range 7(  16.794uV  -    33.587uV ):       430 (  8.35%)
+    Range 8(    0.000V  -    16.794uV ):      4570 ( 88.70%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/rv.gif
+Ended Resistor Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=557.34MB/31793.18MB/4527.14MB)
+
+
+Begin Power Gate I/Idsat Report Generation
+  No data found
+Ended Power Gate I/Idsat Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=557.34MB/31793.18MB/4527.14MB)
+
+
+Begin Power Gate Voltage Report Generation
+  No data found.
+Ended Power Gate Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=557.34MB/31793.18MB/4527.14MB)
+
+
+Begin Current Density (J/JMAX) Report Generation
+  Minimum, Average, Maximum Current Density (J/JMAX): 0.000, 10.143m, 0.143
+    Range 1(    1.000  -     1.000G ):         0 (  0.00%)
+    Range 2(    0.857  -      1.000 ):         0 (  0.00%)
+    Range 3(    0.714  -      0.857 ):         0 (  0.00%)
+    Range 4(    0.571  -      0.714 ):         0 (  0.00%)
+    Range 5(    0.429  -      0.571 ):         0 (  0.00%)
+    Range 6(    0.286  -      0.429 ):         0 (  0.00%)
+    Range 7(    0.143  -      0.286 ):         1 (  0.02%)
+    Range 8(    0.000  -      0.143 ):      4591 ( 99.98%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/rj.gif
+*** Note:560 resistors skipped by EM rules.
+Ended Current Density (J/JMAX) Report Generation: (cpu=0:00:02, real=0:00:02, mem(process/total/peak)=930.85MB/33074.39MB/4926.85MB)
+
+
+Begin Voltage Across Vias and Contacts Report Generation
+Ended Voltage Across Vias and Contacts Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.85MB/33074.39MB/4926.85MB)
+
+
+Begin Weak Grid Connectivity Report
+Ended Weak Grid Connectivity Report: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.85MB/33074.39MB/4926.85MB)
+
+
+Begin Grid Integrity Report Generation
+  # Missing Cell Power-Grid Views: 0
+  # Physically Disconnected Instances: 0
+  # Instances with Floating Power Pins: 0
+  # Disconnected Wire Segments: 0
+  # Weakly Connected Metal Segments: 0
+  # Dropped Voltage Sources: 0
+Ended Grid Integrity Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.85MB/33074.39MB/4926.85MB)
+
+** WARN: (VOLTUS_RAIL-2074): The layer li1 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer licon has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer CONT has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer Poly has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer N_SOURCE_DRAIN has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer P_SOURCE_DRAIN has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer CSUBSTRATE has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer REDUCED has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+
+*** Info: model parameter "vcwidth" has been used to
+          calculate the area of one or more via resistors.
+
+Ended Report Generation: (cpu=0:00:00, real=0:00:11, mem(process/total/peak)=776.92MB/33074.39MB/4927.12MB)
+
+
+Rail Analysis Statistics:
+Warning messages:      0
+Error messages:        0
+
+Rail Analysis completed successfully.
+
+Finished Rail Analysis at 11:26:11 11/11/2026 (cpu=0:00:10, real=0:00:29, peak mem=4927.51MB)
+Current Voltus IC Power Integrity Solution resource usage: (total cpu=0:00:41, real=0:01:06, mem=3065.96MB)
+@file 44: exit
+
+--------------------------------------------------------------------------------
+Exiting Voltus IC Power Integrity Solution on Wed Nov 11 11:26:11 2026
+  Total CPU time:     0:00:41
+  Total real time:    0:01:06
+  Peak memory (main): 4927.51MB
+

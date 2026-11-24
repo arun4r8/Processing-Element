@@ -1,0 +1,63 @@
+* The organization, structure, and layout of this file are copyrights and
+* confidential and proprietary trade secrets of Cadence Design Systems, Inc.,
+* subject to the terms and conditions of the license agreement in effect
+* between you and Cadence Design Systems, Inc. This file and its information
+* may not be disclosed, sold, or otherwise transferred to any third party
+* without the express written consent of Cadence Design Systems, Inc. Export
+* of any or all of this file in violation of any statute or regulation is
+* strictly prohibited.
+* 
+
+FORMAT: 11.0
+PROJECT: pe
+NET: VSS 
+CREATOR: smg
+
+CREATED: 2026-Nov-11 11:25:56 (2026-Nov-11 17:25:56 GMT)
+
+LAYOUT_XMIN: 0
+LAYOUT_YMIN: 0
+LAYOUT_XMAX: 155020
+LAYOUT_YMAX: 154700
+
+NODES: 4829
+NODE_FILE: VSS.mnode
+RESISTORS: 5133
+INDUCTORS: 0
+
+LAYERS: 18
+LAYER: met5 M 16 VSS.ml00
+LAYER: via4 V 14 VSS.ml01
+LAYER: met4 M 296 VSS.ml02
+LAYER: via3 V 225 VSS.ml03
+LAYER: met3 M 400 VSS.ml04
+LAYER: via2 V 225 VSS.ml05
+LAYER: met2 M 500 VSS.ml06
+LAYER: via V 225 VSS.ml07
+LAYER: met1 M 3232 VSS.ml08
+LAYER: mcon V 0 VSS.ml09
+LAYER: li1 M 0 VSS.ml10
+LAYER: licon V 0 VSS.ml11
+LAYER: CONT V 0 VSS.ml12
+LAYER: Poly P 0 VSS.ml13
+LAYER: N_SOURCE_DRAIN D 0 VSS.ml14
+LAYER: P_SOURCE_DRAIN D 0 VSS.ml15
+LAYER: CSUBSTRATE M 0 VSS.ml16
+LAYER: REDUCED V 0 VSS.ml17
+
+CUT_LAYER: none
+GRID_CAP: false
+DIFF_CAP: false
+NUM_PINS: 3235
+PINS: VSS.bmpin
+NUM_INSTANCE_TAPS: 3235
+INSTANCES: VSS.bminst
+NUM_INSTANCES: 3235
+I_LOADS:
+NODE_MAP:
+RESISTOR_MAP:
+OUTPUT_WLT: drawn
+LAYOUT_SCALE_FACTOR: 1
+TEMPERATURE: 25
+BINARY_INST: true
+MICRON_UNITS: 1000

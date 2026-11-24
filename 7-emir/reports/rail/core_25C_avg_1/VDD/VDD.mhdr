@@ -1,0 +1,63 @@
+* The organization, structure, and layout of this file are copyrights and
+* confidential and proprietary trade secrets of Cadence Design Systems, Inc.,
+* subject to the terms and conditions of the license agreement in effect
+* between you and Cadence Design Systems, Inc. This file and its information
+* may not be disclosed, sold, or otherwise transferred to any third party
+* without the express written consent of Cadence Design Systems, Inc. Export
+* of any or all of this file in violation of any statute or regulation is
+* strictly prohibited.
+* 
+
+FORMAT: 11.0
+PROJECT: pe
+NET: VDD 
+CREATOR: smg
+
+CREATED: 2026-Nov-11 11:25:56 (2026-Nov-11 17:25:56 GMT)
+
+LAYOUT_XMIN: 0
+LAYOUT_YMIN: 0
+LAYOUT_XMAX: 155020
+LAYOUT_YMAX: 154700
+
+NODES: 4848
+NODE_FILE: VDD.mnode
+RESISTORS: 5152
+INDUCTORS: 0
+
+LAYERS: 18
+LAYER: met5 M 16 VDD.ml00
+LAYER: via4 V 14 VDD.ml01
+LAYER: met4 M 296 VDD.ml02
+LAYER: via3 V 225 VDD.ml03
+LAYER: met3 M 400 VDD.ml04
+LAYER: via2 V 225 VDD.ml05
+LAYER: met2 M 500 VDD.ml06
+LAYER: via V 225 VDD.ml07
+LAYER: met1 M 3251 VDD.ml08
+LAYER: mcon V 0 VDD.ml09
+LAYER: li1 M 0 VDD.ml10
+LAYER: licon V 0 VDD.ml11
+LAYER: CONT V 0 VDD.ml12
+LAYER: Poly P 0 VDD.ml13
+LAYER: N_SOURCE_DRAIN D 0 VDD.ml14
+LAYER: P_SOURCE_DRAIN D 0 VDD.ml15
+LAYER: CSUBSTRATE M 0 VDD.ml16
+LAYER: REDUCED V 0 VDD.ml17
+
+CUT_LAYER: none
+GRID_CAP: false
+DIFF_CAP: false
+NUM_PINS: 3235
+PINS: VDD.bmpin
+NUM_INSTANCE_TAPS: 3235
+INSTANCES: VDD.bminst
+NUM_INSTANCES: 3235
+I_LOADS:
+NODE_MAP:
+RESISTOR_MAP:
+OUTPUT_WLT: drawn
+LAYOUT_SCALE_FACTOR: 1
+TEMPERATURE: 25
+BINARY_INST: true
+MICRON_UNITS: 1000

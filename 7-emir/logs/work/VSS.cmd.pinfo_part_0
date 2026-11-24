@@ -1,0 +1,35 @@
+
+Begin Preparing Data for Parasitic Extraction
+.
+Ended Preparing Data for Parasitic Extraction: (cpu=0:00:00, real=0:00:01, mem(process/total/peak)=166.18MB/22157.11MB/3108.67MB)
+
+Begin Parasitic Extraction
+
+Nets to Extract:
+VSS
+
+** INFO:  (VOLTUS_EXTR-1054): Extracting following DFM effects:
+ MetalFill        : n/a 
+ WEE Effects      : r_only 
+ Erosion Effects  : n/a 
+ T/B Enlargements : n/a 
+ R(w) Effects     : n/a 
+ R(w,s) Effects   : n/a 
+ R(sw,st) Effects : n/a 
+ TC(w) Effects    : n/a 
+Some effects indicate n/a because of non-availability of relevant input
+data (or) requested to be off.
+
+   0% at 11:25:55 11/11/2026 
+
+ 100% at 11:25:55 11/11/2026 
+
+Ended Parasitic Extraction: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=170.48MB/22157.11MB/3108.67MB)
+
+Hostname yoshi.ece.utexas.edu
+
+Wall clock 5.450186
+
+CPU time 0.421814
+
+Peak memory (process): 260128768

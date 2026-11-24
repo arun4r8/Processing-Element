@@ -1,0 +1,1 @@
+s1(04Nov2026:01:26:22):  xrun -64bit -sv +define+NO_SHM -top pe_smoke_tb -F ../filelist.f ../tb/pe_smoke_tb.sv -l smoke.log 

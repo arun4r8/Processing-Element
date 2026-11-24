@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-sv
+-DEFINE
+CLK_PERIOD=3.0
+-DEFINE
+VCD_FILE=\"../outputs/pe.vcd\"

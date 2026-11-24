@@ -1,0 +1,7 @@
+::db::check_and_set_root_attr add_endcaps_left_edge sky130_fd_sc_hd__decap_3
+::db::check_and_set_root_attr add_endcaps_right_edge sky130_fd_sc_hd__decap_3
+::db::check_and_set_root_attr assign_pins_edit_in_batch false
+::db::check_and_set_root_attr floorplan_default_tech_site unithd
+::db::check_and_set_root_attr floorplan_max_io_height false
+::db::check_and_set_root_attr route_design_extract_third_party_compatible false
+::db::check_and_set_root_attr write_def_stream_check_uncolored false

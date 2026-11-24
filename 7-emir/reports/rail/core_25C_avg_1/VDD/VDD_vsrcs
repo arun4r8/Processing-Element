@@ -1,0 +1,14 @@
+addvs VDDVsrcT2 4832 r=0 l=0 c=0 volt- 1.8
+addvs VDDVsrcT4 4833 r=0 l=0 c=0 volt- 1.8
+addvs VDDVsrcT6 4834 r=0 l=0 c=0 volt- 1.8
+addvs VDDVsrcT8 4835 r=0 l=0 c=0 volt- 1.8
+addvs VDDVsrcT10 4836 r=0 l=0 c=0 volt- 1.8
+addvs VDDVsrcT12 4837 r=0 l=0 c=0 volt- 1.8
+addvs VDDVsrcT14 4838 r=0 l=0 c=0 volt- 1.8
+addvs VDDVsrcT1 4841 r=0 l=0 c=0 volt- 1.8
+addvs VDDVsrcT3 4842 r=0 l=0 c=0 volt- 1.8
+addvs VDDVsrcT5 4843 r=0 l=0 c=0 volt- 1.8
+addvs VDDVsrcT7 4844 r=0 l=0 c=0 volt- 1.8
+addvs VDDVsrcT9 4845 r=0 l=0 c=0 volt- 1.8
+addvs VDDVsrcT11 4846 r=0 l=0 c=0 volt- 1.8
+addvs VDDVsrcT13 4847 r=0 l=0 c=0 volt- 1.8

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Confirm the cell/site/layer names in 0-inputs/pdk.tcl exist in gsclib045 before burning a run.
+#   source ~/pe-apprentice/setup.sh ; ./check-pdk
+set -u
+[ -n "${LIB_SS:-}" ] || { echo "source setup.sh first"; exit 1; }
+for f in LIB_SS LIB_FF LEF_TECH LEF_MACRO; do
+  printf '%-10s %s\n' "$f" "$( [ -f "${!f}" ] && echo OK || echo MISSING ) ${!f}"
+done
+echo
+echo "sites in macro LEF:";  grep -h "^SITE" "$LEF_MACRO" "$LEF_TECH" | sort -u
+echo "routing layers (name/direction):"
+awk '/^LAYER /{n=$2} /TYPE ROUTING/{r=1} /DIRECTION/{if(r){print "  "n, $2; r=0}}' "$LEF_TECH"
+echo
+echo "cells referenced by knobs.tcl:"
+for c in TIEHI TIELO BUFX4 CLKBUFX2 CLKBUFX3 CLKBUFX4 CLKBUFX8 CLKBUFX12 CLKBUFX16 \
+         CLKINVX1 CLKINVX2 CLKINVX3 CLKINVX4 CLKINVX8 CLKINVX12 CLKINVX16 \
+         FILL1 FILL2 FILL4 FILL8 FILL16 FILL32 FILL64 DLY1X1 DLY2X1 DLY3X1 DLY4X1 BUFX2 BUFX3; do
+  if grep -q "^MACRO $c\$" "$LEF_MACRO"; then s=ok; else s=MISSING; fi
+  printf '  %-10s %s\n' "$c" "$s"
+done
+echo
+echo "pg pin names on one cell:"; grep -A40 "^MACRO BUFX2$" "$LEF_MACRO" | grep -E "PIN (VDD|VSS|vdd|gnd|VPWR)" || echo "  (check manually)"
+echo "If anything is MISSING, edit 0-inputs/pdk.tcl (names) or 0-inputs/pdk.tcl (layers)."

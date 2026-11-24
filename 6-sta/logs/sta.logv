@@ -1,0 +1,325 @@
+[11/11 11:05:05      0s] 
+[11/11 11:05:05      0s] Cadence Tempus(TM) Timing Solution.
+[11/11 11:05:05      0s] Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+[11/11 11:05:05      0s] 
+[11/11 11:05:05      0s] Version:	v22.12-s082_1, built Thu May 4 21:55:47 PDT 2023
+[11/11 11:05:05      0s] Options:	-stylus -no_gui -files ../sta.tcl -log sta 
+[11/11 11:05:05      0s] Date:		Wed Nov 11 11:05:05 2026
+[11/11 11:05:05      0s] Host:		yoshi.ece.utexas.edu (x86_64 w/Linux 4.18.0-553.183.1.el8_10.x86_64) (16cores*64cpus*Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz 22528KB)
+[11/11 11:05:05      0s] OS:		Red Hat Enterprise Linux 8.10 (Ootpa)
+[11/11 11:05:05      0s] 
+[11/11 11:05:05      0s] License:
+[11/11 11:05:05      0s] 		[11:05:05.446305] Configured Lic search path (21.01-s002): /usr/local/packages/cadence_2022/license.dat
+[11/11 11:05:05      0s] 
+[11/11 11:05:05      0s] 		tpsxl	Tempus Timing Signoff Solution XL	22.1	checkout succeeded
+[11/11 11:05:05      0s] 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[11/11 11:05:17     10s] 
+[11/11 11:05:17     10s] 
+[11/11 11:05:17     11s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Tempus Timing Solution v22.12-s082_1 (64bit) 05/04/2023 21:55 (Linux 3.10.0-693.el7.x86_64)
+[11/11 11:05:24     16s] @(#)CDS: NanoRoute 22.12-s082_1 NR230417-0429/22_12-UB (database version 18.20.608) {superthreading v2.20}
+[11/11 11:05:24     16s] @(#)CDS: AAE 22.12-s030 (64bit) 05/04/2023 (Linux 3.10.0-693.el7.x86_64)
+[11/11 11:05:24     16s] @(#)CDS: CTE 22.12-s024_1 () Apr 27 2023 13:39:51 ( )
+[11/11 11:05:24     16s] @(#)CDS: SYNTECH 22.12-s012_1 () Apr 26 2023 10:17:02 ( )
+[11/11 11:05:24     16s] @(#)CDS: CPE v22.12-s078
+[11/11 11:05:24     16s] @(#)CDS: OA 22.60-p087 Thu Feb  9 09:35:26 2023
+[11/11 11:05:24     16s] @(#)CDS: SGN 22.20-d001 (02-Jan-2023) (64 bit executable, TkQt5.9.1)
+[11/11 11:05:24     16s] @(#)CDS: RCDB 11.15.0
+[11/11 11:05:24     16s] @(#)CDS: STYLUS 22.11-s005_1 (02/15/2023 06:18 PST)
+[11/11 11:05:24     16s] Change the soft stacksize limit to 0.2%RAM (771 mbytes). Set global soft_stack_size_limit to change the value.
+[11/11 11:05:24     16s] **INFO: (TMPDIR-1001): The environment variable TMPDIR is not set.
+Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_2397600_p1DcxR'.
+[11/11 11:05:24     16s] environment variable TMPDIR is '/tmp/ssv_tmpdir_2397600_p1DcxR'.
+[11/11 11:05:25     17s] #@ Processing -execute option
+[11/11 11:05:25     17s] @tempus 1> 
+[11/11 11:05:25     17s] #@ Processing -files option
+[11/11 11:05:25     17s] Sourcing tcl/tk file '../sta.tcl' ...
+[11/11 11:05:25     17s] @tempus 1> source ../sta.tcl
+[11/11 11:05:25     17s] #@ Begin verbose source ../sta.tcl (pre)
+[11/11 11:05:25     17s] @file 1: # ââ Signoff STA ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+[11/11 11:05:25     17s] @file 2:
+[11/11 11:05:25     17s] @file 3: # ââ Paths ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+[11/11 11:05:25     17s] @file 4: set stage_dir [file dirname [file normalize [info script]]]
+[11/11 11:05:25     17s] @file 5: set sc        $stage_dir/../pdk/sky130/sky130A/libs.ref/sky130_fd_sc_hd
+[11/11 11:05:25     17s] @file 6: set qrc       $stage_dir/../pdk/sky130/qrc/qrcTechFile
+[11/11 11:05:25     17s] @file 7: set in_dir    $stage_dir/../0-inputs
+[11/11 11:05:25     17s] @file 8: set route_out $stage_dir/../5-route/outputs
+[11/11 11:05:25     17s] @file 9: set sdc       $route_out/pe.sdc
+[11/11 11:05:25     17s] @file 10: set rpt_dir   $stage_dir/reports
+[11/11 11:05:25     17s] @file 11:
+[11/11 11:05:25     17s] @@file 12: set_multi_cpu_usage -local_cpu 2
+[11/11 11:05:25     17s] @file 13:
+[11/11 11:05:25     17s] @file 14: # ââ Design import ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+[11/11 11:05:25     17s] @@file 15: read_mmmc $in_dir/mmmc.tcl
+[11/11 11:05:25     17s] #@ Begin verbose source /misc/scratch/ar76269/pe-apprentice/6-sta/../0-inputs/mmmc.tcl (pre)
+[11/11 11:05:25     17s] @file 1: # ââ Corners ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+[11/11 11:05:25     17s] @file 2: # One corner: typical (tt, 25 C, 1.80 V), the same library synthesis uses.
+[11/11 11:05:25     17s] @file 3: # Read by floorplan (saved in the db for place, cts, route) and by sta.
+[11/11 11:05:25     17s] @file 4: # Expects $sc, $qrc and $sdc from the calling script.
+[11/11 11:05:25     17s] @file 5:
+[11/11 11:05:25     17s] @@file 6: create_library_set -name lib_tt -timing $sc/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+[11/11 11:05:25     17s] @@file 7: create_timing_condition -name tc_tt -library_sets lib_tt
+[11/11 11:05:25     17s] @@file 8: create_rc_corner -name rc_nom -qrc_tech $qrc
+[11/11 11:05:25     17s] @@file 9: create_delay_corner -name dc_tt -timing_condition tc_tt -rc_corner rc_nom
+[11/11 11:05:25     17s] @@file 10: create_constraint_mode -name func -sdc_files $sdc
+[11/11 11:05:25     17s] @@file 11: create_analysis_view -name view_tt -constraint_mode func -delay_corner dc_tt
+[11/11 11:05:25     17s] @file 12:
+[11/11 11:05:25     17s] @@file 13: set_analysis_view -setup view_tt -hold view_tt
+[11/11 11:05:25     17s] Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+[11/11 11:05:25     17s] #@ End verbose source /misc/scratch/ar76269/pe-apprentice/6-sta/../0-inputs/mmmc.tcl
+[11/11 11:05:25     17s] Starting library reading in 'Multi-threaded flow' (with '2' threads)
+[11/11 11:05:25     17s] Reading   timing library /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib.
+[11/11 11:05:25     17s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_8'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:05:25     17s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_6'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:05:25     17s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_4'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:05:25     17s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:05:25     17s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:05:25     17s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_bleeder_1'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:05:25     17s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__diode_2'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:05:25     17s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_8'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:05:25     17s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_6'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:05:25     17s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_4'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:05:25     17s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_3'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:05:25     17s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_12'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:05:25     17s] Read 428 cells in library sky130_fd_sc_hd__tt_025C_1v80.
+[11/11 11:05:25     17s] Library reading multithread flow ended.
+Ending "PreSetAnalysisView" (total cpu=0:00:00.8, real=0:00:00.0, peak res=1276.7M, current mem=1209.3M)
+[11/11 11:05:25     17s] @@file 16: read_netlist $route_out/pe.v
+[11/11 11:05:25     17s] #% Begin Load netlist data ... (date=11/11 11:05:25, mem=1209.4M)
+[11/11 11:05:25     18s] *** Begin netlist parsing (mem=1283.5M) ***
+[11/11 11:05:25     18s] Reading verilog netlist '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.v'
+[11/11 11:05:25     18s] 
+[11/11 11:05:25     18s] *** Memory Usage v#1 (Current mem = 1441.547M, initial mem = 646.520M) ***
+[11/11 11:05:25     18s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1441.5M) ***
+[11/11 11:05:26     18s] #% End Load netlist data ... (date=11/11 11:05:26, total cpu=0:00:00.4, real=0:00:01.0, peak res=1323.0M, current mem=1315.2M)
+[11/11 11:05:26     18s] Top level cell is pe.
+[11/11 11:05:26     18s] Ending "BindLib:" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1341.5M, current mem=1341.5M)
+[11/11 11:05:26     18s] Building hierarchical netlist for Cell pe ...
+[11/11 11:05:26     18s] ***** UseNewTieNetMode *****.
+[11/11 11:05:26     18s] *** Netlist is unique.
+[11/11 11:05:26     18s] ** info: there are 431 modules.
+[11/11 11:05:26     18s] ** info: there are 1370 stdCell insts.
+[11/11 11:05:26     18s] 
+[11/11 11:05:26     18s] *** Memory Usage v#1 (Current mem = 1781.992M, initial mem = 646.520M) ***
+[11/11 11:05:26     18s] @@file 17: init_design
+[11/11 11:05:26     18s] Set Default Input Pin Transition as 0.1 ps.
+[11/11 11:05:26     18s] Extraction setup Started 
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] eee: Trim Metal Layers: { }
+[11/11 11:05:26     18s] Summary of Active RC-Corners : 
+[11/11 11:05:26     18s]  
+[11/11 11:05:26     18s]  Analysis View: view_tt
+[11/11 11:05:26     18s]     RC-Corner Name        : rc_nom
+[11/11 11:05:26     18s]     RC-Corner Index       : 0
+[11/11 11:05:26     18s]     RC-Corner Temperature : 25 Celsius
+[11/11 11:05:26     18s]     RC-Corner Cap Table   : ''
+[11/11 11:05:26     18s]     RC-Corner PostRoute Res Factor        : 1
+[11/11 11:05:26     18s]     RC-Corner PostRoute Cap Factor        : 1
+[11/11 11:05:26     18s]     RC-Corner PostRoute XCap Factor       : 1
+[11/11 11:05:26     18s]     RC-Corner Technology file: '/misc/scratch/ar76269/pe-apprentice/6-sta/../pdk/sky130/qrc/qrcTechFile'
+[11/11 11:05:26     18s] Ending "SetAnalysisView" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1854.9M, current mem=1592.6M)
+[11/11 11:05:27     19s] Multithreaded Timing Analysis is initialized with 2 threads
+[11/11 11:05:27     19s] 
+[11/11 11:05:27     19s] Reading timing constraints file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.sdc' ...
+[11/11 11:05:27     19s] Current (total cpu=0:00:19.2, real=0:00:22.0, peak res=1977.8M, current mem=1977.8M)
+[11/11 11:05:27     19s] pe
+[11/11 11:05:27     19s] INFO (CTE): Constraints read successfully.
+[11/11 11:05:27     19s] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1992.5M, current mem=1992.5M)
+[11/11 11:05:27     19s] Current (total cpu=0:00:19.3, real=0:00:22.0, peak res=1992.5M, current mem=1992.5M)
+[11/11 11:05:27     19s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[11/11 11:05:27     19s] 
+[11/11 11:05:27     19s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) Begin ...
+[11/11 11:05:27     19s] Summary for sequential cells identification: 
+[11/11 11:05:27     19s]   Identified SBFF number: 45
+[11/11 11:05:27     19s]   Identified MBFF number: 0
+[11/11 11:05:27     19s]   Identified SB Latch number: 0
+[11/11 11:05:27     19s]   Identified MB Latch number: 0
+[11/11 11:05:27     19s]   Not identified SBFF number: 0
+[11/11 11:05:27     19s]   Not identified MBFF number: 0
+[11/11 11:05:27     19s]   Not identified SB Latch number: 0
+[11/11 11:05:27     19s]   Not identified MB Latch number: 0
+[11/11 11:05:27     19s]   Number of sequential cells which are not FFs: 23
+[11/11 11:05:27     19s] Total number of combinational cells: 317
+[11/11 11:05:27     19s] Total number of sequential cells: 68
+[11/11 11:05:27     19s] Total number of tristate cells: 13
+[11/11 11:05:27     19s] Total number of level shifter cells: 7
+[11/11 11:05:27     19s] Total number of power gating cells: 0
+[11/11 11:05:27     19s] Total number of isolation cells: 11
+[11/11 11:05:27     19s] Total number of power switch cells: 0
+[11/11 11:05:27     19s] Total number of pulse generator cells: 0
+[11/11 11:05:27     19s] Total number of always on buffers: 0
+[11/11 11:05:27     19s] Total number of retention cells: 0
+[11/11 11:05:27     19s] Total number of physical cells: 0
+[11/11 11:05:27     19s] List of usable buffers: sky130_fd_sc_hd__buf_1 sky130_fd_sc_hd__buf_12 sky130_fd_sc_hd__buf_16 sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_4 sky130_fd_sc_hd__buf_6 sky130_fd_sc_hd__buf_8 sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_16 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8 sky130_fd_sc_hd__dlymetal6s2s_1 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__probe_p_8
+[11/11 11:05:27     19s] Total number of usable buffers: 15
+[11/11 11:05:27     19s] List of unusable buffers:
+[11/11 11:05:27     19s] Total number of unusable buffers: 0
+[11/11 11:05:27     19s] List of usable inverters: sky130_fd_sc_hd__bufinv_16 sky130_fd_sc_hd__bufinv_8 sky130_fd_sc_hd__clkinv_1 sky130_fd_sc_hd__clkinv_16 sky130_fd_sc_hd__clkinv_2 sky130_fd_sc_hd__clkinv_4 sky130_fd_sc_hd__clkinv_8 sky130_fd_sc_hd__clkinvlp_2 sky130_fd_sc_hd__clkinvlp_4 sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__inv_12 sky130_fd_sc_hd__inv_16 sky130_fd_sc_hd__inv_2 sky130_fd_sc_hd__inv_4 sky130_fd_sc_hd__inv_8 sky130_fd_sc_hd__inv_6
+[11/11 11:05:27     19s] Total number of usable inverters: 16
+[11/11 11:05:27     19s] List of unusable inverters:
+[11/11 11:05:27     19s] Total number of unusable inverters: 0
+[11/11 11:05:27     19s] List of identified usable delay cells: sky130_fd_sc_hd__bufbuf_16 sky130_fd_sc_hd__bufbuf_8 sky130_fd_sc_hd__clkdlybuf4s15_1 sky130_fd_sc_hd__clkdlybuf4s15_2 sky130_fd_sc_hd__clkdlybuf4s18_1 sky130_fd_sc_hd__clkdlybuf4s18_2 sky130_fd_sc_hd__clkdlybuf4s25_1 sky130_fd_sc_hd__clkdlybuf4s25_2 sky130_fd_sc_hd__clkdlybuf4s50_1 sky130_fd_sc_hd__clkdlybuf4s50_2 sky130_fd_sc_hd__dlygate4sd1_1 sky130_fd_sc_hd__dlygate4sd2_1 sky130_fd_sc_hd__dlygate4sd3_1[11/11 11:05:27     19s] 
+[11/11 11:05:27     19s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) End ...
+ sky130_fd_sc_hd__dlymetal6s4s_1 sky130_fd_sc_hd__dlymetal6s6s_1
+[11/11 11:05:27     19s] Total number of identified usable delay cells: 15
+[11/11 11:05:27     19s] List of identified unusable delay cells:
+[11/11 11:05:27     19s] Total number of identified unusable delay cells: 0
+[11/11 11:05:27     19s] 
+[11/11 11:05:27     19s] TimeStamp Deleting Cell Server Begin ...
+[11/11 11:05:27     19s] 
+[11/11 11:05:27     19s] TimeStamp Deleting Cell Server End ...
+[11/11 11:05:27     19s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2014.7M, current mem=2014.7M)
+[11/11 11:05:27     19s] 
+[11/11 11:05:27     19s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) Begin ...
+[11/11 11:05:27     19s] Summary for sequential cells identification: 
+[11/11 11:05:27     19s]   Identified SBFF number: 45
+[11/11 11:05:27     19s]   Identified MBFF number: 0
+[11/11 11:05:27     19s]   Identified SB Latch number: 0
+[11/11 11:05:27     19s]   Identified MB Latch number: 0
+[11/11 11:05:27     19s]   Not identified SBFF number: 0
+[11/11 11:05:27     19s]   Not identified MBFF number: 0
+[11/11 11:05:27     19s]   Not identified SB Latch number: 0
+[11/11 11:05:27     19s]   Not identified MB Latch number: 0
+[11/11 11:05:27     19s]   Number of sequential cells which are not FFs: 23
+[11/11 11:05:27     19s]  Visiting view : view_tt
+[11/11 11:05:27     19s]    : PowerDomain = none : Weighted F : unweighted  = 32.60 (1.000) with rcCorner = 0
+[11/11 11:05:27     19s]    : PowerDomain = none : Weighted F : unweighted  = 32.60 (1.000) with rcCorner = -1
+[11/11 11:05:27     19s]  Visiting view : view_tt
+[11/11 11:05:27     19s]    : PowerDomain = none : Weighted F : unweighted  = 32.60 (1.000) with rcCorner = 0
+[11/11 11:05:27     19s]    : PowerDomain = none : Weighted F : unweighted  = 32.60 (1.000) with rcCorner = -1
+[11/11 11:05:27     19s] TLC MultiMap info (StdDelay):
+[11/11 11:05:27     19s]   : dc_tt + lib_tt + 1 + no RcCorner := 32.6ps
+[11/11 11:05:27     19s]   : dc_tt + lib_tt + 1 + rc_nom := 32.6ps
+[11/11 11:05:27     19s]  Setting StdDelay to: 32.6ps
+[11/11 11:05:27     19s] 
+[11/11 11:05:27     19s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) End ...
+[11/11 11:05:27     19s] 
+[11/11 11:05:27     19s] TimeStamp Deleting Cell Server Begin ...
+[11/11 11:05:27     19s] 
+[11/11 11:05:27     19s] TimeStamp Deleting Cell Server End ...
+[11/11 11:05:27     19s] @@file 18: read_spef -rc_corner rc_nom $route_out/pe.spef
+[11/11 11:05:27     19s] read_spef Option :  /misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef -noStarN -rc_corner rc_nom 
+[11/11 11:05:27     19s] 
+[11/11 11:05:27     19s] SPEF files for RC Corner rc_nom:
+[11/11 11:05:27     19s] Top-level spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef'.
+[11/11 11:05:27     19s] Number of corners: 1
+[11/11 11:05:27     19s] Start spef parsing (MEM=2372.38).
+[11/11 11:05:27     19s] Number of parallel threads processing the nets is: 2
+[11/11 11:05:27     19s] Maximum backlog used in parser: 50.
+[11/11 11:05:27     19s] Reading multiple SPEF files in parallel.
+[11/11 11:05:27     19s] RCDB /tmp/ssv_tmpdir_2397600_p1DcxR/pe_2397600_XBvBxk.rcdb.d/pe.rcdb.d Creation Started (CPU Time= 0:00:00.0  MEM= 2380.4M)
+[11/11 11:05:27     19s] Creating parasitic data file '/tmp/ssv_tmpdir_2397600_p1DcxR/pe_2397600_XBvBxk.rcdb.d/pe.rcdb.d' for storing RC.
+[11/11 11:05:27     19s] Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef' reading completed:: 10 %
+[11/11 11:05:27     19s] Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef' reading completed:: 20 %
+[11/11 11:05:27     19s] Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef' reading completed:: 30 %
+[11/11 11:05:27     19s] Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef' reading completed:: 40 %
+[11/11 11:05:27     19s] Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef' reading completed:: 50 %
+[11/11 11:05:27     19s] Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef' reading completed:: 60 %
+[11/11 11:05:27     19s] Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef' reading completed:: 70 %
+[11/11 11:05:27     19s] Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef' reading completed:: 80 %
+[11/11 11:05:27     19s] Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef' reading completed:: 90 %
+[11/11 11:05:27     19s] Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef' reading completed:: 100 %
+[11/11 11:05:27     19s] SPEF file /misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef.
+[11/11 11:05:27     19s] Number of Resistors     : 6030
+[11/11 11:05:27     19s] Number of Ground Caps   : 7280
+[11/11 11:05:27     19s] Number of Coupling Caps : 1284
+[11/11 11:05:27     19s] 
+[11/11 11:05:27     19s] RCDB /tmp/ssv_tmpdir_2397600_p1DcxR/pe_2397600_XBvBxk.rcdb.d/pe.rcdb.d Creation Completed (CPU Time= 0:00:00.1  MEM= 2424.4M)
+[11/11 11:05:27     19s] End spef parsing (MEM=2392.38 CPU=0:00:00.1 REAL=0:00:00.0).
+[11/11 11:05:27     19s] Spef for RC Corner 'rc_nom' was previously specified. Dropping the previous specification.
+[11/11 11:05:27     19s] Lumped Parasitic Loading Started (total cpu=0:00:00.0, real=0:00:00.0, current mem=2384.383M)
+[11/11 11:05:27     19s] Opening parasitic data file '/tmp/ssv_tmpdir_2397600_p1DcxR/pe_2397600_XBvBxk.rcdb.d/pe.rcdb.d' for reading (mem: 2384.383M)
+[11/11 11:05:27     19s] Closing parasitic data file '/tmp/ssv_tmpdir_2397600_p1DcxR/pe_2397600_XBvBxk.rcdb.d/pe.rcdb.d': 0 access done (mem: 2388.383M)
+[11/11 11:05:27     19s] Lumped Parasitic Loading Completed (total cpu=0:00:00.2, real=0:00:00.0, current mem=2388.383M)
+[11/11 11:05:27     19s] 5 nets are missing in SPEF file. The names of these nets are saved in ./rc_nom.missing_nets.rpt.
+[11/11 11:05:27     19s] @file 19:
+[11/11 11:05:27     19s] @@file 20: set_db timing_analysis_type ocv
+[11/11 11:05:27     19s] @@file 21: set_db timing_analysis_cppr both
+[11/11 11:05:27     19s] @@file 22: set_db delaycal_enable_si true
+[11/11 11:05:27     19s] AAE_INFO: switching -siAware from false to true ...
+[11/11 11:05:27     19s] AAE_INFO: The setting is changed from false to true in setDelayCalMode -SIAware
+[11/11 11:05:27     19s] @file 23:
+[11/11 11:05:27     19s] @file 24: # ââ Reports ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+[11/11 11:05:27     19s] @@file 25: report_timing -max_paths 10 -path_type full_clock > $rpt_dir/setup.rpt
+[11/11 11:05:27     19s] AAE_INFO: opIsDesignInPostRouteState() is 0
+[11/11 11:05:28     20s] AAE DB initialization (MEM=2415.28 CPU=0:00:00.0 REAL=0:00:00.0) 
+[11/11 11:05:28     20s] AAE_INFO: resetNetProps viewIdx 0 
+[11/11 11:05:28     20s] Starting SI iteration 1 using Infinite Timing Windows
+[11/11 11:05:28     20s] Start slew iteration 
+[11/11 11:05:28     20s] #################################################################################
+[11/11 11:05:28     20s] # Design Name: pe
+[11/11 11:05:28     20s] # Design Mode: 65nm
+[11/11 11:05:28     20s] # Analysis Mode: MMMC OCV 
+[11/11 11:05:28     20s] # Parasitics Mode: SPEF/RCDB 
+[11/11 11:05:28     20s] # Signoff Settings: SI On 
+[11/11 11:05:28     20s] #################################################################################
+[11/11 11:05:28     20s] Start delay calculation (fullDC) (2 T). (MEM=3239.91)
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] Opening parasitic data file '/tmp/ssv_tmpdir_2397600_p1DcxR/pe_2397600_XBvBxk.rcdb.d/pe.rcdb.d' for reading (mem: 3239.906M)
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] eee: Trim Metal Layers: { }
+[11/11 11:05:28     20s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 3241.9M)
+[11/11 11:05:28     20s] Start AAE Lib Loading. (MEM=3241.91)
+[11/11 11:05:29     20s] End AAE Lib Loading. (MEM=3260.98 CPU=0:00:00.0 Real=0:00:01.0)
+[11/11 11:05:29     20s] End AAE Lib Interpolated Model. (MEM=3260.98 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[11/11 11:05:29     20s] End delay calculation. (MEM=3469.62 CPU=0:00:00.1 REAL=0:00:00.0)
+[11/11 11:05:29     20s] End delay calculation (fullDC). (MEM=3469.62 CPU=0:00:00.3 REAL=0:00:01.0)
+[11/11 11:05:29     20s] update aggressor slew in non distributed run
+[11/11 11:05:29     20s] End Slew iteration 
+[11/11 11:05:29     20s] Setting infinite Tws ...
+[11/11 11:05:29     20s] First Iteration Infinite Tw... 
+[11/11 11:05:29     20s] Start delay calculation (fullDC) (2 T). (MEM=3469.62)
+[11/11 11:05:29     20s] End AAE Lib Interpolated Model. (MEM=3469.62 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[11/11 11:05:29     21s] AAE_INFO-618: Total number of nets in the design is 1479,  100.0 percent of the nets selected for SI analysis
+[11/11 11:05:29     21s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[11/11 11:05:29     21s] End delay calculation. (MEM=3570.39 CPU=0:00:00.3 REAL=0:00:00.0)
+[11/11 11:05:29     21s] End delay calculation (fullDC). (MEM=3570.39 CPU=0:00:00.3 REAL=0:00:00.0)
+[11/11 11:05:29     21s] *** CDM Built up (cpu=0:00:00.9  real=0:00:01.0  mem= 2799.4M) ***
+[11/11 11:05:29     21s] Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2791.4M)
+[11/11 11:05:29     21s] Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2791.4M)
+[11/11 11:05:29     21s] Starting SI iteration 2
+[11/11 11:05:29     21s] Start delay calculation (fullDC) (2 T). (MEM=2697.39)
+[11/11 11:05:29     21s] End AAE Lib Interpolated Model. (MEM=2697.39 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[11/11 11:05:29     21s] AAE_INFO-618: Total number of nets in the design is 1479,  0.3 percent of the nets selected for SI analysis
+[11/11 11:05:29     21s] End delay calculation. (MEM=2831.83 CPU=0:00:00.0 REAL=0:00:00.0)
+[11/11 11:05:29     21s] End delay calculation (fullDC). (MEM=2831.83 CPU=0:00:00.1 REAL=0:00:00.0)
+[11/11 11:05:29     21s] *** CDM Built up (cpu=0:00:00.1  real=0:00:00.0  mem= 2831.8M) ***
+[11/11 11:05:30     21s] @@file 26: report_timing -early -max_paths 10 -path_type full_clock > $rpt_dir/hold.rpt
+[11/11 11:05:30     21s] @@file 27: report_analysis_summary > $rpt_dir/summary.rpt
+[11/11 11:05:30     21s] @@file 28: report_constraint -all_violators > $rpt_dir/all_violators.rpt
+[11/11 11:05:30     21s] @file 29: exit
+[11/11 11:05:30     21s] 
+[11/11 11:05:30     21s] *** Memory Usage v#1 (Current mem = 2723.602M, initial mem = 646.520M) ***
+[11/11 11:05:30     21s] 
+[11/11 11:05:30     21s] *** Summary of all messages that are not suppressed in this session:
+[11/11 11:05:30     21s] Severity  ID               Count  Summary                                  
+[11/11 11:05:30     21s] WARNING   TECHLIB-302         12  No function defined for cell '%s'. The c...
+[11/11 11:05:30     21s] *** Message Summary: 12 warning(s), 0 error(s)
+[11/11 11:05:30     21s] 
+[11/11 11:05:30     21s] --- Ending "Tempus Timing Solution" (totcpu=0:00:21.9, real=0:00:25.0, mem=2723.6M) ---

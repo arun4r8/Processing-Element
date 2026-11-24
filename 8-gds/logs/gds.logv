@@ -1,0 +1,662 @@
+[11/11 11:28:14      0s] 
+[11/11 11:28:14      0s] Cadence Innovus(TM) Implementation System.
+[11/11 11:28:14      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[11/11 11:28:14      0s] 
+[11/11 11:28:14      0s] Version:	v21.18-s099_1, built Tue Jul 18 13:03:50 PDT 2023
+[11/11 11:28:14      0s] Options:	-stylus -batch -no_gui -files ../gds.tcl -log gds 
+[11/11 11:28:14      0s] Date:		Wed Nov 11 11:28:14 2026
+[11/11 11:28:14      0s] Host:		yoshi.ece.utexas.edu (x86_64 w/Linux 4.18.0-553.183.1.el8_10.x86_64) (16cores*64cpus*Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz 22528KB)
+[11/11 11:28:14      0s] OS:		Red Hat Enterprise Linux 8.10 (Ootpa)
+[11/11 11:28:14      0s] 
+[11/11 11:28:14      0s] License:
+[11/11 11:28:14      0s] 		[11:28:14.446345] Configured Lic search path (21.01-s002): /usr/local/packages/cadence_2022/license.dat
+[11/11 11:28:14      0s] 
+[11/11 11:28:14      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[11/11 11:28:14      0s] 		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[11/11 11:28:22      7s] 
+[11/11 11:28:22      7s] 
+[11/11 11:28:27     12s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v21.18-s099_1 (64bit) 07/18/2023 13:03 (Linux 3.10.0-693.el7.x86_64)
+[11/11 11:28:30     14s] @(#)CDS: NanoRoute 21.18-s099_1 NR230707-1955/21_18-UB (database version 18.20.605) {superthreading v2.17}
+[11/11 11:28:30     14s] @(#)CDS: AAE 21.18-s017 (64bit) 07/18/2023 (Linux 3.10.0-693.el7.x86_64)
+[11/11 11:28:30     14s] @(#)CDS: CTE 21.18-s022_1 () Jul 11 2023 23:10:24 ( )
+[11/11 11:28:30     14s] @(#)CDS: SYNTECH 21.18-s010_1 () Jul  5 2023 06:32:03 ( )
+[11/11 11:28:30     14s] @(#)CDS: CPE v21.18-s053
+[11/11 11:28:30     14s] @(#)CDS: IQuantus/TQuantus 21.1.1-s966 (64bit) Wed Mar 8 10:22:20 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+[11/11 11:28:30     14s] @(#)CDS: OA 22.60-p087 Thu Feb  9 09:35:26 2023
+[11/11 11:28:30     14s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[11/11 11:28:30     14s] @(#)CDS: RCDB 11.15.0
+[11/11 11:28:30     14s] @(#)CDS: STYLUS 21.12-s019_1 (12/20/2022 05:13 PST)
+[11/11 11:28:30     14s] @(#)CDS: SystemPlanner-21.18-10439 (21.18) (2023-03-01 15:40:03+0800)
+[11/11 11:28:30     14s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_2479723_yoshi.ece.utexas.edu_ar76269_FpiCQ8.
+
+[11/11 11:28:30     14s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_2479723_yoshi.ece.utexas.edu_ar76269_FpiCQ8.
+[11/11 11:28:30     14s] 
+[11/11 11:28:30     14s] Change the soft stacksize limit to 0.2%RAM (771 mbytes). Set global soft_stack_size_limit to change the value.
+[11/11 11:28:31     15s] 
+[11/11 11:28:31     15s] **INFO:  MMMC transition support version v31-84 
+[11/11 11:28:31     15s] 
+[11/11 11:28:31     15s] #@ Processing -files option
+[11/11 11:28:31     15s] @innovus 1> source ../gds.tcl
+[11/11 11:28:31     15s] #@ Begin verbose source (pre): source ../gds.tcl
+[11/11 11:28:31     15s] @file 1: # ââ GDS ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+[11/11 11:28:31     15s] @file 2:
+[11/11 11:28:31     15s] @file 3: # ââ Paths ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+[11/11 11:28:31     15s] @file 4: set stage_dir [file dirname [file normalize [info script]]]
+[11/11 11:28:31     15s] @file 5: set sc        $stage_dir/../pdk/sky130/sky130A/libs.ref/sky130_fd_sc_hd
+[11/11 11:28:31     15s] @file 6: set map       $stage_dir/../pdk/sky130/sky130A/libs.tech/klayout/tech/sky130A.map
+[11/11 11:28:31     15s] @file 7: set in_dir    $stage_dir/../0-inputs
+[11/11 11:28:31     15s] @file 8: set route_out $stage_dir/../5-route/outputs
+[11/11 11:28:31     15s] @file 9: set sta_rpt   $stage_dir/../6-sta/reports
+[11/11 11:28:31     15s] @file 10: set emir_rpt  $stage_dir/../7-emir/reports
+[11/11 11:28:31     15s] @file 11: set out_dir   $stage_dir/outputs
+[11/11 11:28:31     15s] @file 12: set rpt_dir   $stage_dir/reports
+[11/11 11:28:31     15s] @file 13:
+[11/11 11:28:31     15s] @@file 14: set_multi_cpu_usage -local_cpu 2
+[11/11 11:28:31     15s] @file 15:
+[11/11 11:28:31     15s] @@file 16: read_db $route_out/pe.route.db
+[11/11 11:28:31     15s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[11/11 11:28:31     15s] #% Begin load design ... (date=11/11 11:28:31, mem=911.7M)
+[11/11 11:28:31     15s] Set Default Net Delay as 1000 ps.
+[11/11 11:28:31     15s] Set Default Net Load as 0.5 pF. 
+[11/11 11:28:31     15s] AAE_INFO: switching -siAware from false to true ...
+[11/11 11:28:31     15s] AAE_INFO: The setting is changed from false to true in setDelayCalMode -SIAware
+[11/11 11:28:31     15s] Set Default Input Pin Transition as 0.1 ps.
+[11/11 11:28:31     15s] Set Using Default Delay Limit as 1000.
+[11/11 11:28:31     15s] **WARN: (IMPUDM-33):	Global variable "timing_enable_separate_device_slew_effect_sensitivities" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+[11/11 11:28:31     15s] **WARN: (IMPUDM-33):	Global variable "timing_enable_separate_device_slew_effect_sensitivities" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+[11/11 11:28:31     15s] **WARN: (IMPDBTCL-321):	The attribute 'timing_enable_separate_device_slew_effect_sensitivities' still works but will be obsolete in a future major release. You should remove it from your script before the next major release to avoid errors.
+[11/11 11:28:31     15s] **WARN: (IMPUDM-33):	Global variable "timing_enable_separate_device_slew_effect_sensitivities" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+[11/11 11:28:31     15s] Set Default Input Pin Transition as 0.1 ps.
+[11/11 11:28:32     16s] Loading design 'pe' saved by 'Innovus' '21.18-s099_1' on 'Wed Nov 11 10:26:18 2026'.
+[11/11 11:28:32     16s] Starting library reading in 'Multi-threaded flow' (with '2' threads)
+[11/11 11:28:32     16s] 
+[11/11 11:28:32     16s] Threads Configured:2
+[11/11 11:28:32     16s] Reading lib_tt timing library /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib.
+[11/11 11:28:32     16s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_8'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:28:32     16s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_6'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:28:32     16s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_4'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:28:32     16s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:28:32     16s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:28:32     16s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_bleeder_1'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:28:32     16s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__diode_2'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:28:32     16s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_8'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:28:32     16s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_6'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:28:32     16s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_4'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:28:32     16s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_3'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:28:32     16s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_12'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[11/11 11:28:32     16s] Read 428 cells in library sky130_fd_sc_hd__tt_025C_1v80.
+[11/11 11:28:32     16s] Library reading multithread flow ended.
+[11/11 11:28:32     16s] Ending "PreSetAnalysisView" (total cpu=0:00:00.5, real=0:00:00.0, peak res=1002.9M, current mem=929.9M)
+[11/11 11:28:32     16s] 
+[11/11 11:28:32     16s] Loading LEF file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/libs/lef/sky130_fd_sc_hd__nom.tlef ...
+[11/11 11:28:32     16s] 
+[11/11 11:28:32     16s] Loading LEF file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/libs/lef/sky130_fd_sc_hd.lef ...
+[11/11 11:28:32     16s] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+[11/11 11:28:32     16s] The NOWIREEXTENSIONATPIN statement will be ignored. See file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/libs/lef/sky130_fd_sc_hd.lef at line 2.
+[11/11 11:28:32     16s] **WARN: (IMPLF-108):	There is no overlap layer defined in any LEF file
+[11/11 11:28:32     16s] so you are unable to create rectilinear partition in a hierarchical flow.
+[11/11 11:28:32     16s] Set DBUPerIGU to M1 pitch 460.
+[11/11 11:28:32     16s] **WARN: (IMPLF-201):	Pin 'X' in macro 'sky130_fd_sc_hd__probec_p_8' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[11/11 11:28:32     16s] Type 'man IMPLF-201' for more detail.
+[11/11 11:28:32     16s] **WARN: (IMPLF-201):	Pin 'X' in macro 'sky130_fd_sc_hd__probe_p_8' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[11/11 11:28:32     16s] Type 'man IMPLF-201' for more detail.
+[11/11 11:28:32     16s] **WARN: (IMPLF-201):	Pin 'LO' in macro 'sky130_fd_sc_hd__macro_sparecell' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[11/11 11:28:32     16s] Type 'man IMPLF-201' for more detail.
+[11/11 11:28:32     16s] **WARN: (IMPLF-201):	Pin 'HI' in macro 'sky130_fd_sc_hd__conb_1' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[11/11 11:28:32     16s] Type 'man IMPLF-201' for more detail.
+[11/11 11:28:32     16s] **WARN: (IMPLF-201):	Pin 'LO' in macro 'sky130_fd_sc_hd__conb_1' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[11/11 11:28:32     16s] Type 'man IMPLF-201' for more detail.
+[11/11 11:28:32     16s] 
+[11/11 11:28:32     16s] ##  Check design process and node:  
+[11/11 11:28:32     16s] ##  Both design process and tech node are not set.
+[11/11 11:28:32     16s] 
+[11/11 11:28:32     16s] Loading view definition file from /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/viewDefinition.tcl
+[11/11 11:28:32     16s] % Begin Load netlist data ... (date=11/11 11:28:32, mem=938.5M)
+[11/11 11:28:32     16s] *** Begin netlist parsing (mem=1041.5M) ***
+[11/11 11:28:32     16s] Created 428 new cells from 1 timing libraries.
+[11/11 11:28:32     16s] Reading netlist ...
+[11/11 11:28:32     16s] Backslashed names will retain backslash and a trailing blank character.
+[11/11 11:28:32     16s] Reading verilogBinary netlist '/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/vbin/pe.v.bin'
+[11/11 11:28:32     16s] Reading binary database version 2 in multi-threaded mode
+[11/11 11:28:32     16s] 
+[11/11 11:28:32     16s] *** Memory Usage v#1 (Current mem = 1057.508M, initial mem = 494.969M) ***
+[11/11 11:28:32     16s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1057.5M) ***
+[11/11 11:28:32     16s] % End Load netlist data ... (date=11/11 11:28:32, total cpu=0:00:00.0, real=0:00:00.0, peak res=947.9M, current mem=947.9M)
+[11/11 11:28:32     16s] Top level cell is pe.
+[11/11 11:28:32     16s] Hooked 428 DB cells to tlib cells.
+[11/11 11:28:32     16s] Ending "BindLib:" (total cpu=0:00:00.1, real=0:00:00.0, peak res=952.3M, current mem=952.3M)
+[11/11 11:28:32     16s] Starting recursive module instantiation check.
+[11/11 11:28:32     16s] No recursion found.
+[11/11 11:28:32     16s] Building hierarchical netlist for Cell pe ...
+[11/11 11:28:33     16s] *** Netlist is unique.
+[11/11 11:28:33     16s] Setting Std. cell height to 2720 DBU (smallest netlist inst).
+[11/11 11:28:33     16s] ** info: there are 440 modules.
+[11/11 11:28:33     16s] ** info: there are 1370 stdCell insts.
+[11/11 11:28:33     16s] 
+[11/11 11:28:33     16s] *** Memory Usage v#1 (Current mem = 1076.922M, initial mem = 494.969M) ***
+[11/11 11:28:33     16s] *info: set bottom ioPad orient R0
+[11/11 11:28:33     16s] Adjust met3 preferred direction offset from 0.34 to 0.17.
+[11/11 11:28:33     16s] Adjust met4 preferred direction offset from 0.46 to 0.23.
+[11/11 11:28:33     16s] Adjust met5 preferred direction offset from 1.7 to 0.17.
+[11/11 11:28:33     16s] Start create_tracks
+[11/11 11:28:33     16s] Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in preferred direction.
+[11/11 11:28:33     16s] Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
+[11/11 11:28:33     16s] Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
+[11/11 11:28:33     16s] Loading preference file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/gui.pref.tcl ...
+[11/11 11:28:33     17s] Effort level <high> specified for reg2cgate path_group
+[11/11 11:28:33     17s] Slack adjustment of -0 applied on reg2cgate path_group
+[11/11 11:28:33     17s] Effort level <high> specified for reg2reg path_group
+[11/11 11:28:33     17s] Slack adjustment of -0 applied on reg2reg path_group
+[11/11 11:28:33     17s] Slack adjustment of -0 applied on <default> path group
+[11/11 11:28:33     17s] **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[11/11 11:28:33     17s] Change floorplan default-technical-site to 'unithd'.
+[11/11 11:28:33     17s] Extraction setup Delayed 
+[11/11 11:28:33     17s] *Info: initialize multi-corner CTS.
+[11/11 11:28:33     17s] Ending "SetAnalysisView" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1293.5M, current mem=1021.8M)
+[11/11 11:28:33     17s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[11/11 11:28:33     17s] 
+[11/11 11:28:33     17s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign Begin ...
+[11/11 11:28:33     17s] Summary for sequential cells identification: 
+[11/11 11:28:33     17s]   Identified SBFF number: 45
+[11/11 11:28:33     17s]   Identified MBFF number: 0
+[11/11 11:28:33     17s]   Identified SB Latch number: 0
+[11/11 11:28:33     17s]   Identified MB Latch number: 0
+[11/11 11:28:33     17s]   Not identified SBFF number: 0
+[11/11 11:28:33     17s]   Not identified MBFF number: 0
+[11/11 11:28:33     17s]   Not identified SB Latch number: 0
+[11/11 11:28:33     17s]   Not identified MB Latch number: 0
+[11/11 11:28:33     17s]   Number of sequential cells which are not FFs: 23
+[11/11 11:28:33     17s] Total number of combinational cells: 319
+[11/11 11:28:33     17s] Total number of sequential cells: 68
+[11/11 11:28:33     17s] Total number of tristate cells: 13
+[11/11 11:28:33     17s] Total number of level shifter cells: 7
+[11/11 11:28:33     17s] Total number of power gating cells: 0
+[11/11 11:28:33     17s] Total number of isolation cells: 11
+[11/11 11:28:33     17s] Total number of power switch cells: 0
+[11/11 11:28:33     17s] Total number of pulse generator cells: 0
+[11/11 11:28:33     17s] Total number of always on buffers: 0
+[11/11 11:28:33     17s] Total number of retention cells: 0
+[11/11 11:28:33     17s] Total number of physical cells: 10
+[11/11 11:28:33     17s] List of usable buffers: sky130_fd_sc_hd__buf_1 sky130_fd_sc_hd__buf_12 sky130_fd_sc_hd__buf_16 sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_4 sky130_fd_sc_hd__buf_6 sky130_fd_sc_hd__buf_8 sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_16 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8[11/11 11:28:33     17s] 
+[11/11 11:28:33     17s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign End ...
+ sky130_fd_sc_hd__dlymetal6s2s_1 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__probe_p_8
+[11/11 11:28:33     17s] Total number of usable buffers: 15
+[11/11 11:28:33     17s] List of unusable buffers:
+[11/11 11:28:33     17s] Total number of unusable buffers: 0
+[11/11 11:28:33     17s] List of usable inverters: sky130_fd_sc_hd__bufinv_16 sky130_fd_sc_hd__clkinv_1 sky130_fd_sc_hd__bufinv_8 sky130_fd_sc_hd__clkinv_16 sky130_fd_sc_hd__clkinv_2 sky130_fd_sc_hd__clkinv_4 sky130_fd_sc_hd__clkinv_8 sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__clkinvlp_2 sky130_fd_sc_hd__clkinvlp_4 sky130_fd_sc_hd__inv_12 sky130_fd_sc_hd__inv_16 sky130_fd_sc_hd__inv_2 sky130_fd_sc_hd__inv_4 sky130_fd_sc_hd__inv_6 sky130_fd_sc_hd__inv_8
+[11/11 11:28:33     17s] Total number of usable inverters: 16
+[11/11 11:28:33     17s] List of unusable inverters:
+[11/11 11:28:33     17s] Total number of unusable inverters: 0
+[11/11 11:28:33     17s] List of identified usable delay cells: sky130_fd_sc_hd__bufbuf_16 sky130_fd_sc_hd__bufbuf_8 sky130_fd_sc_hd__clkdlybuf4s15_1 sky130_fd_sc_hd__clkdlybuf4s15_2 sky130_fd_sc_hd__clkdlybuf4s18_1 sky130_fd_sc_hd__clkdlybuf4s18_2 sky130_fd_sc_hd__clkdlybuf4s25_1 sky130_fd_sc_hd__clkdlybuf4s50_1 sky130_fd_sc_hd__clkdlybuf4s25_2 sky130_fd_sc_hd__clkdlybuf4s50_2 sky130_fd_sc_hd__dlygate4sd2_1 sky130_fd_sc_hd__dlygate4sd1_1 sky130_fd_sc_hd__dlygate4sd3_1 sky130_fd_sc_hd__dlymetal6s6s_1 sky130_fd_sc_hd__dlymetal6s4s_1
+[11/11 11:28:33     17s] Total number of identified usable delay cells: 15
+[11/11 11:28:33     17s] List of identified unusable delay cells:
+[11/11 11:28:33     17s] Total number of identified unusable delay cells: 0
+[11/11 11:28:33     17s] 
+[11/11 11:28:33     17s] TimeStamp Deleting Cell Server Begin ...
+[11/11 11:28:33     17s] 
+[11/11 11:28:33     17s] TimeStamp Deleting Cell Server End ...
+[11/11 11:28:33     17s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1283.1M, current mem=1283.1M)
+[11/11 11:28:33     17s] 
+[11/11 11:28:33     17s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) in restoreDesign Begin ...
+[11/11 11:28:33     17s] Summary for sequential cells identification: 
+[11/11 11:28:33     17s]   Identified SBFF number: 45
+[11/11 11:28:33     17s]   Identified MBFF number: 0
+[11/11 11:28:33     17s]   Identified SB Latch number: 0
+[11/11 11:28:33     17s]   Identified MB Latch number: 0
+[11/11 11:28:33     17s]   Not identified SBFF number: 0
+[11/11 11:28:33     17s]   Not identified MBFF number: 0
+[11/11 11:28:33     17s]   Not identified SB Latch number: 0
+[11/11 11:28:33     17s]   Not identified MB Latch number: 0
+[11/11 11:28:33     17s]   Number of sequential cells which are not FFs: 23
+[11/11 11:28:33     17s] 
+[11/11 11:28:33     17s] Trim Metal Layers:
+[11/11 11:28:33     17s]  Visiting view : view_tt
+[11/11 11:28:33     17s]    : PowerDomain = none : Weighted F : unweighted  = 42.50 (1.000) with rcCorner = 0
+[11/11 11:28:33     17s]    : PowerDomain = none : Weighted F : unweighted  = 32.60 (1.000) with rcCorner = -1
+[11/11 11:28:33     17s]  Visiting view : view_tt
+[11/11 11:28:33     17s]    : PowerDomain = none : Weighted F : unweighted  = 42.50 (1.000) with rcCorner = 0
+[11/11 11:28:33     17s]    : PowerDomain = none : Weighted F : unweighted  = 32.60 (1.000) with rcCorner = -1
+[11/11 11:28:33     17s] 
+[11/11 11:28:33     17s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) in restoreDesign End ...
+[11/11 11:28:33     17s] 
+[11/11 11:28:33     17s] TimeStamp Deleting Cell Server Begin ...
+[11/11 11:28:33     17s] 
+[11/11 11:28:33     17s] TimeStamp Deleting Cell Server End ...
+[11/11 11:28:33     17s] Reading floorplan file - /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.fp.gz (mem = 1387.5M).
+[11/11 11:28:33     17s] % Begin Load floorplan data ... (date=11/11 11:28:33, mem=1284.8M)
+[11/11 11:28:34     17s] *info: reset 1481 existing net BottomPreferredLayer and AvoidDetour
+[11/11 11:28:34     17s] Deleting old partition specification.
+[11/11 11:28:34     17s] Set FPlanBox to (0 0 155020 154700)
+[11/11 11:28:34     17s] Adjust met3 preferred direction offset from 0.34 to 0.17.
+[11/11 11:28:34     17s] Adjust met4 preferred direction offset from 0.46 to 0.23.
+[11/11 11:28:34     17s] Adjust met5 preferred direction offset from 1.7 to 0.17.
+[11/11 11:28:34     17s] Start create_tracks
+[11/11 11:28:34     17s] Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in preferred direction.
+[11/11 11:28:34     17s] Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
+[11/11 11:28:34     17s] Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
+[11/11 11:28:34     17s]  ... processed partition successfully.
+[11/11 11:28:34     17s] Reading binary special route file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.fp.spr.gz (Created by Innovus v21.18-s099_1 on Wed Nov 11 10:26:11 2026, version: 1)
+[11/11 11:28:34     17s] Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1286.2M, current mem=1286.2M)
+[11/11 11:28:34     17s] There are 5 nets with weight being set
+[11/11 11:28:34     17s] There are 5 nets with bottomPreferredRoutingLayer being set
+[11/11 11:28:34     17s] There are 22 nets with avoidDetour being set
+[11/11 11:28:34     17s] Extracting standard cell pins and blockage ...... 
+[11/11 11:28:34     17s] Pin and blockage extraction finished
+[11/11 11:28:34     17s] Delete all existing relative floorplan constraints.
+[11/11 11:28:34     17s] % End Load floorplan data ... (date=11/11 11:28:34, total cpu=0:00:00.0, real=0:00:01.0, peak res=1287.3M, current mem=1287.3M)
+[11/11 11:28:34     17s] Reading congestion map file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.route.congmap.gz ...
+[11/11 11:28:34     17s] % Begin Load SymbolTable ... (date=11/11 11:28:34, mem=1287.8M)
+[11/11 11:28:34     17s] Suppress "**WARN ..." messages.
+[11/11 11:28:34     17s] routingBox: (0 0) (155020 154700)
+[11/11 11:28:34     17s] coreBox:    (10120 9860) (144900 144840)
+[11/11 11:28:34     17s] Un-suppress "**WARN ..." messages.
+[11/11 11:28:34     17s] % End Load SymbolTable ... (date=11/11 11:28:34, total cpu=0:00:00.0, real=0:00:00.0, peak res=1288.6M, current mem=1288.6M)
+[11/11 11:28:34     17s] Loading place ...
+[11/11 11:28:34     17s] % Begin Load placement data ... (date=11/11 11:28:34, mem=1287.9M)
+[11/11 11:28:34     17s] Reading placement file - /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.place.gz.
+[11/11 11:28:34     17s] ** Reading stdCellPlacement_binary (Created by Innovus v21.18-s099_1 on Wed Nov 11 10:26:11 2026, version# 2) ...
+[11/11 11:28:34     17s] Read Views for adaptive view pruning ...
+[11/11 11:28:34     17s] Read 0 views from Binary DB for adaptive view pruning
+[11/11 11:28:34     17s] *** Checked 4 GNC rules.
+[11/11 11:28:34     17s] *** applyConnectGlobalNets disabled.
+[11/11 11:28:34     17s] *** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=1390.5M) ***
+[11/11 11:28:34     17s] Total net length = 2.776e+04 (1.572e+04 1.204e+04) (ext = 7.205e+03)
+[11/11 11:28:34     17s] % End Load placement data ... (date=11/11 11:28:34, total cpu=0:00:00.0, real=0:00:00.0, peak res=1289.6M, current mem=1289.6M)
+[11/11 11:28:34     17s] Reading PG file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.pg.gz, version#2, (Created by Innovus v21.18-s099_1 on       Wed Nov 11 10:26:11 2026)
+[11/11 11:28:34     17s] *** Completed restorePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=1387.5M) ***
+[11/11 11:28:34     17s] % Begin Load routing data ... (date=11/11 11:28:34, mem=1290.0M)
+[11/11 11:28:34     17s] Reading routing file - /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.route.gz.
+[11/11 11:28:35     17s] Reading Innovus routing data (Created by Innovus v21.18-s099_1 on Wed Nov 11 10:26:11 2026 Format: 20.1) ...
+[11/11 11:28:35     17s] *** Total 1479 nets are successfully restored.
+[11/11 11:28:35     17s] *** Completed restoreRoute (cpu=0:00:00.0 real=0:00:01.0 mem=1389.5M) ***
+[11/11 11:28:35     17s] % End Load routing data ... (date=11/11 11:28:35, total cpu=0:00:00.0, real=0:00:01.0, peak res=1292.2M, current mem=1292.2M)
+[11/11 11:28:35     17s] TAT_INFO: restoreCongMap REAL = 0 : CPU = 0 : MEM = 0.
+[11/11 11:28:35     17s] Reading property file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.prop
+[11/11 11:28:35     17s] *** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1393.5M) ***
+[11/11 11:28:35     17s] Reading dirtyarea snapshot file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.db.da.gz (Create by Innovus v21.18-s099_1 on Wed Nov 11 10:26:12 2026, version: 4).
+[11/11 11:28:35     17s] Change floorplan default-technical-site to 'unithd'.
+[11/11 11:28:35     17s] Restore PreRoute RC Grid meta data successful.
+[11/11 11:28:35     17s] Loading preRoute extraction data from directory '/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/extraction/' ...
+[11/11 11:28:35     17s] Extraction setup Started 
+[11/11 11:28:35     17s] 
+[11/11 11:28:35     17s] Trim Metal Layers:
+[11/11 11:28:35     17s] __QRC_SADV_USE_LE__ is set 0
+[11/11 11:28:35     17s] Initializing multi-corner RC extraction with 1 active RC Corners ...
+[11/11 11:28:35     17s] Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For post_route extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+[11/11 11:28:35     17s] Metal Layer Id 1 is li1 
+[11/11 11:28:35     17s] Metal Layer Id 2 is met1 
+[11/11 11:28:35     17s] Metal Layer Id 3 is met2 
+[11/11 11:28:35     17s] Metal Layer Id 4 is met3 
+[11/11 11:28:35     17s] Metal Layer Id 5 is met4 
+[11/11 11:28:35     17s] Metal Layer Id 6 is met5 
+[11/11 11:28:35     17s] Via Layer Id 33 is licon 
+[11/11 11:28:35     17s] Via Layer Id 34 is mcon 
+[11/11 11:28:35     17s] Via Layer Id 35 is via 
+[11/11 11:28:35     17s] Via Layer Id 36 is via2 
+[11/11 11:28:35     17s] Via Layer Id 37 is via3 
+[11/11 11:28:35     17s] Via Layer Id 38 is via4 
+[11/11 11:28:35     17s] 
+[11/11 11:28:35     17s] Trim Metal Layers:
+[11/11 11:28:35     17s]  lef metal Layer Id 1 mapped to tech Id 6 of Layer li1 
+[11/11 11:28:35     17s]  lef via Layer Id 1 mapped to tech Id 7 of Layer mcon 
+[11/11 11:28:35     17s]  lef metal Layer Id 2 mapped to tech Id 8 of Layer met1 
+[11/11 11:28:35     17s]  lef via Layer Id 2 mapped to tech Id 9 of Layer via 
+[11/11 11:28:35     17s]  lef metal Layer Id 3 mapped to tech Id 10 of Layer met2 
+[11/11 11:28:35     17s]  lef via Layer Id 3 mapped to tech Id 11 of Layer via2 
+[11/11 11:28:35     17s]  lef metal Layer Id 4 mapped to tech Id 12 of Layer met3 
+[11/11 11:28:35     17s]  lef via Layer Id 4 mapped to tech Id 13 of Layer via3 
+[11/11 11:28:35     17s]  lef metal Layer Id 5 mapped to tech Id 14 of Layer met4 
+[11/11 11:28:35     17s]  lef via Layer Id 5 mapped to tech Id 15 of Layer via4 
+[11/11 11:28:35     17s]  lef metal Layer Id 6 mapped to tech Id 16 of Layer met5 
+[11/11 11:28:35     17s] Metal Layer Id 1 mapped to 6 
+[11/11 11:28:35     17s] Via Layer Id 1 mapped to 7 
+[11/11 11:28:35     17s] Metal Layer Id 2 mapped to 8 
+[11/11 11:28:35     17s] Via Layer Id 2 mapped to 9 
+[11/11 11:28:35     17s] Metal Layer Id 3 mapped to 10 
+[11/11 11:28:35     17s] Via Layer Id 3 mapped to 11 
+[11/11 11:28:35     17s] Metal Layer Id 4 mapped to 12 
+[11/11 11:28:35     17s] Via Layer Id 4 mapped to 13 
+[11/11 11:28:35     17s] Metal Layer Id 5 mapped to 14 
+[11/11 11:28:35     17s] Via Layer Id 5 mapped to 15 
+[11/11 11:28:35     17s] Metal Layer Id 6 mapped to 16 
+[11/11 11:28:35     17s] Generating auto layer map file.
+[11/11 11:28:35     17s] eee: pegPreRouteEnableSaveRestoreRCPatterns:1, retVal:1, doesAnyTechFileNeedExtraction1
+[11/11 11:28:35     17s] eee: Reading patterns meta data.
+[11/11 11:28:35     17s] Restore PreRoute Pattern Extraction data successful in header.
+[11/11 11:28:35     17s] Loading preRoute extracted patterns from file '/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.techData.gz' ...
+[11/11 11:28:35     17s] readViaRC viaRead:25, nrVia:25
+[11/11 11:28:35     17s] isWireRCValid Validate checksum:3867432, FromFile:3867432accessWirePatterns Pattern count:26640, FromFile:26640 Checksum:3867432, FromFile:3867432
+[11/11 11:28:35     18s] eee: PatternAvail:1, PreRoutePatternReadFailed:0
+[11/11 11:28:35     18s] Restore PreRoute Pattern Extraction data successful.
+[11/11 11:28:35     18s] Completed (cpu: 0:00:00.3 real: 0:00:00.0)
+[11/11 11:28:35     18s] Set Shrink Factor to 1.00000
+[11/11 11:28:35     18s] Summary of Active RC-Corners : 
+[11/11 11:28:35     18s]  
+[11/11 11:28:35     18s]  Analysis View: view_tt
+[11/11 11:28:35     18s]     RC-Corner Name        : rc_nom
+[11/11 11:28:35     18s]     RC-Corner Index       : 0
+[11/11 11:28:35     18s]     RC-Corner Temperature : 25 Celsius
+[11/11 11:28:35     18s]     RC-Corner Cap Table   : ''
+[11/11 11:28:35     18s]     RC-Corner PreRoute Res Factor         : 1
+[11/11 11:28:35     18s]     RC-Corner PreRoute Cap Factor         : 1
+[11/11 11:28:35     18s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[11/11 11:28:35     18s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[11/11 11:28:35     18s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[11/11 11:28:35     18s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[11/11 11:28:35     18s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[11/11 11:28:35     18s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[11/11 11:28:35     18s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[11/11 11:28:35     18s]     RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+[11/11 11:28:35     18s]     RC-Corner Technology file: '/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/libs/mmmc/rc_nom/qrcTechFile'
+[11/11 11:28:35     18s] 
+[11/11 11:28:35     18s] Trim Metal Layers:
+[11/11 11:28:35     18s] LayerId::1 widthSet size::1
+[11/11 11:28:35     18s] LayerId::2 widthSet size::2
+[11/11 11:28:35     18s] LayerId::3 widthSet size::2
+[11/11 11:28:35     18s] LayerId::4 widthSet size::2
+[11/11 11:28:35     18s] LayerId::5 widthSet size::2
+[11/11 11:28:35     18s] LayerId::6 widthSet size::2
+[11/11 11:28:35     18s] Checksum of RCGrid density data read::(72 72) passed::1
+[11/11 11:28:35     18s] Restore PreRoute RC Grid data successful.
+[11/11 11:28:35     18s] eee: pegSigSF::1.070000
+[11/11 11:28:35     18s] Initializing multi-corner resistance tables ...
+[11/11 11:28:35     18s] ReadRoutingBlockageFactor status::1
+[11/11 11:28:35     18s] Restore PreRoute Blockage data successful.
+[11/11 11:28:35     18s] eee: Reading Grid unit RC.
+[11/11 11:28:36     18s] pesRestorePreRouteExtractionData::readRCGridUnitRC called for corner::rc_nom
+[11/11 11:28:36     18s] RCCorner in design data Name::rc_nom Tech::/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/libs/mmmc/rc_nom/qrcTechFile 25.000000 1.000000 1.000000 
+[11/11 11:28:36     18s] RCCorner in saved data Name::rc_nom Tech::/misc/scratch/ar76269/pe-apprentice/4-cts/outputs/pe.cts.db/libs/mmmc/rc_nom/qrcTechFile 25.000000 1.000000 1.000000 
+[11/11 11:28:36     18s] Unit RC read checksum: 1176, count: 1176, status: 1
+[11/11 11:28:36     18s] Number of RC corner to be extracted::0
+[11/11 11:28:36     18s] eee: l::1 avDens::0.009777 usedTrk::18.500184 availTrk::1892.173913 sigTrk::18.500184
+[11/11 11:28:36     18s] eee: l::2 avDens::0.245571 usedTrk::707.245517 availTrk::2880.000000 sigTrk::707.245517
+[11/11 11:28:36     18s] eee: l::3 avDens::0.210261 usedTrk::435.149597 availTrk::2069.565217 sigTrk::435.149597
+[11/11 11:28:36     18s] eee: l::4 avDens::0.152905 usedTrk::245.450294 availTrk::1605.245902 sigTrk::245.450294
+[11/11 11:28:36     18s] eee: l::5 avDens::0.123297 usedTrk::174.973861 availTrk::1419.130435 sigTrk::174.973861
+[11/11 11:28:36     18s] eee: l::6 avDens::0.296397 usedTrk::70.487463 availTrk::237.814208 sigTrk::70.487463
+[11/11 11:28:36     18s] eee: LAM: n=40 LLS=2-3 HLS=3-5 rDens=0.256031 uaWl=1.000000 uaWlH=0.284201 aWlH=0.000000 lMod=0 pMax=0.867800 pMod=80 wcR=0.396600 newSi=0.001600 wHLS=0.991500 siPrev=0 viaL=0.000000 crit=0.000000 shortMod=0.000000 fMod=0.000000 
+[11/11 11:28:36     18s] Default value for post_route extraction mode's extract_rc_effort_level (extract_rc_effort_level option of set_db) changed to 'medium'.
+[11/11 11:28:36     18s] Restore PreRoute all RC Grid data successful.[11/11 11:28:36     18s] Start generating vias ..
+#create default rule from bind_ndr_rule rule=0x7fa6f0693030 0x7fa6db14eff0
+[11/11 11:28:36     18s] ### import design signature (1): route=1 fixed_route=1 flt_obj=0 vio=1905142130 swire=1 shield_wire=1 net_attr=1 dirty_area=0 del_dirty_area=0 cell=0 placement=0 pin_access=1 inst_pattern=1 via=1482772860 routing_via=1
+[11/11 11:28:36     18s] #Skip building auto via since it is not turned on.
+[11/11 11:28:36     18s] Extracting standard cell pins and blockage ...... 
+[11/11 11:28:36     18s] Pin and blockage extraction finished
+[11/11 11:28:36     18s] Via generation completed.
+[11/11 11:28:36     18s] % Begin Load power constraints ... (date=11/11 11:28:36, mem=1326.1M)
+[11/11 11:28:36     18s] source /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe_power_constraints.tcl
+[11/11 11:28:36     18s] 'set_default_switching_activity' finished successfully.
+[11/11 11:28:36     18s] % End Load power constraints ... (date=11/11 11:28:36, total cpu=0:00:00.0, real=0:00:00.0, peak res=1332.9M, current mem=1332.9M)
+[11/11 11:28:36     18s] % Begin load AAE data ... (date=11/11 11:28:36, mem=1348.6M)
+[11/11 11:28:36     18s] AAE DB initialization (MEM=1466.73 CPU=0:00:00.0 REAL=0:00:00.0) 
+[11/11 11:28:36     18s] % End load AAE data ... (date=11/11 11:28:36, total cpu=0:00:00.5, real=0:00:00.0, peak res=1354.5M, current mem=1354.5M)
+[11/11 11:28:36     18s] Restoring CCOpt config...
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) in restoreDesign Begin ...
+[11/11 11:28:36     18s] Summary for sequential cells identification: 
+[11/11 11:28:36     18s]   Identified SBFF number: 45
+[11/11 11:28:36     18s]   Identified MBFF number: 0
+[11/11 11:28:36     18s]   Identified SB Latch number: 0
+[11/11 11:28:36     18s]   Identified MB Latch number: 0
+[11/11 11:28:36     18s]   Not identified SBFF number: 0
+[11/11 11:28:36     18s]   Not identified MBFF number: 0
+[11/11 11:28:36     18s]   Not identified SB Latch number: 0
+[11/11 11:28:36     18s]   Not identified MB Latch number: 0
+[11/11 11:28:36     18s]   Number of sequential cells which are not FFs: 23
+[11/11 11:28:36     18s]  Visiting view : view_tt
+[11/11 11:28:36     18s]    : PowerDomain = none : Weighted F : unweighted  = 47.10 (1.000) with rcCorner = 0
+[11/11 11:28:36     18s]    : PowerDomain = none : Weighted F : unweighted  = 32.60 (1.000) with rcCorner = -1
+[11/11 11:28:36     18s]  Visiting view : view_tt
+[11/11 11:28:36     18s]    : PowerDomain = none : Weighted F : unweighted  = 47.10 (1.000) with rcCorner = 0
+[11/11 11:28:36     18s]    : PowerDomain = none : Weighted F : unweighted  = 32.60 (1.000) with rcCorner = -1
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) in restoreDesign End ...
+[11/11 11:28:36     18s]   Extracting original clock gating for clk...
+[11/11 11:28:36     18s]     clock_tree clk contains 112 sinks and 2 clock gates.
+[11/11 11:28:36     18s]   Extracting original clock gating for clk done.
+[11/11 11:28:36     18s]   The skew group clk/func was created. It contains 112 sinks and 1 sources.
+[11/11 11:28:36     18s]   The skew group clk/func was created. It contains 112 sinks and 1 sources.
+[11/11 11:28:36     18s] Restoring CCOpt config done.
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] TimeStamp Deleting Cell Server Begin ...
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] TimeStamp Deleting Cell Server End ...
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign Begin ...
+[11/11 11:28:36     18s] Summary for sequential cells identification: 
+[11/11 11:28:36     18s]   Identified SBFF number: 45
+[11/11 11:28:36     18s]   Identified MBFF number: 0
+[11/11 11:28:36     18s]   Identified SB Latch number: 0
+[11/11 11:28:36     18s]   Identified MB Latch number: 0
+[11/11 11:28:36     18s]   Not identified SBFF number: 0
+[11/11 11:28:36     18s]   Not identified MBFF number: 0
+[11/11 11:28:36     18s]   Not identified SB Latch number: 0
+[11/11 11:28:36     18s]   Not identified MB Latch number: 0
+[11/11 11:28:36     18s]   Number of sequential cells which are not FFs: 23
+[11/11 11:28:36     18s] Total number of combinational cells: 319
+[11/11 11:28:36     18s] Total number of sequential cells: 68
+[11/11 11:28:36     18s] Total number of tristate cells: 13
+[11/11 11:28:36     18s] Total number of level shifter cells: 7
+[11/11 11:28:36     18s] Total number of power gating cells: 0
+[11/11 11:28:36     18s] Total number of isolation cells: 11
+[11/11 11:28:36     18s] Total number of power switch cells: 0
+[11/11 11:28:36     18s] Total number of pulse generator cells: 0
+[11/11 11:28:36     18s] Total number of always on buffers: 0
+[11/11 11:28:36     18s] Total number of retention cells: 0
+[11/11 11:28:36     18s] Total number of physical cells: 10
+[11/11 11:28:36     18s] List of usable buffers: sky130_fd_sc_hd__buf_1 sky130_fd_sc_hd__buf_12 sky130_fd_sc_hd__buf_16 sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_4 sky130_fd_sc_hd__buf_6 sky130_fd_sc_hd__buf_8 sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_16 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8 sky130_fd_sc_hd__dlymetal6s2s_1 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__probe_p_8
+[11/11 11:28:36     18s] Total number of usable buffers: 15
+[11/11 11:28:36     18s] List of unusable buffers:
+[11/11 11:28:36     18s] Total number of unusable buffers: 0
+[11/11 11:28:36     18s] List of usable inverters: sky130_fd_sc_hd__bufinv_16 sky130_fd_sc_hd__clkinv_1 sky130_fd_sc_hd__bufinv_8 sky130_fd_sc_hd__clkinv_16 sky130_fd_sc_hd__clkinv_2 sky130_fd_sc_hd__clkinv_4 sky130_fd_sc_hd__clkinv_8 sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__clkinvlp_2 sky130_fd_sc_hd__clkinvlp_4 sky130_fd_sc_hd__inv_12 sky130_fd_sc_hd__inv_16 sky130_fd_sc_hd__inv_2 sky130_fd_sc_hd__inv_4 sky130_fd_sc_hd__inv_6 sky130_fd_sc_hd__inv_8
+[11/11 11:28:36     18s] Total number of usable inverters: 16
+[11/11 11:28:36     18s] List of unusable inverters:
+[11/11 11:28:36     18s] Total number of unusable inverters: 0
+[11/11 11:28:36     18s] List of identified usable delay cells: sky130_fd_sc_hd__bufbuf_16 sky130_fd_sc_hd__bufbuf_8 sky130_fd_sc_hd__clkdlybuf4s15_1 sky130_fd_sc_hd__clkdlybuf4s15_2 sky130_fd_sc_hd__clkdlybuf4s18_1 sky130_fd_sc_hd__clkdlybuf4s18_2 sky130_fd_sc_hd__clkdlybuf4s25_1 sky130_fd_sc_hd__clkdlybuf4s50_1 sky130_fd_sc_hd__clkdlybuf4s25_2 sky130_fd_sc_hd__clkdlybuf4s50_2 sky130_fd_sc_hd__dlygate4sd2_1 sky130_fd_sc_hd__dlygate4sd1_1 sky130_fd_sc_hd__dlygate4sd3_1 sky130_fd_sc_hd__dlymetal6s6s_1 sky130_fd_sc_hd__dlymetal6s4s_1
+[11/11 11:28:36     18s] Total number of identified usable delay cells: 15
+[11/11 11:28:36     18s] List of identified unusable delay cells:
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign End ...
+[11/11 11:28:36     18s] Total number of identified unusable delay cells: 0
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] TimeStamp Deleting Cell Server Begin ...
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] TimeStamp Deleting Cell Server End ...
+[11/11 11:28:36     18s] **WARN: (IMPCTE-107):	The following globals have been obsoleted since version . They will be removed in the next release. 
+[11/11 11:28:36     18s] timing_enable_separate_device_slew_effect_sensitivities
+[11/11 11:28:36     18s] #% End load design ... (date=11/11 11:28:36, total cpu=0:00:03.2, real=0:00:05.0, peak res=1380.1M, current mem=1359.5M)
+[11/11 11:28:36     18s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] *** Summary of all messages that are not suppressed in this session:
+[11/11 11:28:36     18s] Severity  ID               Count  Summary                                  
+[11/11 11:28:36     18s] WARNING   IMPLF-201            5  Pin '%s' in macro '%s' has no ANTENNADIF...
+[11/11 11:28:36     18s] WARNING   IMPLF-108            1  There is no overlap layer defined in any...
+[11/11 11:28:36     18s] WARNING   IMPDBTCL-321         1  The attribute '%s' still works but will ...
+[11/11 11:28:36     18s] WARNING   IMPCTE-107           1  The following globals have been obsolete...
+[11/11 11:28:36     18s] WARNING   IMPTCM-77            1  Option "%s" for command %s is obsolete a...
+[11/11 11:28:36     18s] WARNING   IMPUDM-33            3  Global variable "%s" is obsolete and wil...
+[11/11 11:28:36     18s] WARNING   TECHLIB-302         12  No function defined for cell '%s'. The c...
+[11/11 11:28:36     18s] *** Message Summary: 24 warning(s), 0 error(s)
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] @file 17:
+[11/11 11:28:36     18s] @file 18: # ââ Stream out âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+[11/11 11:28:36     18s] @file 19: # The map gives the GDS layer and datatype for each LEF layer.
+[11/11 11:28:36     18s] @file 20: # The route db only has cell outlines; -merge copies in the cell layouts.
+[11/11 11:28:36     18s] @@file 21: write_stream $out_dir/pe.gds -map_file $map -merge $sc/gds/sky130_fd_sc_hd.gds -unit 1000 -mode all
+[11/11 11:28:36     18s] Merge file: /misc/scratch/ar76269/pe-apprentice/8-gds/../pdk/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds has version number: 3
+[11/11 11:28:36     18s] Parse flat map file...
+[11/11 11:28:36     18s] **WARN: (IMPOGDS-389):	 Line 4: Text can be written only for NET, SPNET, PIN and LEFPIN.
+[11/11 11:28:36     18s] **WARN: (IMPOGDS-397):	 Line 8: Name is not output on cut layer. Statement ignored.
+[11/11 11:28:36     18s] **WARN: (IMPOGDS-389):	 Line 8: Text can be written only for NET, SPNET, PIN and LEFPIN.
+[11/11 11:28:36     18s] **WARN: (IMPOGDS-397):	 Line 8: Name is not output on cut layer. Statement ignored.
+[11/11 11:28:36     18s] **WARN: (IMPOGDS-389):	 Line 11: Text can be written only for NET, SPNET, PIN and LEFPIN.
+[11/11 11:28:36     18s] **WARN: (IMPOGDS-389):	 Line 14: Text can be written only for NET, SPNET, PIN and LEFPIN.
+[11/11 11:28:36     18s] **WARN: (IMPOGDS-407):	Duplicate entry found in line 22, the same mapping is already specified before this line. Duplicate entries leads to duplicate write hence bigger file size. Remove the line from mapping file if not intended.
+[11/11 11:28:36     18s] **WARN: (IMPOGDS-389):	 Line 31: Text can be written only for NET, SPNET, PIN and LEFPIN.
+[11/11 11:28:36     18s] **WARN: (IMPOGDS-389):	 Line 36: Text can be written only for NET, SPNET, PIN and LEFPIN.
+[11/11 11:28:36     18s] **WARN: (IMPOGDS-389):	 Line 41: Text can be written only for NET, SPNET, PIN and LEFPIN.
+[11/11 11:28:36     18s] **WARN: (IMPOGDS-389):	 Line 46: Text can be written only for NET, SPNET, PIN and LEFPIN.
+[11/11 11:28:36     18s] **WARN: (IMPOGDS-389):	 Line 51: Text can be written only for NET, SPNET, PIN and LEFPIN.
+[11/11 11:28:36     18s] Writing GDSII file ...
+[11/11 11:28:36     18s] 	****** db unit per micron = 1000 ******
+[11/11 11:28:36     18s] 	****** output gds2 file unit per micron = 1000 ******
+[11/11 11:28:36     18s] 	****** unit scaling factor = 1 ******
+[11/11 11:28:36     18s] Output for instance
+[11/11 11:28:36     18s] Output for bump
+[11/11 11:28:36     18s] Output for physical terminals
+[11/11 11:28:36     18s] Output for logical terminals
+[11/11 11:28:36     18s] Output for regular nets
+[11/11 11:28:36     18s] Output for special nets and metal fills
+[11/11 11:28:36     18s] Output for via structure generation total number 15
+[11/11 11:28:36     18s] Statistics for GDS generated (version 3)
+[11/11 11:28:36     18s] ----------------------------------------
+[11/11 11:28:36     18s] Stream Out Layer Mapping Information:
+[11/11 11:28:36     18s] GDS Layer Number          GDS Layer Name
+[11/11 11:28:36     18s] ----------------------------------------
+[11/11 11:28:36     18s]     235                          DIEAREA
+[11/11 11:28:36     18s]     72                              met5
+[11/11 11:28:36     18s]     71                              met4
+[11/11 11:28:36     18s]     69                              via2
+[11/11 11:28:36     18s]     68                               via
+[11/11 11:28:36     18s]     67                              mcon
+[11/11 11:28:36     18s]     67                               li1
+[11/11 11:28:36     18s]     70                              via3
+[11/11 11:28:36     18s]     64                             nwell
+[11/11 11:28:36     18s]     68                              met1
+[11/11 11:28:36     18s]     70                              met3
+[11/11 11:28:36     18s]     69                              met2
+[11/11 11:28:36     18s]     71                              via4
+[11/11 11:28:36     18s]     122                            pwell
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] Stream Out Information Processed for GDS version 3:
+[11/11 11:28:36     18s] Units: 1000 DBU
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] Object                             Count
+[11/11 11:28:36     18s] ----------------------------------------
+[11/11 11:28:36     18s] Instances                           3235
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] Ports/Pins                           208
+[11/11 11:28:36     18s]     metal layer met3                 208
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] Nets                               13028
+[11/11 11:28:36     18s]     metal layer li1                  648
+[11/11 11:28:36     18s]     metal layer met1                6335
+[11/11 11:28:36     18s]     metal layer met2                4775
+[11/11 11:28:36     18s]     metal layer met3                 919
+[11/11 11:28:36     18s]     metal layer met4                 317
+[11/11 11:28:36     18s]     metal layer met5                  34
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s]     Via Instances                   9044
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] Special Nets                         168
+[11/11 11:28:36     18s]     metal layer met1                 150
+[11/11 11:28:36     18s]     metal layer met4                  14
+[11/11 11:28:36     18s]     metal layer met5                   4
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s]     Via Instances                   1078
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] Metal Fills                            0
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s]     Via Instances                      0
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] Metal FillOPCs                         0
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s]     Via Instances                      0
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] Metal FillDRCs                         0
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s]     Via Instances                      0
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] Text                                   0
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] Blockages                              0
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] Custom Text                            0
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] Custom Box                             0
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] Trim Metal                             0
+[11/11 11:28:36     18s] 
+[11/11 11:28:36     18s] Scanning GDS file /misc/scratch/ar76269/pe-apprentice/8-gds/../pdk/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds to register cell name ......
+[11/11 11:28:37     18s] Merging GDS file /misc/scratch/ar76269/pe-apprentice/8-gds/../pdk/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds ......
+[11/11 11:28:37     18s] 	****** Merge file: /misc/scratch/ar76269/pe-apprentice/8-gds/../pdk/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds has version number: 3.
+[11/11 11:28:37     18s] 	****** Merge file: /misc/scratch/ar76269/pe-apprentice/8-gds/../pdk/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds has units: 1000 per micron.
+[11/11 11:28:37     18s] 	****** unit scaling factor = 1 ******
+[11/11 11:28:37     18s] ######Streamout is finished!
+[11/11 11:28:37     18s] @file 22:
+[11/11 11:28:37     18s] @file 23: # ââ Final PPA ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+[11/11 11:28:37     18s] @file 24: # Scores the finished design with ppa.tcl: setup timing at tt from 6-sta, power from 7-emir,
+[11/11 11:28:37     18s] @file 25: # and the area of the logic cells (fillers, taps and end caps left out).
+[11/11 11:28:37     18s] @file 26: # ppa_report reads Genus report text, so the numbers are first written in that format.
+[11/11 11:28:37     18s] @file 27:
+[11/11 11:28:37     18s] @file 28: # Worst setup slack in ns: the first path in 6-sta's setup report
+[11/11 11:28:37     18s] @file 29: set fh [open $sta_rpt/setup.rpt]
+[11/11 11:28:37     18s] @file 30: set setup [read $fh]
+[11/11 11:28:37     18s] @file 31: close $fh
+[11/11 11:28:37     18s] @file 32: regexp {Path 1: \S+ \((-?[0-9.]+) ns\)} $setup -> wns
+[11/11 11:28:37     18s] @file 33:
+[11/11 11:28:37     18s] @file 34: # TNS in ns and failing paths: the Standard group of the tt setup section in the summary.
+[11/11 11:28:37     18s] @file 35: # The summary only lists failing paths, so when setup passes there is no line and both stay 0.
+[11/11 11:28:37     18s] @file 36: # The Async group (reset recovery and removal) is left out, as in synthesis.
+[11/11 11:28:37     18s] @file 37: set fh [open $sta_rpt/summary.rpt]
+[11/11 11:28:37     18s] @file 38: set sta [read $fh]
+[11/11 11:28:37     18s] @file 39: close $fh
+[11/11 11:28:37     18s] @file 40: set tns  0
+[11/11 11:28:37     18s] @file 41: set nvio 0
+[11/11 11:28:37     18s] @file 42: regexp {View:view_tt\) \(EL:Setup\).*?GroupType:Standard.*?\n\s*(-?[0-9.]+):(-?[0-9.]+):([0-9]+)\s} $sta -> sum_wns tns nvio
+[11/11 11:28:37     18s] @file 43:
+[11/11 11:28:37     18s] @file 44: # Power in mW
+[11/11 11:28:37     18s] @file 45: set fh [open $emir_rpt/power/power.rpt]
+[11/11 11:28:37     18s] @file 46: set pwr [read $fh]
+[11/11 11:28:37     18s] @file 47: close $fh
+[11/11 11:28:37     18s] @file 48: regexp {Total Internal Power:\s+(\S+)}  $pwr -> int_mw
+[11/11 11:28:37     18s] @file 49: regexp {Total Switching Power:\s+(\S+)} $pwr -> sw_mw
+[11/11 11:28:37     18s] @file 50: regexp {Total Leakage Power:\s+(\S+)}   $pwr -> leak_mw
+[11/11 11:28:37     18s] @file 51: regexp {Total Power:\s+(\S+)}           $pwr -> tot_mw
+[11/11 11:28:37     18s] @file 52:
+[11/11 11:28:37     18s] @file 53: set area 0
+[11/11 11:28:37     18s] @file 54: foreach inst [get_db insts] {
+[11/11 11:28:37     18s]     if {![regexp {__(fill|decap|tapvpwrvgnd)_} [get_db $inst .base_cell.name]]} {
+[11/11 11:28:37     18s]         set area [expr {$area + [get_db $inst .area]}]
+[11/11 11:28:37     18s]     }
+[11/11 11:28:37     18s] }
+[11/11 11:28:37     19s] Multithreaded Timing Analysis is initialized with 2 threads
+[11/11 11:28:37     19s] 
+[11/11 11:28:37     19s] @file 59: set period_ps [expr {[lindex [get_db clocks .period] 0] * 1000}]
+[11/11 11:28:37     19s] @file 60:
+[11/11 11:28:37     19s] @file 61: set fh [open $rpt_dir/final_qor.rpt w]
+[11/11 11:28:37     19s] @file 62: puts $fh "Clock Period\n------------\nclk $period_ps\n"
+[11/11 11:28:37     19s] @file 63: puts $fh "clk [expr {$wns * 1000}] [expr {$tns * 1000}] $nvio"
+[11/11 11:28:37     19s] @file 64: puts $fh "Total Cell Area (Cell+Physical) $area"
+[11/11 11:28:37     19s] @file 65: close $fh
+[11/11 11:28:37     19s] @file 66:
+[11/11 11:28:37     19s] @file 67: set fh [open $rpt_dir/final_power.rpt w]
+[11/11 11:28:37     19s] @file 68: puts $fh "Subtotal [expr {$leak_mw / 1000.0}] [expr {$int_mw / 1000.0}] [expr {$sw_mw / 1000.0}] [expr {$tot_mw / 1000.0}]"
+[11/11 11:28:37     19s] @file 69: close $fh
+[11/11 11:28:37     19s] @file 70:
+[11/11 11:28:37     19s] @file 71: set ppa_activity "VCD 0-inputs/outputs/pe.vcd, Voltus at tt"
+[11/11 11:28:37     19s] @file 72: source $in_dir/ppa.tcl
+[11/11 11:28:37     19s] @file 73: ppa_report $rpt_dir/final_qor.rpt $rpt_dir/final_power.rpt $rpt_dir/pe_ppa_final.rpt
+[11/11 11:28:37     19s] @file 74: exit
+[11/11 11:28:37     19s] 
+[11/11 11:28:37     19s] *** Memory Usage v#1 (Current mem = 1584.203M, initial mem = 494.969M) ***
+[11/11 11:28:37     19s] 
+[11/11 11:28:37     19s] *** Summary of all messages that are not suppressed in this session:
+[11/11 11:28:37     19s] Severity  ID               Count  Summary                                  
+[11/11 11:28:37     19s] WARNING   IMPLF-201            5  Pin '%s' in macro '%s' has no ANTENNADIF...
+[11/11 11:28:37     19s] WARNING   IMPLF-108            1  There is no overlap layer defined in any...
+[11/11 11:28:37     19s] WARNING   IMPDBTCL-321         1  The attribute '%s' still works but will ...
+[11/11 11:28:37     19s] WARNING   IMPOGDS-389          9   Line %d: Text can be written only for N...
+[11/11 11:28:37     19s] WARNING   IMPOGDS-397          2   Line %d: Name is not output on cut laye...
+[11/11 11:28:37     19s] WARNING   IMPOGDS-407          1  Duplicate entry found in line %d, the sa...
+[11/11 11:28:37     19s] WARNING   IMPCTE-107           1  The following globals have been obsolete...
+[11/11 11:28:37     19s] WARNING   IMPTCM-77            1  Option "%s" for command %s is obsolete a...
+[11/11 11:28:37     19s] WARNING   IMPUDM-33            3  Global variable "%s" is obsolete and wil...
+[11/11 11:28:37     19s] WARNING   TECHLIB-302         12  No function defined for cell '%s'. The c...
+[11/11 11:28:37     19s] *** Message Summary: 36 warning(s), 0 error(s)
+[11/11 11:28:37     19s] 
+[11/11 11:28:37     19s] --- Ending "Innovus" (totcpu=0:00:19.1, real=0:00:23.0, mem=1584.2M) ---

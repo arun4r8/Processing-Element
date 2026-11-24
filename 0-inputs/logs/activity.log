@@ -1,0 +1,65 @@
+xrun(64): 22.09-s007: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s007: Started on Nov 04, 2026 at 01:26:23 CST
+xrun
+	-64bit
+	-sv
+	-access +r
+	-top pe_activity_tb
+	+define+CLK_PERIOD=3.0
+	+define+VCD_FILE="../outputs/pe.vcd"
+	-F ../filelist.f
+		rtl/fxp.sv
+		rtl/pe.sv
+	../tb/pe_activity_tb.sv
+	-l activity.log
+file: ../rtl/fxp.sv
+	module worklib.fxp_add:sv
+		errors: 0, warnings: 0
+	module worklib.fxp_mul:sv
+		errors: 0, warnings: 0
+file: ../rtl/pe.sv
+	module worklib.pe:sv
+		errors: 0, warnings: 0
+file: ../tb/pe_activity_tb.sv
+	module worklib.pe_activity_tb:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		pe_activity_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.fxp_add:sv <0x3fa2b0a0>
+			streams:   3, words:   732
+		worklib.fxp_mul:sv <0x77a9f051>
+			streams:   2, words:   587
+		worklib.pe:sv <0x462d8058>
+			streams:  15, words:  6524
+		worklib.pe_activity_tb:sv <0x35269a70>
+			streams:  18, words: 14917
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 4       4
+		Registers:              30      30
+		Scalar wires:           12       -
+		Vectored wires:         20       -
+		Always blocks:           5       5
+		Initial blocks:          2       2
+		Cont. assignments:       6       7
+		Pseudo assignments:     18      18
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.pe_activity_tb:sv
+Loading snapshot worklib.pe_activity_tb:sv .................... Done
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /usr/local/packages/cadence_2022/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,OLDURR: The default algorithm for $urandom_range and randcase is used. It can have distribution problems..
+activity: 4096 cycles at 3.000 ns, switch lead 0, vcd ../outputs/pe.vcd
+Simulation complete via $finish(1) at time 12306 NS + 0
+../tb/pe_activity_tb.sv:93     $finish;
+xcelium> exit
+TOOL:	xrun(64)	22.09-s007: Exiting on Nov 04, 2026 at 01:26:23 CST  (total: 00:00:00)

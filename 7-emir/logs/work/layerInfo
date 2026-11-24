@@ -1,0 +1,23 @@
+
+REDUCED
+
+CSUBSTRATE
+P_SOURCE_DRAIN*
+N_SOURCE_DRAIN*
+Poly*
+CONT*2
+licon*2
+li1"li1*2
+mcon"mcon*	2
+	met1"met1*
+2
+
+via"via*2	
+met2"met2*2
+
+via2"via2*2
+met3"met3*2
+via3"via3*2
+met4"met4*2
+via4"via4*2
+met5"met52

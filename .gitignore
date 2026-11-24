@@ -1,0 +1,12 @@
+# not my work / not shippable
+refs/
+pdk
+.cadence/
+# scratch from interactive Innovus/Genus sessions
+innovus.cmd*
+innovus.log*
+genus.cmd*
+genus.log*
+timingReports/
+*.shm/
+.DS_Store

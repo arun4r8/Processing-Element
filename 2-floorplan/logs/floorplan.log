@@ -1,0 +1,656 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.18-s099_1, built Tue Jul 18 13:03:50 PDT 2023
+Options:	-stylus -batch -no_gui -files ../floorplan.tcl -log floorplan 
+Date:		Sun Nov 22 10:50:03 2026
+Host:		daisy.ece.utexas.edu (x86_64 w/Linux 4.18.0-553.183.1.el8_10.x86_64) (16cores*64cpus*Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz 22528KB)
+OS:		Red Hat Enterprise Linux 8.10 (Ootpa)
+
+License:
+		[10:50:03.446281] Configured Lic search path (21.01-s002): /usr/local/packages/cadence_2022/license.dat
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+
+
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_3105316_daisy.ece.utexas.edu_ar76269_Rp3fLx.
+
+Change the soft stacksize limit to 0.2%RAM (771 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+#@ Processing -files option
+@innovus 1> source ../floorplan.tcl
+#@ Begin verbose source (pre): source ../floorplan.tcl
+@file 1: # ââ Floorplan ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@file 2:
+@file 3: # ââ Paths ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@file 4: set stage_dir /misc/scratch/ar76269/pe-apprentice/2-floorplan
+@file 5: set sc        $stage_dir/../pdk/sky130/sky130A/libs.ref/sky130_fd_sc_hd
+@file 6: set qrc       $stage_dir/../pdk/sky130/qrc/qrcTechFile
+@file 7: set in_dir    $stage_dir/../0-inputs
+@file 8: set syn_out   $stage_dir/../1-syn/outputs
+@file 9: set sdc       $syn_out/pe.sdc
+@file 10: set out_dir   $stage_dir/outputs
+@file 11: set rpt_dir   $stage_dir/reports
+@file 12:
+@@file 13: set_multi_cpu_usage -local_cpu 2
+@file 14:
+@file 15: # ââ Design import ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@@file 16: read_mmmc $in_dir/mmmc.tcl
+#@ Begin verbose source /misc/scratch/ar76269/pe-apprentice/2-floorplan/../0-inputs/mmmc.tcl (pre)
+@file 1: # ââ Corners ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@file 2: # One corner: typical (tt, 25 C, 1.80 V), the same library synthesis uses.
+@file 3: # Read by floorplan (saved in the db for place, cts, route) and by sta.
+@file 4: # Expects $sc, $qrc and $sdc from the calling script.
+@file 5:
+@@file 6: create_library_set -name lib_tt -timing $sc/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+@@file 7: create_timing_condition -name tc_tt -library_sets lib_tt
+@@file 8: create_rc_corner -name rc_nom -qrc_tech $qrc
+@@file 9: create_delay_corner -name dc_tt -timing_condition tc_tt -rc_corner rc_nom
+@@file 10: create_constraint_mode -name func -sdc_files $sdc
+@@file 11: create_analysis_view -name view_tt -constraint_mode func -delay_corner dc_tt
+@file 12:
+@@file 13: set_analysis_view -setup view_tt -hold view_tt
+#@ End verbose source /misc/scratch/ar76269/pe-apprentice/2-floorplan/../0-inputs/mmmc.tcl
+Starting library reading in 'Multi-threaded flow' (with '2' threads)
+
+Threads Configured:2
+Reading lib_tt timing library /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib.
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_8'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_6'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_4'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_bleeder_1'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__diode_2'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_8'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_6'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_4'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_3'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_12'. The cell will only be used for analysis. (File /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+Read 428 cells in library sky130_fd_sc_hd__tt_025C_1v80.
+Library reading multithread flow ended.
+@@file 17: read_physical -lef [list $sc/techlef/sky130_fd_sc_hd__nom.tlef $sc/lef/sky130_fd_sc_hd.lef]
+
+Loading LEF file /misc/scratch/ar76269/pe-apprentice/2-floorplan/../pdk/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef ...
+
+Loading LEF file /misc/scratch/ar76269/pe-apprentice/2-floorplan/../pdk/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef ...
+WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /misc/scratch/ar76269/pe-apprentice/2-floorplan/../pdk/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef at line 2.
+**WARN: (IMPLF-108):	There is no overlap layer defined in any LEF file
+so you are unable to create rectilinear partition in a hierarchical flow.
+Set DBUPerIGU to M1 pitch 460.
+**WARN: (IMPLF-201):	Pin 'X' in macro 'sky130_fd_sc_hd__probec_p_8' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'X' in macro 'sky130_fd_sc_hd__probe_p_8' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'LO' in macro 'sky130_fd_sc_hd__macro_sparecell' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'HI' in macro 'sky130_fd_sc_hd__conb_1' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'LO' in macro 'sky130_fd_sc_hd__conb_1' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+@@file 18: read_netlist $syn_out/pe.v
+#% Begin Load netlist data ... (date=11/22 10:50:19, mem=929.6M)
+*** Begin netlist parsing (mem=1034.5M) ***
+Created 428 new cells from 1 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '/misc/scratch/ar76269/pe-apprentice/2-floorplan/../1-syn/outputs/pe.v'
+
+*** Memory Usage v#1 (Current mem = 1034.516M, initial mem = 494.969M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1034.5M) ***
+#% End Load netlist data ... (date=11/22 10:50:19, total cpu=0:00:00.0, real=0:00:00.0, peak res=939.4M, current mem=939.4M)
+Top level cell is pe.
+Hooked 428 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell pe ...
+*** Netlist is unique.
+** info: there are 440 modules.
+** info: there are 1043 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1069.930M, initial mem = 494.969M) ***
+@@file 19: set_db init_power_nets  VDD
+@@file 20: set_db init_ground_nets VSS
+@@file 21: init_design
+Adjust met3 preferred direction offset from 0.34 to 0.17.
+Adjust met4 preferred direction offset from 0.46 to 0.23.
+Adjust met5 preferred direction offset from 1.7 to 0.17.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in preferred direction.
+Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For post_route extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Generating auto layer map file.
+Importing multi-corner technology file(s) for preRoute extraction...
+/misc/scratch/ar76269/pe-apprentice/2-floorplan/../pdk/sky130/qrc/qrcTechFile
+Generating auto layer map file.
+Completed (cpu: 0:00:01.5 real: 0:00:01.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: view_tt
+    RC-Corner Name        : rc_nom
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/misc/scratch/ar76269/pe-apprentice/2-floorplan/../pdk/sky130/qrc/qrcTechFile'
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+Default value for post_route extraction mode's extract_rc_effort_level (extract_rc_effort_level option of set_db) changed to 'medium'.
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '/misc/scratch/ar76269/pe-apprentice/2-floorplan/../1-syn/outputs/pe.sdc' ...
+Current (total cpu=0:00:17.5, real=0:00:19.0, peak res=1274.1M, current mem=1274.1M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File /misc/scratch/ar76269/pe-apprentice/2-floorplan/../1-syn/outputs/pe.sdc, Line 9).
+
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File /misc/scratch/ar76269/pe-apprentice/2-floorplan/../1-syn/outputs/pe.sdc, Line 10).
+
+pe
+INFO (CTE): Reading of timing constraints file /misc/scratch/ar76269/pe-apprentice/2-floorplan/../1-syn/outputs/pe.sdc completed, with 2 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1293.2M, current mem=1293.2M)
+Current (total cpu=0:00:17.6, real=0:00:19.0, peak res=1293.2M, current mem=1293.2M)
+**WARN: (TA-976):	Path groups asserted by the group_path constraint are considered by the software to be global in nature - they cannot be restricted to specific constraint modes. Due to this restriction, the group_path constraint is not supported directly in the constraint files which are configured in mode-specific commands such as create_constraint_mode. The current group_path entry will be ignored. You can enter the group_path constraint interactively or as part of a general command script -  where it will be interpreted as global and will be in effect for all modes.
+Total number of combinational cells: 319
+Total number of sequential cells: 68
+Total number of tristate cells: 13
+Total number of level shifter cells: 7
+Total number of power gating cells: 0
+Total number of isolation cells: 11
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 10
+List of usable buffers: sky130_fd_sc_hd__buf_1 sky130_fd_sc_hd__buf_12 sky130_fd_sc_hd__buf_16 sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_4 sky130_fd_sc_hd__buf_6 sky130_fd_sc_hd__buf_8 sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_16 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8 sky130_fd_sc_hd__dlymetal6s2s_1 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__probe_p_8
+Total number of usable buffers: 15
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: sky130_fd_sc_hd__bufinv_16 sky130_fd_sc_hd__clkinv_1 sky130_fd_sc_hd__bufinv_8 sky130_fd_sc_hd__clkinv_16 sky130_fd_sc_hd__clkinv_2 sky130_fd_sc_hd__clkinv_4 sky130_fd_sc_hd__clkinv_8 sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__clkinvlp_2 sky130_fd_sc_hd__clkinvlp_4 sky130_fd_sc_hd__inv_12 sky130_fd_sc_hd__inv_16 sky130_fd_sc_hd__inv_2 sky130_fd_sc_hd__inv_4 sky130_fd_sc_hd__inv_6 sky130_fd_sc_hd__inv_8
+Total number of usable inverters: 16
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: sky130_fd_sc_hd__bufbuf_16 sky130_fd_sc_hd__bufbuf_8 sky130_fd_sc_hd__clkdlybuf4s15_1 sky130_fd_sc_hd__clkdlybuf4s15_2 sky130_fd_sc_hd__clkdlybuf4s18_1 sky130_fd_sc_hd__clkdlybuf4s18_2 sky130_fd_sc_hd__clkdlybuf4s25_1 sky130_fd_sc_hd__clkdlybuf4s50_1 sky130_fd_sc_hd__clkdlybuf4s25_2 sky130_fd_sc_hd__clkdlybuf4s50_2 sky130_fd_sc_hd__dlygate4sd2_1 sky130_fd_sc_hd__dlygate4sd1_1 sky130_fd_sc_hd__dlygate4sd3_1 sky130_fd_sc_hd__dlymetal6s6s_1 sky130_fd_sc_hd__dlymetal6s4s_1
+Total number of identified usable delay cells: 15
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+@file 22:
+@file 23: # Needed for post-route timing; saved in the db
+@@file 24: set_db timing_analysis_type ocv
+@@file 25: set_db timing_analysis_cppr both
+@file 26:
+@file 27: # ââ Global nets ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@@file 28: connect_global_net VDD -type pg_pin -pin_base_name VPWR -all
+@@file 29: connect_global_net VSS -type pg_pin -pin_base_name VGND -all
+@file 30:
+@file 31: # Body (well) pins
+@@file 32: connect_global_net VDD -type pg_pin -pin_base_name VPB  -all
+@@file 33: connect_global_net VSS -type pg_pin -pin_base_name VNB  -all
+@file 34:
+@file 35: # ââ Core ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@file 36: # Core width and height, then core to die on the left, bottom, right and top, in um.
+@file 37:
+@@file 38: create_floorplan -site unithd -core_size 135 135 10 10 10 10;
+Adjusting core size togrid(PlacementGrid): width :134.78 height : 134.98
+**WARN: (IMPFP-4026):	Adjusting core to 'Left' to 10.120000 due to track/row misalignment. To force the value, specify the -no_snap_to_grid option or use floorplan_set_snap_rule command to specify the die/core to different grid.
+**WARN: (IMPFP-4026):	Adjusting core to 'Bottom' to 9.860000 due to track/row misalignment. To force the value, specify the -no_snap_to_grid option or use floorplan_set_snap_rule command to specify the die/core to different grid.
+**WARN: (IMPFP-4026):	Adjusting core to 'Right' to 10.120000 due to track/row misalignment. To force the value, specify the -no_snap_to_grid option or use floorplan_set_snap_rule command to specify the die/core to different grid.
+**WARN: (IMPFP-4026):	Adjusting core to 'Top' to 9.860000 due to track/row misalignment. To force the value, specify the -no_snap_to_grid option or use floorplan_set_snap_rule command to specify the die/core to different grid.
+Adjust met3 preferred direction offset from 0.34 to 0.17.
+Adjust met4 preferred direction offset from 0.46 to 0.23.
+Adjust met5 preferred direction offset from 1.7 to 0.17.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in preferred direction.
+Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current create_floorplan objects are automatically derived based on specified new create_floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+@file 38: #you need to set your core area here
+@file 39:
+@file 40: # ââ Pins âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@file 41: # Groups are set in SetPinGroup.tcl. Inputs on the left edge, outputs on the right.
+@file 42: # -start {x y} is in um; on the left and right edges only y is used.
+@file 43: # you need to fill in some blanks in SetPinGroup.tcl
+@file 44: # you will need to adjust the spacing for your core area that you choose
+@file 45:
+@file 46: source $stage_dir/SetPinGroup.tcl
+#@ Begin verbose source /misc/scratch/ar76269/pe-apprentice/2-floorplan/SetPinGroup.tcl (pre)
+@file 1: # ââ Pin groups âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@file 2: # Port names for each edit_pin in floorplan.tcl. Buses list bit 0 first.
+@file 3:
+@file 4: # bus pe_psum_in 16 -> pe_psum_in[0] pe_psum_in[1] ... pe_psum_in[15]
+@file 5: proc bus {name width} {
+    set pins {}
+    for {set i 0} {$i < $width} {incr i} { lappend pins "$name\[$i\]" }
+    return $pins
+}
+@file 10:
+@file 11: # ââ Inputs âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@file 12: set CtrlIn   {clk rst pe_accept_w_in pe_valid_in pe_switch_in pe_enabled}
+@file 13: set PsumIn   [bus pe_psum_in    16]
+@file 14: set WeightIn [bus pe_weight_in  16] ;
+@file 14: # create for weight in
+@file 15: set InputIn  [bus pe_input_in   16] ;
+@file 15: # create for input in
+@file 16:
+@file 17: # ââ Outputs ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@file 18: set CtrlOut   {pe_valid_out pe_switch_out} ;
+@file 18: # put your two output controls here
+@file 19: set PsumOut   [bus pe_psum_out   16]
+@file 20: set WeightOut [bus pe_weight_out 16] ;
+@file 20: # create for weight out
+@file 21: set InputOut  [bus pe_input_out  16] ;
+@file 21: # create for input out
+#@ End verbose source /misc/scratch/ar76269/pe-apprentice/2-floorplan/SetPinGroup.tcl
+@@file 47: set_db assign_pins_edit_in_batch true
+@file 48:
+@@file 49: edit_pin -pin $CtrlIn   -side left -spread_type start -start {0 20} -spacing 4.08 -layer met3 -spread_direction clockwise -fixed_pin 1
+Successfully spread [6] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+@@file 50: edit_pin -pin $PsumIn   -side left -spread_type start -start {0 50} -spacing 1.36 -layer met3 -spread_direction clockwise -fixed_pin 1
+Successfully spread [16] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+@@file 51: edit_pin -pin $WeightIn -side left -spread_type start -start {0 80} -spacing 1.36 -layer met3 -spread_direction clockwise -fixed_pin 1
+Successfully spread [16] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+@@file 52: edit_pin -pin $InputIn  -side left -spread_type start -start {0 110} -spacing 1.36 -layer met3 -spread_direction clockwise -fixed_pin 1
+Successfully spread [16] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+@file 53:
+@@file 54: edit_pin -pin $PsumOut   -side right -spread_type start -start {0 72} -spacing 1.36 -layer met3 -spread_direction clockwise -fixed_pin 1
+Successfully spread [16] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+@@file 55: edit_pin -pin $WeightOut -side right -spread_type start -start {0 102} -spacing 1.36 -layer met3 -spread_direction clockwise -fixed_pin 1
+Successfully spread [16] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+@@file 56: edit_pin -pin $InputOut  -side right -spread_type start -start {0 132} -spacing 1.36 -layer met3 -spread_direction clockwise -fixed_pin 1
+Successfully spread [16] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+@@file 57: edit_pin -pin $CtrlOut   -side right -spread_type start -start {0 24} -spacing 4.08 -layer met3 -spread_direction clockwise -fixed_pin 1
+Successfully spread [2] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+@file 58:
+@@file 59: set_db assign_pins_edit_in_batch false
+@file 60:
+@file 61: # ââ Well taps and end caps âââââââââââââââââââââââââââââââââââââââââââââââââââ
+@@file 62: set_db add_endcaps_left_edge  sky130_fd_sc_hd__decap_3
+@@file 63: set_db add_endcaps_right_edge sky130_fd_sc_hd__decap_3
+@@file 64: add_endcaps -prefix ENDCAP
+**WARN: (IMPSP-5534):	'add_endcaps_left_edge' and 'add_endcaps_right_edge' are using the same endcap cells
+**WARN: (IMPSP-5534):	'add_endcaps_left_bottom_corner' and 'add_endcaps_right_bottom_corner' are using the same endcap cells
+**WARN: (IMPSP-5534):	'add_endcaps_left_top_corner' and 'add_endcaps_right_top_corner' are using the same endcap cells
+Multithreaded Timing Analysis is initialized with 2 threads
+
+Estimated cell power/ground rail width = 0.340 um
+Minimum row-size in sites for endcap insertion = 7.
+Minimum number of sites for row blockage       = 1.
+Inserted 49 pre-endcap <sky130_fd_sc_hd__decap_3> cells (prefix ENDCAP).
+Inserted 49 post-endcap <sky130_fd_sc_hd__decap_3> cells (prefix ENDCAP).
+For 98 new insts, @@file 65: add_well_taps -cell sky130_fd_sc_hd__tapvpwrvgnd_1 -cell_interval 26.0 -checker_board -prefix WELLTAP
+skipRow option will be disabled when checkerBoard is set
+**WARN: (IMPSP-5134):	Setting cellInterval to 25.760 (microns) as a multiple of cell sky130_fd_sc_hd__tapvpwrvgnd_1's techSite 'unithd' width of 0.460 microns
+Type 'man IMPSP-5134' for more detail.
+For 280 new insts, Inserted 280 well-taps <sky130_fd_sc_hd__tapvpwrvgnd_1> cells (prefix WELLTAP).
+@file 66:
+@file 67: # ââ Power Grid âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@file 68: ## Core edges in um; match the -core_size you set in create_floorplan. use at least 10um of margin
+@file 69: set XMinCore 10 ;
+@file 69: # left margin
+@file 70: set XMaxCore 145 ;
+@file 70: # left margin + core width
+@file 71: set YMinCore 10 ;
+@file 71: # bottom margin
+@file 72: set YMaxCore 145 ;
+@file 72: # bottom margin + core height
+@file 73:
+@file 74: ## Adding parameters for power stripes
+@file 75: set power_metal_start_x [expr $XMinCore + 2]
+@file 76: set power_metal_start_y [expr $YMinCore + 2]
+@file 77: set power_metal_stop_x  [expr $XMaxCore - 2]
+@file 78: set power_metal_stop_y  [expr $YMaxCore - 2]
+@file 79: set power_metal_width   2 ;
+@file 79: # set your power rail metal width in um
+@file 80:
+@@file 81: add_rings -nets {VDD VSS} -type core_rings -follow core -layer {top met5 bottom met5 left met4 right met4} -width $power_metal_width -spacing 1.8 -offset 1.8
+#% Begin add_rings (date=11/22 10:50:22, mem=1425.4M)
+
+
+viaInitial starts at Sun Nov 22 10:50:22 2026
+viaInitial ends at Sun Nov 22 10:50:22 2026
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1715.9M)
+Ring generation is complete.
+vias are now being generated.
+add_rings created 8 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  met4  |        4       |       NA       |
+|  via4  |        8       |        0       |
+|  met5  |        4       |       NA       |
++--------+----------------+----------------+
+#% End add_rings (date=11/22 10:50:22, total cpu=0:00:00.0, real=0:00:00.0, peak res=1428.7M, current mem=1428.7M)
+@@file 82: route_special -connect core_pin -nets {VDD VSS}
+#% Begin route_special (date=11/22 10:50:22, mem=1428.7M)
+*** Begin SPECIAL ROUTE on Sun Nov 22 10:50:22 2026 ***
+SPECIAL ROUTE ran on directory: /misc/scratch/ar76269/pe-apprentice/2-floorplan/logs
+SPECIAL ROUTE ran on machine: daisy.ece.utexas.edu (Linux 4.18.0-553.183.1.el8_10.x86_64 Xeon 3.90Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "VDD VSS"
+routeSpecial set to true
+srouteConnectBlockPin set to false
+srouteConnectConverterPin set to false
+srouteConnectPadPin set to false
+srouteConnectStripe set to false
+srouteFollowCorePinEnd set to 3
+srouteFollowPadPin set to false
+srouteJogControl set to "preferWithChanges differentLayer"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3065.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
+Read in 12 layers, 6 routing layers, 0 overlap layer
+Read in 437 macros, 92 used
+Read in 467 components
+  467 core components: 89 unplaced, 0 placed, 378 fixed
+Read in 104 physical pins
+  104 physical pins: 0 unplaced, 0 placed, 104 fixed
+Read in 104 nets
+Read in 2 special nets, 2 routed
+Read in 1412 terminals
+2 nets selected.
+
+Begin power routing ...
+CPU time for VDD FollowPin 0 seconds
+CPU time for VSS FollowPin 0 seconds
+  Number of Core ports routed: 100
+  Number of Followpin connections: 50
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3068.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 104 io pins ...
+ Updating DB with 0 via definition ...Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+
+route_special created 150 wires.
+ViaGen created 300 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  met1  |       150      |       NA       |
+|   via  |       100      |        0       |
+|  via2  |       100      |        0       |
+|  via3  |       100      |        0       |
++--------+----------------+----------------+
+#% End route_special (date=11/22 10:50:22, total cpu=0:00:00.2, real=0:00:00.0, peak res=1446.3M, current mem=1438.4M)
+@@file 83: add_stripes -nets {VDD VSS} -layer met4 -direction vertical -width 2.0 -spacing 1.6 -set_to_set_distance 30 -start_from left -start_offset 20 -extend_to design_boundary
+#% Begin add_stripes (date=11/22 10:50:22, mem=1438.4M)
+
+Initialize fgc environment(mem: 1716.2M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1716.2M)
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_1' instance was increased to (10.120000 9.860000) (11.500000 12.820000) because the VGND pin (10.120000 12.340000) (11.500000 12.820000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_2' instance was increased to (143.520004 9.860000) (144.899994 12.820000) because the VGND pin (143.520004 12.340000) (144.899994 12.820000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_3' instance was increased to (10.120000 12.580000) (11.500000 15.540000) because the VPWR pin (10.120000 15.060000) (11.500000 15.540000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_4' instance was increased to (143.520004 12.580000) (144.899994 15.540000) because the VPWR pin (143.520004 15.060000) (144.899994 15.540000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_5' instance was increased to (10.120000 15.300000) (11.500000 18.260000) because the VGND pin (10.120000 17.780001) (11.500000 18.260000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_6' instance was increased to (143.520004 15.300000) (144.899994 18.260000) because the VGND pin (143.520004 17.780001) (144.899994 18.260000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_7' instance was increased to (10.120000 18.020000) (11.500000 20.980000) because the VPWR pin (10.120000 20.500000) (11.500000 20.980000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_8' instance was increased to (143.520004 18.020000) (144.899994 20.980000) because the VPWR pin (143.520004 20.500000) (144.899994 20.980000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_9' instance was increased to (10.120000 20.740000) (11.500000 23.700001) because the VGND pin (10.120000 23.219999) (11.500000 23.700001) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_10' instance was increased to (143.520004 20.740000) (144.899994 23.700001) because the VGND pin (143.520004 23.219999) (144.899994 23.700001) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_11' instance was increased to (10.120000 23.459999) (11.500000 26.420000) because the VPWR pin (10.120000 25.940001) (11.500000 26.420000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_12' instance was increased to (143.520004 23.459999) (144.899994 26.420000) because the VPWR pin (143.520004 25.940001) (144.899994 26.420000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_13' instance was increased to (10.120000 26.180000) (11.500000 29.139999) because the VGND pin (10.120000 28.660000) (11.500000 29.139999) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_14' instance was increased to (143.520004 26.180000) (144.899994 29.139999) because the VGND pin (143.520004 28.660000) (144.899994 29.139999) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_15' instance was increased to (10.120000 28.900000) (11.500000 31.860001) because the VPWR pin (10.120000 31.379999) (11.500000 31.860001) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_16' instance was increased to (143.520004 28.900000) (144.899994 31.860001) because the VPWR pin (143.520004 31.379999) (144.899994 31.860001) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_17' instance was increased to (10.120000 31.620001) (11.500000 34.580002) because the VGND pin (10.120000 34.099998) (11.500000 34.580002) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_18' instance was increased to (143.520004 31.620001) (144.899994 34.580002) because the VGND pin (143.520004 34.099998) (144.899994 34.580002) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_19' instance was increased to (10.120000 34.340000) (11.500000 37.299999) because the VPWR pin (10.120000 36.820000) (11.500000 37.299999) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_20' instance was increased to (143.520004 34.340000) (144.899994 37.299999) because the VPWR pin (143.520004 36.820000) (144.899994 37.299999) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (EMS-27):	Message (IMPPP-133) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1716.2M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1716.2M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1716.2M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+**WARN: (IMPPP-4055):	The run time of add_stripes will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of set_multi_cpu_usage in add_stripes.
+Type 'man IMPPP-4055' for more detail.
+Stripe generation is complete.
+vias are now being generated.
+add_stripes created 8 wires.
+ViaGen created 616 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   via  |       200      |        0       |
+|  via2  |       200      |        0       |
+|  via3  |       200      |        0       |
+|  met4  |        8       |       NA       |
+|  via4  |       16       |        0       |
++--------+----------------+----------------+
+#% End add_stripes (date=11/22 10:50:22, total cpu=0:00:00.1, real=0:00:00.0, peak res=1439.6M, current mem=1439.6M)
+@@file 84: add_stripes -nets {VDD VSS} -layer met5 -direction horizontal -width 2.0 -spacing 1.6 -set_to_set_distance 30 -start_from bottom -start_offset 20 -extend_to design_boundary 
+#% Begin add_stripes (date=11/22 10:50:22, mem=1439.6M)
+
+Initialize fgc environment(mem: 1717.2M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1717.2M)
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_1' instance was increased to (10.120000 9.860000) (11.500000 12.820000) because the VGND pin (10.120000 12.340000) (11.500000 12.820000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_2' instance was increased to (143.520004 9.860000) (144.899994 12.820000) because the VGND pin (143.520004 12.340000) (144.899994 12.820000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_3' instance was increased to (10.120000 12.580000) (11.500000 15.540000) because the VPWR pin (10.120000 15.060000) (11.500000 15.540000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_4' instance was increased to (143.520004 12.580000) (144.899994 15.540000) because the VPWR pin (143.520004 15.060000) (144.899994 15.540000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_5' instance was increased to (10.120000 15.300000) (11.500000 18.260000) because the VGND pin (10.120000 17.780001) (11.500000 18.260000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_6' instance was increased to (143.520004 15.300000) (144.899994 18.260000) because the VGND pin (143.520004 17.780001) (144.899994 18.260000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_7' instance was increased to (10.120000 18.020000) (11.500000 20.980000) because the VPWR pin (10.120000 20.500000) (11.500000 20.980000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_8' instance was increased to (143.520004 18.020000) (144.899994 20.980000) because the VPWR pin (143.520004 20.500000) (144.899994 20.980000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_9' instance was increased to (10.120000 20.740000) (11.500000 23.700001) because the VGND pin (10.120000 23.219999) (11.500000 23.700001) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_10' instance was increased to (143.520004 20.740000) (144.899994 23.700001) because the VGND pin (143.520004 23.219999) (144.899994 23.700001) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_11' instance was increased to (10.120000 23.459999) (11.500000 26.420000) because the VPWR pin (10.120000 25.940001) (11.500000 26.420000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_12' instance was increased to (143.520004 23.459999) (144.899994 26.420000) because the VPWR pin (143.520004 25.940001) (144.899994 26.420000) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_13' instance was increased to (10.120000 26.180000) (11.500000 29.139999) because the VGND pin (10.120000 28.660000) (11.500000 29.139999) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_14' instance was increased to (143.520004 26.180000) (144.899994 29.139999) because the VGND pin (143.520004 28.660000) (144.899994 29.139999) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_15' instance was increased to (10.120000 28.900000) (11.500000 31.860001) because the VPWR pin (10.120000 31.379999) (11.500000 31.860001) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_16' instance was increased to (143.520004 28.900000) (144.899994 31.860001) because the VPWR pin (143.520004 31.379999) (144.899994 31.860001) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_17' instance was increased to (10.120000 31.620001) (11.500000 34.580002) because the VGND pin (10.120000 34.099998) (11.500000 34.580002) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_18' instance was increased to (143.520004 31.620001) (144.899994 34.580002) because the VGND pin (143.520004 34.099998) (144.899994 34.580002) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_19' instance was increased to (10.120000 34.340000) (11.500000 37.299999) because the VPWR pin (10.120000 36.820000) (11.500000 37.299999) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_20' instance was increased to (143.520004 34.340000) (144.899994 37.299999) because the VPWR pin (143.520004 36.820000) (144.899994 37.299999) on layer met1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (EMS-27):	Message (IMPPP-133) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1717.2M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1717.2M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1717.2M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+**WARN: (IMPPP-4055):	The run time of add_stripes will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of set_multi_cpu_usage in add_stripes.
+Type 'man IMPPP-4055' for more detail.
+Stripe generation is complete.
+vias are now being generated.
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer met5 & met1 at (6.32, 31.38) (10.12, 31.86).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer met5 & met1 at (10.12, 31.38) (144.90, 31.86).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer met5 & met1 at (144.90, 31.38) (148.70, 31.86).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer met5 & met1 at (6.32, 91.22) (10.12, 91.70).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer met5 & met1 at (10.12, 91.22) (144.90, 91.70).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer met5 & met1 at (144.90, 91.22) (148.70, 91.70).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer met5 & met1 at (2.52, 34.10) (10.12, 34.58).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer met5 & met1 at (10.12, 34.10) (144.90, 34.58).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer met5 & met1 at (144.90, 34.10) (152.50, 34.58).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer met5 & met1 at (2.52, 93.94) (10.12, 94.42).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer met5 & met1 at (10.12, 93.94) (144.90, 94.42).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer met5 & met1 at (144.90, 93.94) (152.50, 94.42).
+add_stripes created 8 wires.
+ViaGen created 48 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  via4  |       48       |        0       |
+|  met5  |        8       |       NA       |
++--------+----------------+----------------+
+#% End add_stripes (date=11/22 10:50:22, total cpu=0:00:00.0, real=0:00:00.0, peak res=1439.6M, current mem=1439.6M)
+@file 85: # ââ Reports ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@@file 86: check_floorplan -out_file $rpt_dir/check_floorplan.rpt
+Checking routing tracks.....
+Checking other grids.....
+Checking FINFET Grid is on Manufacture Grid.....
+Checking core/die box is on Grid.....
+Checking snap rule ......
+Checking Row is on grid......
+Checking AreaIO row.....
+Checking row out of die ...
+Checking routing blockage.....
+Checking components.....
+Checking IO Pads out of die...
+Checking constraints (guide/region/fence).....
+
+Checking Preroutes.....
+No. of regular pre-routes not on tracks : 0 
+*** Message Summary: 0 warning(s), 0 error(s)
+
+@@file 87: check_connectivity -type special -nets {VDD VSS} -ignore_soft_pg_connects -out_file $rpt_dir/pg_connectivity.rpt
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Sun Nov 22 10:50:22 2026
+
+Design Name: pe
+Database Units: 1000
+Design Boundary: (0.0000, 0.0000) (155.0200, 154.7000)
+Error Limit = 1000; Warning Limit = 50
+Check specified nets
+Use 2 pthreads
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Sun Nov 22 10:50:22 2026
+Time Elapsed: 0:00:00.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 1.000M)
+
+@file 88:
+@file 89: # ââ Outputs ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@@file 90: write_db $out_dir/pe.floorplan.db
+tc_tt
+#% Begin save design ... (date=11/22 10:50:22, mem=1444.3M)
+% Begin Save ccopt configuration ... (date=11/22 10:50:22, mem=1444.3M)
+% End Save ccopt configuration ... (date=11/22 10:50:23, total cpu=0:00:00.0, real=0:00:00.0, peak res=1446.1M, current mem=1446.1M)
+% Begin Save netlist data ... (date=11/22 10:50:23, mem=1446.1M)
+Writing Binary DB to /misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/vbin/pe.v.bin in multi-threaded mode...
+% End Save netlist data ... (date=11/22 10:50:23, total cpu=0:00:00.0, real=0:00:00.0, peak res=1454.5M, current mem=1446.4M)
+Saving symbol-table file ...
+Saving congestion map file /misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/pe.route.congmap.gz ...
+% Begin Save AAE data ... (date=11/22 10:50:23, mem=1446.4M)
+Saving AAE Data ...
+% End Save AAE data ... (date=11/22 10:50:23, total cpu=0:00:00.0, real=0:00:00.0, peak res=1446.4M, current mem=1446.4M)
+Saving preference file /misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/gui.pref.tcl ...
+Saving mode setting ...
+Saving root attributes to be loaded post write_db ...
+Saving global file ...
+Saving root attributes to be loaded previous write_db ...
+% Begin Save floorplan data ... (date=11/22 10:50:24, mem=1452.1M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=11/22 10:50:24, total cpu=0:00:00.0, real=0:00:00.0, peak res=1452.2M, current mem=1452.2M)
+Saving PG file /misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/pe.pg.gz, version#2, (Created by Innovus v21.18-s099_1 on Sun Nov 22 10:50:24 2026)
+*** Completed savePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=1723.8M) ***
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=11/22 10:50:24, mem=1452.2M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=11/22 10:50:24, total cpu=0:00:00.0, real=0:00:00.0, peak res=1452.7M, current mem=1452.7M)
+% Begin Save routing data ... (date=11/22 10:50:24, mem=1452.7M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:01.0 mem=1724.8M) ***
+% End Save routing data ... (date=11/22 10:50:25, total cpu=0:00:00.0, real=0:00:01.0, peak res=1452.9M, current mem=1452.9M)
+Saving property file /misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/pe.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1727.8M) ***
+Saving preRoute extracted patterns in file '/misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/pe.techData.gz' ...
+Saving preRoute extraction data in directory '/misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/extraction/' ...
+% Begin Save power constraints data ... (date=11/22 10:50:25, mem=1453.9M)
+% End Save power constraints data ... (date=11/22 10:50:25, total cpu=0:00:00.0, real=0:00:00.0, peak res=1453.9M, current mem=1453.9M)
+rc_nom
+rc_nom
+rc_nom
+Generated self-contained design pe.floorplan.db
+#% End save design ... (date=11/22 10:50:25, total cpu=0:00:01.2, real=0:00:03.0, peak res=1482.9M, current mem=1456.6M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+@file 91:
+@file 92: exit
+
+*** Memory Usage v#1 (Current mem = 1746.109M, initial mem = 494.969M) ***
+*** Message Summary: 241 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:19.6, real=0:00:22.0, mem=1746.1M) ---

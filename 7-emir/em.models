@@ -1,0 +1,26 @@
+# ── SKY130 EM limits ─────────────────────────────────────────────────────────
+# DC average limits from sky130_fd_sc_hd__nom.tlef (Tj = 90 C).
+# Metal: LEF mA/um divided by the layer thickness, in A/cm^2.
+# Via:   LEF mA per cut, in A per via.
+
+model met1 thickness   = 0.35e-06;   # m
+model met1 jmax_dc_avg = 8.0e+05;    # 2.8 mA/um
+model met2 thickness   = 0.35e-06;
+model met2 jmax_dc_avg = 8.0e+05;    # 2.8 mA/um
+model met3 thickness   = 0.8e-06;
+model met3 jmax_dc_avg = 8.5e+05;    # 6.8 mA/um
+model met4 thickness   = 0.8e-06;
+model met4 jmax_dc_avg = 8.5e+05;    # 6.8 mA/um
+model met5 thickness   = 1.2e-06;
+model met5 jmax_dc_avg = 8.475e+05;  # 10.17 mA/um
+
+model mcon vcwidth       = 0.17e-06; # m
+model mcon jmax_dc_avg_w = 0.36e-03;
+model via  vcwidth       = 0.15e-06;
+model via  jmax_dc_avg_w = 0.29e-03;
+model via2 vcwidth       = 0.2e-06;
+model via2 jmax_dc_avg_w = 0.48e-03;
+model via3 vcwidth       = 0.2e-06;
+model via3 jmax_dc_avg_w = 0.48e-03;
+model via4 vcwidth       = 0.8e-06;
+model via4 jmax_dc_avg_w = 2.49e-03;

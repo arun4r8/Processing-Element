@@ -1,0 +1,10 @@
+CMD: /usr/local/packages/cadence_2022/SSV221/tools.lnx86/ssvtools/bin/64bit/voltus_rail -nhbPort 53047 -procInfoHost yoshi.ece.utexas.edu:49347 -temp_directory_name /tmp/ssv_tmpdir_2461037_oha9hq -eps -clienttimeout 3600 -machine yoshi.ece.utexas.edu -port 52527 -hbPort -1 -id 1 
+CWD: /misc/scratch/ar76269/pe-apprentice/7-emir/logs
+PID: 2468433
+Host: yoshi.ece.utexas.edu
+Number of CPU(s): 64
+System total memory: 385559MB
+date_time max RSS memory(MB) RSS memory(MB) virtual memory(MB) shared memory(MB)
+2026-11-11 11:25:56 53 53 4958 41
+2026-11-11 11:26:6 660 557 6592 51
+end

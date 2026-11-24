@@ -1,0 +1,300 @@
+INFO (PRL-725): EDP: start server on yoshi.ece.utexas.edu:46453
+
+INFO (PRL-756): Wed Nov 11 11:25:46 2026: Successfully connected to the master.
+
+INFO (PRL-760): sending server data to client yoshi.ece.utexas.edu 46453 0 2468425 
+
+Invoking: "/usr/local/packages/cadence_2022/SSV221/tools.lnx86/ssvtools/bin/64bit/voltus_rail_smg -cmd /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/voltus_rail_smg.VSS.cmd -l /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/voltus_rail_smg.VSS.log" ...
+Begin Merging power grid
+Tech reference temperature: 30
+Target temperature: 25
+
+Set Layer via4 for the Auto Ploc Vsrc feature
+Grid Statistics of Net VSS:
+- NODE
+  Total node: 4828
+    Top Level grid node: 4828
+      Top level interface node: 3235
+    Missing interface node: 0
+    Cell internal node: 0
+- ELEM
+  Total element: 5133
+    Top Level grid element: 5133
+    Cell internal element: 0
+- INST
+  Instance logically connected: 3235
+    Tech: 3235
+    StdCell: 0
+    Macro:
+      Early: 0
+      IR: 0
+      EM: 0
+    Current Region:  0
+  Dropped instance due to missing/incomplete cell library: 0
+- TAP
+  Total tap: 3235
+
+Ended Merging power grid: (cpu=0:00:01, real=0:00:00, mem(process/total/peak)=27.84MB/21708.56MB/3108.67MB)
+
+Analysis_Output_Directory is /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1//VSS
+Analysis_Power_Domain is core
+
+
+
+Begin Report Generation
+
+
+Net VSS:
+
+
+Begin Preparing Database for Report Generation
+
+Circuit profile:
+                                                      Current    Voltage
+Layer Name                       Nodes   Resistors    Sources    Sources
+----- --------------------  ----------  ----------  ---------  ---------
+0     met5                          18          16          0         14
+1     via4                           0          14          0          0
+2     met4                         303         296          0          0
+3     via3                           0         225          0          0
+4     met3                         575         400          0          0
+5     via2                           0         225          0          0
+6     met2                         675         500          0          0
+7     via                            0         225          0          0
+8     met1                        3257        3232       2982          0
+                            ----------  ----------  ---------  ---------
+9     Circuit total               4829        5133       2982         14
+Ended Preparing Database for Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=427.89MB/30511.97MB/3909.19MB)
+
+Initializing Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=427.89MB/30511.97MB/3909.19MB)
+
+Begin IR Drop (Linear) Report Generation
+  Voltage: 0
+  Threshold: 0.09
+  Minimum, Average, Maximum IR Drop: 0.000V, 0.423mV, 1.012mV
+    Range 1(   0.885mV  -     1.012mV ):        10 (  0.21%)
+    Range 2(   0.759mV  -     0.885mV ):        62 (  1.28%)
+    Range 3(   0.632mV  -     0.759mV ):       332 (  6.88%)
+    Range 4(   0.506mV  -     0.632mV ):      1241 ( 25.70%)
+    Range 5(   0.379mV  -     0.506mV ):      1135 ( 23.51%)
+    Range 6(   0.253mV  -     0.379mV ):      1303 ( 26.99%)
+    Range 7(   0.126mV  -     0.253mV ):       670 ( 13.88%)
+    Range 8(    0.000V  -     0.126mV ):        75 (  1.55%)
+    Layer with maximum IR Drop:  met1
+      met5: 1.5709e-12 [0 - 0]
+      met4: 0.00047216 [7.4807e-05 - 0.00054697]
+      met3: 0.00049388 [0.0001181 - 0.00061199]
+      met2: 0.00060328 [0.0001211 - 0.00072438]
+      met1: 0.00088739 [0.0001243 - 0.0010117]
+  IR Report: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/VSS.main.rpt
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/ir_linear.gif
+Ended IR Drop (Linear) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=467.21MB/30511.97MB/3997.33MB)
+
+
+Begin IR Drop (Limit) Report Generation
+  Voltage: 0
+  Threshold: 0.09
+  Minimum, Average, Maximum IR Drop: 0.000V, 0.423mV, 1.012mV
+    Range 1(  90.000mV  -    90.009mV ):         0 (  0.00%)
+    Range 2(  82.500mV  -    90.000mV ):         0 (  0.00%)
+    Range 3(  75.000mV  -    82.500mV ):         0 (  0.00%)
+    Range 4(  67.500mV  -    75.000mV ):         0 (  0.00%)
+    Range 5(  60.000mV  -    67.500mV ):         0 (  0.00%)
+    Range 6(  52.500mV  -    60.000mV ):         0 (  0.00%)
+    Range 7(  45.000mV  -    52.500mV ):         0 (  0.00%)
+    Range 8(  -1.000uV  -    45.000mV ):      4828 (100.00%)
+    Layer with maximum IR Drop:  met1
+      met5: 1.5709e-12 [0 - 0]
+      met4: 0.00047216 [7.4807e-05 - 0.00054697]
+      met3: 0.00049388 [0.0001181 - 0.00061199]
+      met2: 0.00060328 [0.0001211 - 0.00072438]
+      met1: 0.00088739 [0.0001243 - 0.0010117]
+  IR Report: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/VSS.main.rpt
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/ir_limit.gif
+Ended IR Drop (Limit) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=471.21MB/30511.97MB/4005.33MB)
+
+
+Begin Tap Current Report Generation
+  Minimum, Average, Maximum Tap Current: -0.140mA, -1.236uA, 0.000A
+  Total Current: -3.686mA
+    Range 1(  -1.000GA  -    -1.000mA ):         0 (  0.00%)
+    Range 2(  -1.000mA  -  -100.000uA ):         2 (  0.07%)
+    Range 3(-100.000uA  -   -10.000uA ):        48 (  1.61%)
+    Range 4( -10.000uA  -    -1.000uA ):       821 ( 27.53%)
+    Range 5(  -1.000uA  -  -100.000nA ):       412 ( 13.82%)
+    Range 6(-100.000nA  -   -10.000nA ):        17 (  0.57%)
+    Range 7( -10.000nA  -    -1.000nA ):         0 (  0.00%)
+    Range 8(  -1.000nA  -      0.000A ):      1682 ( 56.41%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/tc.gif
+Ended Tap Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=471.21MB/30511.97MB/4005.40MB)
+
+
+Begin Instance Based IR Drop Report Generation
+  Minimum, Average, Maximum Instance Based IR Drop: 0.133mV, 0.479mV, 1.012mV
+    Range 1(  90.000mV  -    90.009mV ):         0 (  0.00%)
+    Range 2(  82.500mV  -    90.000mV ):         0 (  0.00%)
+    Range 3(  75.000mV  -    82.500mV ):         0 (  0.00%)
+    Range 4(  67.500mV  -    75.000mV ):         0 (  0.00%)
+    Range 5(  60.000mV  -    67.500mV ):         0 (  0.00%)
+    Range 6(  52.500mV  -    60.000mV ):         0 (  0.00%)
+    Range 7(  45.000mV  -    52.500mV ):         0 (  0.00%)
+    Range 8(  -1.000uV  -    45.000mV ):      2982 (100.00%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/iv.gif
+Ended Instance Based IR Drop Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=471.82MB/30511.97MB/4006.50MB)
+
+
+Begin Effective Instance Voltage Report Generation
+Ended Effective Instance Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=471.82MB/30511.97MB/4006.50MB)
+
+
+Begin Voltage Source Current Report Generation
+  Minimum, Average, Maximum Voltage Source Current: 0.199mA, 0.263mA, 0.356mA
+  Total Current: 3.686mA
+    Range 1(   0.336mA  -     0.356mA ):         2 ( 14.29%)
+    Range 2(   0.316mA  -     0.336mA ):         0 (  0.00%)
+    Range 3(   0.297mA  -     0.316mA ):         2 ( 14.29%)
+    Range 4(   0.277mA  -     0.297mA ):         2 ( 14.29%)
+    Range 5(   0.258mA  -     0.277mA ):         1 (  7.14%)
+    Range 6(   0.238mA  -     0.258mA ):         1 (  7.14%)
+    Range 7(   0.218mA  -     0.238mA ):         2 ( 14.29%)
+    Range 8(   0.199mA  -     0.218mA ):         4 ( 28.57%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/vc.gif
+Ended Voltage Source Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=473.82MB/30511.97MB/4020.70MB)
+
+
+Begin Resistor Current Report Generation
+  Minimum, Average, Maximum Resistor Current: 0.000A, 17.235uA, 0.361mA
+    Range 1(   1.000mA  -     1.000GA ):         0 (  0.00%)
+    Range 2( 100.000uA  -     1.000mA ):       137 (  2.67%)
+    Range 3(  10.000uA  -   100.000uA ):      2295 ( 44.71%)
+    Range 4(   1.000uA  -    10.000uA ):      1696 ( 33.04%)
+    Range 5(   0.100uA  -     1.000uA ):       186 (  3.62%)
+    Range 6(  10.000nA  -     0.100uA ):        38 (  0.74%)
+    Range 7(   1.000nA  -    10.000nA ):         1 (  0.02%)
+    Range 8(    0.000A  -     1.000nA ):       780 ( 15.20%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/rc.gif
+Ended Resistor Current Report Generation: (cpu=0:00:00, real=0:00:01, mem(process/total/peak)=554.02MB/30511.97MB/4170.97MB)
+
+
+Begin Resistor Voltage Report Generation
+  Minimum, Average, Maximum Resistor Voltage: 0.000V, 6.734uV, 0.134mV
+    Range 1(   0.117mV  -     0.134mV ):         3 (  0.06%)
+    Range 2(   0.100mV  -     0.117mV ):        13 (  0.25%)
+    Range 3(  83.733uV  -     0.100mV ):         5 (  0.10%)
+    Range 4(  66.986uV  -    83.733uV ):        17 (  0.33%)
+    Range 5(  50.240uV  -    66.986uV ):        25 (  0.49%)
+    Range 6(  33.493uV  -    50.240uV ):       107 (  2.08%)
+    Range 7(  16.747uV  -    33.493uV ):       458 (  8.92%)
+    Range 8(    0.000V  -    16.747uV ):      4505 ( 87.77%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/rv.gif
+Ended Resistor Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=556.02MB/30511.97MB/4174.97MB)
+
+
+Begin Power Gate I/Idsat Report Generation
+  No data found.
+Ended Power Gate I/Idsat Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=556.04MB/30511.97MB/4174.98MB)
+
+
+Begin Power Gate Voltage Report Generation
+  No data found.
+Ended Power Gate Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=556.04MB/30511.97MB/4174.98MB)
+
+** WARN: (VOLTUS_RAIL-2074): The layer li1 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer licon has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer CONT has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer Poly has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer N_SOURCE_DRAIN has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer P_SOURCE_DRAIN has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer CSUBSTRATE has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer REDUCED has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+
+*** Info: model parameter "vcwidth" has been used to
+          calculate the area of one or more via resistors.
+
+
+Begin Current Density (J/JMAX) Report Generation
+  Minimum, Average, Maximum Current Density (J/JMAX): 0.000, 9.875m, 0.143
+    Range 1(    1.000  -     1.000G ):         0 (  0.00%)
+    Range 2(    0.857  -      1.000 ):         0 (  0.00%)
+    Range 3(    0.714  -      0.857 ):         0 (  0.00%)
+    Range 4(    0.571  -      0.714 ):         0 (  0.00%)
+    Range 5(    0.429  -      0.571 ):         0 (  0.00%)
+    Range 6(    0.286  -      0.429 ):         0 (  0.00%)
+    Range 7(    0.143  -      0.286 ):         0 (  0.00%)
+    Range 8(    0.000  -      0.143 ):      4749 (100.00%)
+  GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/rj.gif
+*** Note:384 resistors skipped by EM rules.
+Ended Current Density (J/JMAX) Report Generation: (cpu=0:00:02, real=0:00:02, mem(process/total/peak)=930.20MB/33074.39MB/4926.60MB)
+
+
+Begin Voltage Across Vias and Contacts Report Generation
+Ended Voltage Across Vias and Contacts Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.20MB/33074.39MB/4926.60MB)
+
+
+Begin Weak Grid Connectivity Report
+Ended Weak Grid Connectivity Report: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.20MB/33074.39MB/4926.60MB)
+
+
+Begin Grid Integrity Report Generation
+  # Missing Cell Power-Grid Views: 0
+  # Physically Disconnected Instances: 0
+  # Instances with Floating Power Pins: 0
+  # Disconnected Wire Segments: 0
+  # Weakly Connected Metal Segments: 0
+  # Dropped Voltage Sources: 0
+Ended Grid Integrity Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.32MB/33074.39MB/4926.73MB)
+
+Ended Report Generation: (cpu=0:00:07, real=0:00:09, mem(process/total/peak)=930.39MB/33074.39MB/4926.80MB)
+
+INFO (PRL-700): EDP: Close channel handler 14 when receive message in connection server side
+
+INFO (PRL-701): EDP: Close channel handler 14 when meet event 25 in connection server side
+

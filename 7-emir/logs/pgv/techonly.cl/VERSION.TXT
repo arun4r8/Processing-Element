@@ -1,0 +1,11 @@
+* The organization, structure, and layout of this file are copyrights
+* and confidential and proprietary trade secrets of Cadence Design Systems,
+* subject to the terms and conditions of the license agreement in effect
+* between you and Cadence Design Systems, Inc.
+Library Name             : techonly
+Library Major Version    : 4
+Application Name         : voltus
+Application Version      : Voltus Version: 22.12-s082_1 voltus_libGen Version 22.10-XP-2023-04-19.gilberth (04/19/2023 07:40:26)
+Date Created             : 2026-Nov-11 11:25:33 (2026-Nov-11 17:25:33 GMT)
+Date Modified            : 2026-Nov-11 11:25:36 (2026-Nov-11 17:25:36 GMT)
+Custom Label             : 
