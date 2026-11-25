@@ -1,16 +1,16 @@
 RAIL ANALYSIS REPORT
-Generated Date: Wed Nov 11 11:26:10 2026
-Host Name: yoshi.ece.utexas.edu
+Generated Date: Wed Nov 25 11:12:25 2026
+Host Name: daisy.ece.utexas.edu
 
 
 ==============================
 
 ==============================
 User: ar76269 
-Hostname: yoshi.ece.utexas.edu 
+Hostname: daisy.ece.utexas.edu 
 Peak Memory: 0 Mbytes 
 Total CPU time: 00:00:09 
-Total Wall Clock time: 00:00:25 
+Total Wall Clock time: 00:00:26 
 Exit status: Successful 
 State Directory: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1 
 Units: Volt, Amp, Ohm, fF 

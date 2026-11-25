@@ -1,24 +1,11 @@
-- Cell: sky130_fd_sc_hd__a21bo_1 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__a21bo_1 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__a21bo_1 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
 - Cell: sky130_fd_sc_hd__a21boi_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__a21boi_1 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a21boi_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__a21boi_1 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a21boi_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -26,12 +13,12 @@
 
 - Cell: sky130_fd_sc_hd__a21o_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__a21o_1 Pin: VGND Instantiation: 15 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a21o_1 Pin: VGND Instantiation: 14 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__a21o_1 Pin: VNB Instantiation: 15 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a21o_1 Pin: VNB Instantiation: 14 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -39,25 +26,51 @@
 
 - Cell: sky130_fd_sc_hd__a21oi_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__a21oi_1 Pin: VGND Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a21oi_1 Pin: VGND Instantiation: 9 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__a21oi_1 Pin: VNB Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a21oi_1 Pin: VNB Instantiation: 9 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
 
 
-- Cell: sky130_fd_sc_hd__a21oi_2 Tag: 
+- Cell: sky130_fd_sc_hd__a221o_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__a21oi_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a221o_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__a21oi_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a221o_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+          Total               0               0               0               0               0               0
+
+
+- Cell: sky130_fd_sc_hd__a221oi_1 Tag: 
+ Temperature: 25
+* Cell: sky130_fd_sc_hd__a221oi_1 Pin: VGND Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+           met1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+* Cell: sky130_fd_sc_hd__a221oi_1 Pin: VNB Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+          Total               0               0               0               0               0               0
+
+
+- Cell: sky130_fd_sc_hd__a222oi_1 Tag: 
+ Temperature: 25
+* Cell: sky130_fd_sc_hd__a222oi_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+           met1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+* Cell: sky130_fd_sc_hd__a222oi_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -65,12 +78,12 @@
 
 - Cell: sky130_fd_sc_hd__a22o_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__a22o_1 Pin: VGND Instantiation: 11 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a22o_1 Pin: VGND Instantiation: 7 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__a22o_1 Pin: VNB Instantiation: 11 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a22o_1 Pin: VNB Instantiation: 7 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -78,12 +91,25 @@
 
 - Cell: sky130_fd_sc_hd__a22o_2 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__a22o_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a22o_2 Pin: VGND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__a22o_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a22o_2 Pin: VNB Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+          Total               0               0               0               0               0               0
+
+
+- Cell: sky130_fd_sc_hd__a22o_4 Tag: 
+ Temperature: 25
+* Cell: sky130_fd_sc_hd__a22o_4 Pin: VGND Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+           met1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+* Cell: sky130_fd_sc_hd__a22o_4 Pin: VNB Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -91,90 +117,25 @@
 
 - Cell: sky130_fd_sc_hd__a22oi_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__a22oi_1 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a22oi_1 Pin: VGND Instantiation: 6 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__a22oi_1 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a22oi_1 Pin: VNB Instantiation: 6 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
 
 
-- Cell: sky130_fd_sc_hd__a2bb2o_1 Tag: 
+- Cell: sky130_fd_sc_hd__a31oi_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__a2bb2o_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a31oi_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__a2bb2o_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__a2bb2oi_1 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__a2bb2oi_1 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__a2bb2oi_1 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__a2bb2oi_2 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__a2bb2oi_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__a2bb2oi_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__a31oi_2 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__a31oi_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__a31oi_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__a32oi_1 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__a32oi_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__a32oi_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__and2_0 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__and2_0 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__and2_0 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__a31oi_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -193,79 +154,27 @@
           Total               0               0               0               0               0               0
 
 
-- Cell: sky130_fd_sc_hd__and2_4 Tag: 
+- Cell: sky130_fd_sc_hd__and2b_2 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__and2_4 Pin: VGND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__and2b_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__and2_4 Pin: VNB Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__and2b_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
 
 
-- Cell: sky130_fd_sc_hd__and2b_1 Tag: 
+- Cell: sky130_fd_sc_hd__and3b_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__and2b_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__and3b_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__and2b_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__and2b_4 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__and2b_4 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__and2b_4 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__and3_1 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__and3_1 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__and3_1 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__and3_4 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__and3_4 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__and3_4 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__buf_1 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__buf_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__buf_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__and3b_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -284,27 +193,14 @@
           Total               0               0               0               0               0               0
 
 
-- Cell: sky130_fd_sc_hd__buf_2 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__buf_2 Pin: VGND Instantiation: 11 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__buf_2 Pin: VNB Instantiation: 11 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
 - Cell: sky130_fd_sc_hd__buf_4 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__buf_4 Pin: VGND Instantiation: 11 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__buf_4 Pin: VGND Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__buf_4 Pin: VNB Instantiation: 11 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__buf_4 Pin: VNB Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -312,25 +208,12 @@
 
 - Cell: sky130_fd_sc_hd__buf_6 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__buf_6 Pin: VGND Instantiation: 12 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__buf_6 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__buf_6 Pin: VNB Instantiation: 12 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__buf_8 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__buf_8 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__buf_8 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__buf_6 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -338,12 +221,12 @@
 
 - Cell: sky130_fd_sc_hd__clkbuf_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__clkbuf_1 Pin: VGND Instantiation: 8 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__clkbuf_1 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__clkbuf_1 Pin: VNB Instantiation: 8 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__clkbuf_1 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -351,25 +234,25 @@
 
 - Cell: sky130_fd_sc_hd__clkbuf_16 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__clkbuf_16 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__clkbuf_16 Pin: VGND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__clkbuf_16 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__clkbuf_16 Pin: VNB Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
 
 
-- Cell: sky130_fd_sc_hd__clkbuf_2 Tag: 
+- Cell: sky130_fd_sc_hd__clkbuf_4 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__clkbuf_2 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__clkbuf_4 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__clkbuf_2 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__clkbuf_4 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -377,38 +260,12 @@
 
 - Cell: sky130_fd_sc_hd__clkinv_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__clkinv_1 Pin: VGND Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__clkinv_1 Pin: VGND Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__clkinv_1 Pin: VNB Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__clkinv_2 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__clkinv_2 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__clkinv_2 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__clkinv_4 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__clkinv_4 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__clkinv_4 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__clkinv_1 Pin: VNB Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -455,25 +312,12 @@
 
 - Cell: sky130_fd_sc_hd__dfrbp_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__dfrbp_1 Pin: VGND Instantiation: 12 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__dfrbp_1 Pin: VGND Instantiation: 17 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__dfrbp_1 Pin: VNB Instantiation: 12 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__dfrbp_2 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__dfrbp_2 Pin: VGND Instantiation: 9 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__dfrbp_2 Pin: VNB Instantiation: 9 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__dfrbp_1 Pin: VNB Instantiation: 17 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -481,12 +325,12 @@
 
 - Cell: sky130_fd_sc_hd__dfrtp_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__dfrtp_1 Pin: VGND Instantiation: 52 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__dfrtp_1 Pin: VGND Instantiation: 133 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__dfrtp_1 Pin: VNB Instantiation: 52 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__dfrtp_1 Pin: VNB Instantiation: 133 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -494,25 +338,12 @@
 
 - Cell: sky130_fd_sc_hd__dfrtp_2 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__dfrtp_2 Pin: VGND Instantiation: 6 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__dfrtp_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__dfrtp_2 Pin: VNB Instantiation: 6 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__dfrtp_4 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__dfrtp_4 Pin: VGND Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__dfrtp_4 Pin: VNB Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__dfrtp_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -520,12 +351,12 @@
 
 - Cell: sky130_fd_sc_hd__dfsbp_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__dfsbp_1 Pin: VGND Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__dfsbp_1 Pin: VGND Instantiation: 9 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__dfsbp_1 Pin: VNB Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__dfsbp_1 Pin: VNB Instantiation: 9 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -533,12 +364,12 @@
 
 - Cell: sky130_fd_sc_hd__dfstp_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__dfstp_1 Pin: VGND Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__dfstp_1 Pin: VGND Instantiation: 18 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__dfstp_1 Pin: VNB Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__dfstp_1 Pin: VNB Instantiation: 18 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -546,12 +377,12 @@
 
 - Cell: sky130_fd_sc_hd__dfstp_2 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__dfstp_2 Pin: VGND Instantiation: 19 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__dfstp_2 Pin: VGND Instantiation: 14 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__dfstp_2 Pin: VNB Instantiation: 19 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__dfstp_2 Pin: VNB Instantiation: 14 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -559,12 +390,25 @@
 
 - Cell: sky130_fd_sc_hd__fa_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__fa_1 Pin: VGND Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__fa_1 Pin: VGND Instantiation: 44 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__fa_1 Pin: VNB Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__fa_1 Pin: VNB Instantiation: 44 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+          Total               0               0               0               0               0               0
+
+
+- Cell: sky130_fd_sc_hd__fa_2 Tag: 
+ Temperature: 25
+* Cell: sky130_fd_sc_hd__fa_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+           met1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+* Cell: sky130_fd_sc_hd__fa_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -572,12 +416,12 @@
 
 - Cell: sky130_fd_sc_hd__fah_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__fah_1 Pin: VGND Instantiation: 20 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__fah_1 Pin: VGND Instantiation: 9 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__fah_1 Pin: VNB Instantiation: 20 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__fah_1 Pin: VNB Instantiation: 9 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -585,12 +429,12 @@
 
 - Cell: sky130_fd_sc_hd__fill_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__fill_1 Pin: VGND Instantiation: 548 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__fill_1 Pin: VGND Instantiation: 459 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__fill_1 Pin: VNB Instantiation: 548 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__fill_1 Pin: VNB Instantiation: 459 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -598,25 +442,12 @@
 
 - Cell: sky130_fd_sc_hd__fill_2 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__fill_2 Pin: VGND Instantiation: 420 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__fill_2 Pin: VGND Instantiation: 1043 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__fill_2 Pin: VNB Instantiation: 420 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__fill_4 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__fill_4 Pin: VGND Instantiation: 267 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__fill_4 Pin: VNB Instantiation: 267 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__fill_2 Pin: VNB Instantiation: 1043 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -624,12 +455,12 @@
 
 - Cell: sky130_fd_sc_hd__fill_8 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__fill_8 Pin: VGND Instantiation: 252 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__fill_8 Pin: VGND Instantiation: 286 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__fill_8 Pin: VNB Instantiation: 252 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__fill_8 Pin: VNB Instantiation: 286 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -637,12 +468,25 @@
 
 - Cell: sky130_fd_sc_hd__ha_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__ha_1 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__ha_1 Pin: VGND Instantiation: 6 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__ha_1 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__ha_1 Pin: VNB Instantiation: 6 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+          Total               0               0               0               0               0               0
+
+
+- Cell: sky130_fd_sc_hd__ha_2 Tag: 
+ Temperature: 25
+* Cell: sky130_fd_sc_hd__ha_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+           met1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+* Cell: sky130_fd_sc_hd__ha_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -650,25 +494,12 @@
 
 - Cell: sky130_fd_sc_hd__inv_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__inv_1 Pin: VGND Instantiation: 35 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__inv_1 Pin: VGND Instantiation: 13 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__inv_1 Pin: VNB Instantiation: 35 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__inv_12 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__inv_12 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__inv_12 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__inv_1 Pin: VNB Instantiation: 13 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -676,12 +507,12 @@
 
 - Cell: sky130_fd_sc_hd__inv_2 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__inv_2 Pin: VGND Instantiation: 103 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__inv_2 Pin: VGND Instantiation: 40 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__inv_2 Pin: VNB Instantiation: 103 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__inv_2 Pin: VNB Instantiation: 40 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -689,38 +520,12 @@
 
 - Cell: sky130_fd_sc_hd__inv_4 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__inv_4 Pin: VGND Instantiation: 15 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__inv_4 Pin: VGND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__inv_4 Pin: VNB Instantiation: 15 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__inv_6 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__inv_6 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__inv_6 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__inv_8 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__inv_8 Pin: VGND Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__inv_8 Pin: VNB Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__inv_4 Pin: VNB Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -728,12 +533,12 @@
 
 - Cell: sky130_fd_sc_hd__maj3_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__maj3_1 Pin: VGND Instantiation: 14 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__maj3_1 Pin: VGND Instantiation: 10 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__maj3_1 Pin: VNB Instantiation: 14 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__maj3_1 Pin: VNB Instantiation: 10 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -741,12 +546,12 @@
 
 - Cell: sky130_fd_sc_hd__maj3_2 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__maj3_2 Pin: VGND Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__maj3_2 Pin: VGND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__maj3_2 Pin: VNB Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__maj3_2 Pin: VNB Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -754,51 +559,12 @@
 
 - Cell: sky130_fd_sc_hd__mux2_2 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__mux2_2 Pin: VGND Instantiation: 17 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__mux2_2 Pin: VGND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__mux2_2 Pin: VNB Instantiation: 17 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__mux2_4 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__mux2_4 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__mux2_4 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__mux2i_1 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__mux2i_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__mux2i_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__mux2i_4 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__mux2i_4 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__mux2i_4 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__mux2_2 Pin: VNB Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -806,12 +572,12 @@
 
 - Cell: sky130_fd_sc_hd__nand2_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__nand2_1 Pin: VGND Instantiation: 328 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand2_1 Pin: VGND Instantiation: 98 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nand2_1 Pin: VNB Instantiation: 328 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand2_1 Pin: VNB Instantiation: 98 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -819,12 +585,12 @@
 
 - Cell: sky130_fd_sc_hd__nand2_2 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__nand2_2 Pin: VGND Instantiation: 58 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand2_2 Pin: VGND Instantiation: 16 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nand2_2 Pin: VNB Instantiation: 58 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand2_2 Pin: VNB Instantiation: 16 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -832,25 +598,12 @@
 
 - Cell: sky130_fd_sc_hd__nand2_4 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__nand2_4 Pin: VGND Instantiation: 11 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand2_4 Pin: VGND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nand2_4 Pin: VNB Instantiation: 11 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__nand2_8 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__nand2_8 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nand2_8 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand2_4 Pin: VNB Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -858,12 +611,12 @@
 
 - Cell: sky130_fd_sc_hd__nand2b_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__nand2b_1 Pin: VGND Instantiation: 64 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand2b_1 Pin: VGND Instantiation: 33 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nand2b_1 Pin: VNB Instantiation: 64 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand2b_1 Pin: VNB Instantiation: 33 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -871,12 +624,12 @@
 
 - Cell: sky130_fd_sc_hd__nand2b_2 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__nand2b_2 Pin: VGND Instantiation: 6 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand2b_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nand2b_2 Pin: VNB Instantiation: 6 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand2b_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -884,12 +637,12 @@
 
 - Cell: sky130_fd_sc_hd__nand2b_4 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__nand2b_4 Pin: VGND Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand2b_4 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nand2b_4 Pin: VNB Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand2b_4 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -897,12 +650,12 @@
 
 - Cell: sky130_fd_sc_hd__nand3_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__nand3_1 Pin: VGND Instantiation: 11 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand3_1 Pin: VGND Instantiation: 8 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nand3_1 Pin: VNB Instantiation: 11 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand3_1 Pin: VNB Instantiation: 8 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -910,25 +663,12 @@
 
 - Cell: sky130_fd_sc_hd__nand3_2 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__nand3_2 Pin: VGND Instantiation: 14 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand3_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nand3_2 Pin: VNB Instantiation: 14 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__nand3_4 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__nand3_4 Pin: VGND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nand3_4 Pin: VNB Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand3_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -947,40 +687,14 @@
           Total               0               0               0               0               0               0
 
 
-- Cell: sky130_fd_sc_hd__nand3b_2 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__nand3b_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nand3b_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
 - Cell: sky130_fd_sc_hd__nand4_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__nand4_1 Pin: VGND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand4_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nand4_1 Pin: VNB Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__nand4b_1 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__nand4b_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nand4b_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nand4_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -988,12 +702,12 @@
 
 - Cell: sky130_fd_sc_hd__nor2_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__nor2_1 Pin: VGND Instantiation: 29 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nor2_1 Pin: VGND Instantiation: 25 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nor2_1 Pin: VNB Instantiation: 29 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nor2_1 Pin: VNB Instantiation: 25 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1001,25 +715,12 @@
 
 - Cell: sky130_fd_sc_hd__nor2_2 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__nor2_2 Pin: VGND Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nor2_2 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nor2_2 Pin: VNB Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__nor2_4 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__nor2_4 Pin: VGND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nor2_4 Pin: VNB Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nor2_2 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1027,25 +728,12 @@
 
 - Cell: sky130_fd_sc_hd__nor2b_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__nor2b_1 Pin: VGND Instantiation: 8 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nor2b_1 Pin: VGND Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nor2b_1 Pin: VNB Instantiation: 8 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__nor2b_2 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__nor2b_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__nor2b_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nor2b_1 Pin: VNB Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1064,27 +752,40 @@
           Total               0               0               0               0               0               0
 
 
-- Cell: sky130_fd_sc_hd__o21a_1 Tag: 
+- Cell: sky130_fd_sc_hd__nor4b_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__o21a_1 Pin: VGND Instantiation: 9 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nor4b_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__o21a_1 Pin: VNB Instantiation: 9 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__nor4b_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
 
 
-- Cell: sky130_fd_sc_hd__o21ai_0 Tag: 
+- Cell: sky130_fd_sc_hd__o211ai_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__o21ai_0 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__o211ai_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__o21ai_0 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__o211ai_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+          Total               0               0               0               0               0               0
+
+
+- Cell: sky130_fd_sc_hd__o21a_1 Tag: 
+ Temperature: 25
+* Cell: sky130_fd_sc_hd__o21a_1 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+           met1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+* Cell: sky130_fd_sc_hd__o21a_1 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1092,12 +793,12 @@
 
 - Cell: sky130_fd_sc_hd__o21ai_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__o21ai_1 Pin: VGND Instantiation: 58 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__o21ai_1 Pin: VGND Instantiation: 32 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__o21ai_1 Pin: VNB Instantiation: 58 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__o21ai_1 Pin: VNB Instantiation: 32 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1105,12 +806,38 @@
 
 - Cell: sky130_fd_sc_hd__o21ai_2 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__o21ai_2 Pin: VGND Instantiation: 35 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__o21ai_2 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__o21ai_2 Pin: VNB Instantiation: 35 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__o21ai_2 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+          Total               0               0               0               0               0               0
+
+
+- Cell: sky130_fd_sc_hd__o21ai_4 Tag: 
+ Temperature: 25
+* Cell: sky130_fd_sc_hd__o21ai_4 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+           met1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+* Cell: sky130_fd_sc_hd__o21ai_4 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+          Total               0               0               0               0               0               0
+
+
+- Cell: sky130_fd_sc_hd__o21ba_2 Tag: 
+ Temperature: 25
+* Cell: sky130_fd_sc_hd__o21ba_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+           met1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+* Cell: sky130_fd_sc_hd__o21ba_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1118,12 +845,38 @@
 
 - Cell: sky130_fd_sc_hd__o21bai_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__o21bai_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__o21bai_1 Pin: VGND Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__o21bai_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__o21bai_1 Pin: VNB Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+          Total               0               0               0               0               0               0
+
+
+- Cell: sky130_fd_sc_hd__o221a_1 Tag: 
+ Temperature: 25
+* Cell: sky130_fd_sc_hd__o221a_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+           met1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+* Cell: sky130_fd_sc_hd__o221a_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+          Total               0               0               0               0               0               0
+
+
+- Cell: sky130_fd_sc_hd__o221ai_1 Tag: 
+ Temperature: 25
+* Cell: sky130_fd_sc_hd__o221ai_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+           met1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+* Cell: sky130_fd_sc_hd__o221ai_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1144,12 +897,12 @@
 
 - Cell: sky130_fd_sc_hd__o22ai_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__o22ai_1 Pin: VGND Instantiation: 48 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__o22ai_1 Pin: VGND Instantiation: 90 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__o22ai_1 Pin: VNB Instantiation: 48 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__o22ai_1 Pin: VNB Instantiation: 90 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1157,12 +910,38 @@
 
 - Cell: sky130_fd_sc_hd__o22ai_2 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__o22ai_2 Pin: VGND Instantiation: 9 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__o22ai_2 Pin: VGND Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__o22ai_2 Pin: VNB Instantiation: 9 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__o22ai_2 Pin: VNB Instantiation: 5 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+          Total               0               0               0               0               0               0
+
+
+- Cell: sky130_fd_sc_hd__o22ai_4 Tag: 
+ Temperature: 25
+* Cell: sky130_fd_sc_hd__o22ai_4 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+           met1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+* Cell: sky130_fd_sc_hd__o22ai_4 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+          Total               0               0               0               0               0               0
+
+
+- Cell: sky130_fd_sc_hd__o2bb2a_2 Tag: 
+ Temperature: 25
+* Cell: sky130_fd_sc_hd__o2bb2a_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+  Grid:
+          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
+           met1               1               1               0               0               1               0
+          Total               1               1               0               0               1               0
+* Cell: sky130_fd_sc_hd__o2bb2a_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1170,64 +949,12 @@
 
 - Cell: sky130_fd_sc_hd__o2bb2ai_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__o2bb2ai_1 Pin: VGND Instantiation: 23 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__o2bb2ai_1 Pin: VGND Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__o2bb2ai_1 Pin: VNB Instantiation: 23 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__o2bb2ai_2 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__o2bb2ai_2 Pin: VGND Instantiation: 8 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__o2bb2ai_2 Pin: VNB Instantiation: 8 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__o2bb2ai_4 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__o2bb2ai_4 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__o2bb2ai_4 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__o31ai_2 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__o31ai_2 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__o31ai_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__o32ai_1 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__o32ai_1 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__o32ai_1 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__o2bb2ai_1 Pin: VNB Instantiation: 4 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1235,12 +962,12 @@
 
 - Cell: sky130_fd_sc_hd__or2_0 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__or2_0 Pin: VGND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__or2_0 Pin: VGND Instantiation: 6 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__or2_0 Pin: VNB Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__or2_0 Pin: VNB Instantiation: 6 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1267,19 +994,6 @@
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
 * Cell: sky130_fd_sc_hd__or2_2 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__or2_4 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__or2_4 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__or2_4 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1322,25 +1036,12 @@
 
 - Cell: sky130_fd_sc_hd__xnor2_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__xnor2_1 Pin: VGND Instantiation: 102 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__xnor2_1 Pin: VGND Instantiation: 150 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__xnor2_1 Pin: VNB Instantiation: 102 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__xnor2_2 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__xnor2_2 Pin: VGND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__xnor2_2 Pin: VNB Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__xnor2_1 Pin: VNB Instantiation: 150 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1348,12 +1049,12 @@
 
 - Cell: sky130_fd_sc_hd__xnor3_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__xnor3_1 Pin: VGND Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__xnor3_1 Pin: VGND Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__xnor3_1 Pin: VNB Instantiation: 2 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__xnor3_1 Pin: VNB Instantiation: 3 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1361,25 +1062,12 @@
 
 - Cell: sky130_fd_sc_hd__xor2_1 Tag: 
  Temperature: 25
-* Cell: sky130_fd_sc_hd__xor2_1 Pin: VGND Instantiation: 30 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__xor2_1 Pin: VGND Instantiation: 32 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
            met1               1               1               0               0               1               0
           Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__xor2_1 Pin: VNB Instantiation: 30 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-          Total               0               0               0               0               0               0
-
-
-- Cell: sky130_fd_sc_hd__xor2_4 Tag: 
- Temperature: 25
-* Cell: sky130_fd_sc_hd__xor2_4 Pin: VGND Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
-  Grid:
-          Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
-           met1               1               1               0               0               1               0
-          Total               1               1               0               0               1               0
-* Cell: sky130_fd_sc_hd__xor2_4 Pin: VNB Instantiation: 1 Snapped: 0 PowerGate: No Hidden: No
+* Cell: sky130_fd_sc_hd__xor2_1 Pin: VNB Instantiation: 32 Snapped: 0 PowerGate: No Hidden: No
   Grid:
           Layer            Node        IntfNode    InternalNode            Elem             Tap           PGTap
           Total               0               0               0               0               0               0
@@ -1401,18 +1089,18 @@
 
 Grid Statistics of Net VSS:
 - NODE
-  Total node: 4828
-    Top Level grid node: 4828
-      Top level interface node: 3235
+  Total node: 5306
+    Top Level grid node: 5306
+      Top level interface node: 3126
     Missing interface node: 0
     Cell internal node: 0
 - ELEM
-  Total element: 5133
-    Top Level grid element: 5133
+  Total element: 5905
+    Top Level grid element: 5905
     Cell internal element: 0
 - INST
-  Instance logically connected: 3235
-    Tech: 3235
+  Instance logically connected: 3126
+    Tech: 3126
     StdCell: 0
     Macro:
       Early: 0
@@ -1421,6 +1109,6 @@ Grid Statistics of Net VSS:
     Current Region:  0
   Dropped instance due to missing/incomplete cell library: 0
 - TAP
-  Total tap: 3235
+  Total tap: 3126
 
 

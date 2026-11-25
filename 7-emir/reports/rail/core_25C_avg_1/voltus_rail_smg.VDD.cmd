@@ -18,7 +18,7 @@
     },
     "cellview_file": ".\/work\/VDD.cell.views",
     "technology_file": "\/misc\/scratch\/ar76269\/pe-apprentice\/7-emir\/..\/pdk\/sky130\/qrc\/qrcTechFile",
-    "temporary_directory": "\/tmp\/ssv_tmpdir_2461037_oha9hq\/",
+    "temporary_directory": "\/tmp\/ssv_tmpdir_2136743_yloW9P\/",
     "pgdb_path": ".\/work\/",
     "sfedb_path": ".\/work\/SFEDB",
     "thread_num": "1",

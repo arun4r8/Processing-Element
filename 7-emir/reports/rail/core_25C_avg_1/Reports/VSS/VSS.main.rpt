@@ -1,6 +1,6 @@
 POWER NET REPORT 
-Generated Date: Wed Nov 11 11:26:09 2026
-Host Name: yoshi.ece.utexas.edu
+Generated Date: Wed Nov 25 11:12:24 2026
+Host Name: daisy.ece.utexas.edu
 
 
 ==============================
@@ -14,17 +14,17 @@ Threshold: 0.090
 ==============================
 POWER-GRID VIEW
 ==============================
-Power-Grid Views Used: 108
+Power-Grid Views Used: 84
 
 
 ==============================
 POWER-GRID ATTRIBUTES
 ==============================
-Total Resistor Elements: 5133
+Total Resistor Elements: 5905
     Please refer to ../VSS/grid.gif for more details
-Top-level Resistor Elements:5133
+Top-level Resistor Elements:5905
 Cell Library Resistor Elements: 0
-Total Number of Current Taps: 3235
+Total Number of Current Taps: 3126
     Please refer to ../VSS/tc.gif for more details
 
 
@@ -32,12 +32,12 @@ Total Number of Current Taps: 3235
 IR DROP ANALYSIS
 ==============================
 Layer based IR Drop Report: See Report
-Minimum, Average, Maximum IR drop: 0.000V 0.423mV 1.012mV
+Minimum, Average, Maximum IR drop: 0.000V 82.953uV 0.609mV
     Please refer to ../VSS/ir_linear.gif for more details
-Total Static Current Loaded: 0.0036864134017378092A
+Total Static Current Loaded: 0.0029538227045122767A
 Number of Violations: 0
     Please refer to ../VSS/ir_limit.gif for more details
-Minimum, Average, Maximum Vsrc Current: 0.00019861987675540149A, 0.00026331524298127206A, 0.00035570946056395769A
+Minimum, Average, Maximum Vsrc Current: 2.0984536604373716e-05A, 8.2050630680896575e-05A, 0.00021211810235399753A
 
 
 ==============================

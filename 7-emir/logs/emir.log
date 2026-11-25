@@ -4,19 +4,19 @@ Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v22.12-s082_1, built Thu May 4 21:55:47 PDT 2023
 Options:	-stylus -no_gui -files ../emir.tcl -log emir 
-Date:		Wed Nov 11 11:25:07 2026
-Host:		yoshi.ece.utexas.edu (x86_64 w/Linux 4.18.0-553.183.1.el8_10.x86_64) (16cores*64cpus*Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz 22528KB)
+Date:		Wed Nov 25 11:11:27 2026
+Host:		daisy.ece.utexas.edu (x86_64 w/Linux 4.18.0-553.183.1.el8_10.x86_64) (16cores*64cpus*Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz 22528KB)
 OS:		Red Hat Enterprise Linux 8.10 (Ootpa)
 
 License:
-		[11:25:07.446337] Configured Lic search path (21.01-s002): /usr/local/packages/cadence_2022/license.dat
+		[11:11:27.446313] Configured Lic search path (21.01-s002): /usr/local/packages/cadence_2022/license.dat
 
 		vtsxl	Voltus Power Integrity Solution XL	22.1	checkout succeeded
 		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
 
 
 Change the soft stacksize limit to 0.2%RAM (771 mbytes). Set global soft_stack_size_limit to change the value.
-environment variable TMPDIR is '/tmp/ssv_tmpdir_2461037_oha9hq'.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_2136743_yloW9P'.
 #@ Processing -execute option
 @voltus 1> 
 #@ Processing -files option
@@ -47,7 +47,7 @@ Set Default Input Pin Transition as 0.1 ps.
 Set Using Default Delay Limit as 1000.
 **WARN: (IMPSYC-6134):	Setting analysis mode to setup does not have any impact on timing analysis as simultaneous setup/hold mode analysis is on. Use '-late' option to report setup timing reports.
 **WARN: (IMPDBTCL-321):	The attribute 'timing_enable_separate_device_slew_effect_sensitivities' still works but will be obsolete in a future major release. You should remove it from your script before the next major release to avoid errors.
-Loading design 'pe' saved by 'Innovus' '21.18-s099_1' on 'Wed Nov 11 10:26:18 2026'.
+Loading design 'pe' saved by 'Innovus' '21.18-s099_1' on 'Wed Nov 25 11:04:19 2026'.
 Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
 Starting library reading in 'Multi-threaded flow' (with '2' threads)
 Reading   timing library /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0478df9ee6b7289202f3e87440ab/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib.
@@ -86,22 +86,22 @@ Set DBUPerIGU to M1 pitch 460.
 ##  Both design process and tech node are not set.
 
 Loading view definition file from /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/viewDefinition.tcl
-#% Begin Load netlist data ... (date=11/11 11:25:25, mem=1296.7M)
-*** Begin netlist parsing (mem=1335.1M) ***
+#% Begin Load netlist data ... (date=11/25 11:11:46, mem=1302.1M)
+*** Begin netlist parsing (mem=1334.9M) ***
 Reading verilogBinary netlist '/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/vbin/pe.v.bin'
 Reading binary database version 2 in multi-threaded mode
 
-*** Memory Usage v#1 (Current mem = 1495.148M, initial mem = 638.520M) ***
-*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1495.1M) ***
-#% End Load netlist data ... (date=11/11 11:25:26, total cpu=0:00:00.4, real=0:00:01.0, peak res=1399.1M, current mem=1388.2M)
+*** Memory Usage v#1 (Current mem = 1494.898M, initial mem = 638.520M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1494.9M) ***
+#% End Load netlist data ... (date=11/25 11:11:46, total cpu=0:00:00.4, real=0:00:00.0, peak res=1403.9M, current mem=1393.6M)
 Top level cell is pe.
 Building hierarchical netlist for Cell pe ...
 ***** UseNewTieNetMode *****.
 *** Netlist is unique.
 ** info: there are 440 modules.
-** info: there are 1370 stdCell insts.
+** info: there are 960 stdCell insts.
 
-*** Memory Usage v#1 (Current mem = 1831.594M, initial mem = 638.520M) ***
+*** Memory Usage v#1 (Current mem = 1831.344M, initial mem = 638.520M) ***
 *info: set bottom ioPad orient R0
 Adjust met3 preferred direction offset from 0.34 to 0.17.
 Adjust met4 preferred direction offset from 0.46 to 0.23.
@@ -149,8 +149,7 @@ Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
 Change floorplan default-technical-site to 'unithd'.
 Total number of combinational cells: 319
 Total number of sequential cells: 68
-Total number of tristate cells: 13/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/mmmc/modes/func/func.sdc
-
+Total number of tristate cells: 13
 Total number of level shifter cells: 7
 Total number of power gating cells: 0
 Total number of isolation cells: 11
@@ -160,7 +159,8 @@ Total number of always on buffers: 0
 Total number of retention cells: 0
 Total number of physical cells: 10
 List of usable buffers: sky130_fd_sc_hd__buf_1 sky130_fd_sc_hd__buf_12 sky130_fd_sc_hd__buf_16 sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_4 sky130_fd_sc_hd__buf_6 sky130_fd_sc_hd__buf_8 sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_16 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8 sky130_fd_sc_hd__dlymetal6s2s_1 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__probe_p_8
-Total number of usable buffers: 15
+Total number of usable buffers: 15/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/mmmc/modes/func/func.sdc
+
 List of unusable buffers:
 Total number of unusable buffers: 0
 List of usable inverters: sky130_fd_sc_hd__bufinv_16 sky130_fd_sc_hd__clkinv_1 sky130_fd_sc_hd__bufinv_8 sky130_fd_sc_hd__clkinv_16 sky130_fd_sc_hd__clkinv_2 sky130_fd_sc_hd__clkinv_4 sky130_fd_sc_hd__clkinv_8 sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__clkinvlp_2 sky130_fd_sc_hd__clkinvlp_4 sky130_fd_sc_hd__inv_12 sky130_fd_sc_hd__inv_16 sky130_fd_sc_hd__inv_2 sky130_fd_sc_hd__inv_4 sky130_fd_sc_hd__inv_6 sky130_fd_sc_hd__inv_8
@@ -171,9 +171,9 @@ List of identified usable delay cells: sky130_fd_sc_hd__bufbuf_16 sky130_fd_sc_h
 Total number of identified usable delay cells: 15
 List of identified unusable delay cells:
 Total number of identified unusable delay cells: 0
-Reading floorplan file - /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.fp.gz (mem = 2150.8M).
-#% Begin Load floorplan data ... (date=11/11 11:25:27, mem=1941.8M)
-*info: reset 1481 existing net BottomPreferredLayer and AvoidDetour
+Reading floorplan file - /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.fp.gz (mem = 2150.2M).
+#% Begin Load floorplan data ... (date=11/25 11:11:47, mem=1945.4M)
+*info: reset 1107 existing net BottomPreferredLayer and AvoidDetour
 Deleting old partition specification.
 Set FPlanBox to (0 0 155020 154700)
 Adjust met3 preferred direction offset from 0.34 to 0.17.
@@ -184,37 +184,37 @@ Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in
 Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
 Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
  ... processed partition successfully.
-Reading binary special route file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.fp.spr.gz (Created by Innovus v21.18-s099_1 on Wed Nov 11 10:26:11 2026, version: 1)
-Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1942.9M, current mem=1942.9M)
-There are 5 nets with weight being set
-There are 5 nets with bottomPreferredRoutingLayer being set
-There are 22 nets with avoidDetour being set
+Reading binary special route file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.fp.spr.gz (Created by Innovus v21.18-s099_1 on Wed Nov 25 11:04:11 2026, version: 1)
+Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2011.0M, current mem=2011.0M)
+There are 7 nets with weight being set
+There are 7 nets with bottomPreferredRoutingLayer being set
+There are 20 nets with avoidDetour being set
 Extracting standard cell pins and blockage ...... 
 Pin and blockage extraction finished
 Delete all existing relative floorplan constraints.
-#% End Load floorplan data ... (date=11/11 11:25:27, total cpu=0:00:00.1, real=0:00:00.0, peak res=1956.0M, current mem=1955.9M)
-#% Begin Load SymbolTable ... (date=11/11 11:25:27, mem=1955.9M)
-#% End Load SymbolTable ... (date=11/11 11:25:27, total cpu=0:00:00.0, real=0:00:01.0, peak res=1956.2M, current mem=1956.2M)
+#% End Load floorplan data ... (date=11/25 11:11:47, total cpu=0:00:00.1, real=0:00:00.0, peak res=2023.9M, current mem=2023.9M)
+#% Begin Load SymbolTable ... (date=11/25 11:11:47, mem=2023.9M)
+#% End Load SymbolTable ... (date=11/25 11:11:47, total cpu=0:00:00.0, real=0:00:00.0, peak res=2024.2M, current mem=2024.2M)
 Loading place ...
-#% Begin Load placement data ... (date=11/11 11:25:28, mem=1956.2M)
+#% Begin Load placement data ... (date=11/25 11:11:47, mem=2024.2M)
 Reading placement file - /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.place.gz.
-** Reading stdCellPlacement_binary (Created by Innovus v21.18-s099_1 on Wed Nov 11 10:26:11 2026, version# 2) ...
+** Reading stdCellPlacement_binary (Created by Innovus v21.18-s099_1 on Wed Nov 25 11:04:12 2026, version# 2) ...
 Read Views for adaptive view pruning ...
 Read 0 views from Binary DB for adaptive view pruning
 *** applyConnectGlobalNets disabled.
-*** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=2166.8M) ***
-Total net length = 2.776e+04 (1.572e+04 1.204e+04) (ext = 7.205e+03)
-#% End Load placement data ... (date=11/11 11:25:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=1957.8M, current mem=1957.7M)
-Reading PG file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.pg.gz, version#2, (Created by Innovus v21.18-s099_1 on       Wed Nov 11 10:26:11 2026)
-*** Completed restorePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=2163.8M) ***
-#% Begin Load routing data ... (date=11/11 11:25:28, mem=1958.1M)
+*** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=2230.2M) ***
+Total net length = 2.493e+04 (1.381e+04 1.112e+04) (ext = 7.312e+03)
+#% End Load placement data ... (date=11/25 11:11:47, total cpu=0:00:00.0, real=0:00:01.0, peak res=2025.6M, current mem=2025.5M)
+Reading PG file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.pg.gz, version#2, (Created by Innovus v21.18-s099_1 on       Wed Nov 25 11:04:12 2026)
+*** Completed restorePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=2227.2M) ***
+#% Begin Load routing data ... (date=11/25 11:11:48, mem=2025.9M)
 Reading routing file - /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.route.gz.
-Reading Innovus routing data (Created by Innovus v21.18-s099_1 on Wed Nov 11 10:26:11 2026 Format: 20.1) ...
-*** Total 1479 nets are successfully restored.
-*** Completed restoreRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2163.8M) ***
-#% End Load routing data ... (date=11/11 11:25:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=1961.5M, current mem=1960.5M)
+Reading Innovus routing data (Created by Innovus v21.18-s099_1 on Wed Nov 25 11:04:12 2026 Format: 20.1) ...
+*** Total 1104 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2227.2M) ***
+#% End Load routing data ... (date=11/25 11:11:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=2028.9M, current mem=2028.2M)
 Reading property file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.prop
-*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2167.8M) ***
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2230.2M) ***
 Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
 Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
 Warning: setOptMode is ignored by Voltus IC Power Integrity Solution.
@@ -238,29 +238,29 @@ Summary of Active RC-Corners :
     RC-Corner PostRoute XCap Factor       : 1
     RC-Corner Technology file: '/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/libs/mmmc/rc_nom/qrcTechFile'
 Initializing multi-corner resistance tables ...
-#% Begin Load power constraints ... (date=11/11 11:25:28, mem=1963.1M)
+#% Begin Load power constraints ... (date=11/25 11:11:48, mem=2031.0M)
 source /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe_power_constraints.tcl
 'set_default_switching_activity' finished successfully.
-#% End Load power constraints ... (date=11/11 11:25:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=1969.9M, current mem=1969.9M)
+#% End Load power constraints ... (date=11/25 11:11:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=2037.7M, current mem=2037.7M)
 dc_tt
-#% Begin load AAE data ... (date=11/11 11:25:28, mem=1985.6M)
-AAE DB initialization (MEM=2216.3 CPU=0:00:00.0 REAL=0:00:00.0) 
-#% End load AAE data ... (date=11/11 11:25:29, total cpu=0:00:00.5, real=0:00:01.0, peak res=1992.5M, current mem=1992.5M)
+#% Begin load AAE data ... (date=11/25 11:11:48, mem=2053.4M)
+AAE DB initialization (MEM=2278.69 CPU=0:00:00.0 REAL=0:00:00.0) 
+#% End load AAE data ... (date=11/25 11:11:49, total cpu=0:00:00.6, real=0:00:01.0, peak res=2060.7M, current mem=2060.7M)
 Restoring CCOpt config...
   Extracting original clock gating for clk...
-    clock_tree clk contains 112 sinks and 2 clock gates.
+    clock_tree clk contains 193 sinks and 2 clock gates.
   Extracting original clock gating for clk done.
-  The skew group clk/func was created. It contains 112 sinks and 1 sources.
-  The skew group clk/func was created. It contains 112 sinks and 1 sources.
+  The skew group clk/func was created. It contains 193 sinks and 1 sources.
+  The skew group clk/func was created. It contains 193 sinks and 1 sources.
 Restoring CCOpt config done.
 **WARN: (IMPCTE-107):	The following globals have been obsoleted since version . They will be removed in the next release. 
 timing_enable_separate_device_slew_effect_sensitivities
-Ending "read_design" (total cpu=0:00:04.3, real=0:00:05.0, peak res=2017.2M, current mem=2000.9M)
+Ending "read_design" (total cpu=0:00:04.5, real=0:00:05.0, peak res=2084.9M, current mem=2067.1M)
 @@file 15: read_spef -rc_corner rc_nom $route_out/pe.spef
 
 SPEF files for RC Corner rc_nom:
 Top-level spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef'.
-Start spef parsing (MEM=2217.3).
+Start spef parsing (MEM=2280.69).
 Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 10 %
 Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 20 %
 Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 30 %
@@ -270,14 +270,13 @@ Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef
 Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 70 %
 Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 80 %
 Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 90 %
-Spef file '/misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef' reading completed:: 100 %
 SPEF file /misc/scratch/ar76269/pe-apprentice/7-emir/../5-route/outputs/pe.spef.
-Number of Resistors     : 6030
-Number of Ground Caps   : 7280
-Number of Coupling Caps : 1284
+Number of Resistors     : 5043
+Number of Ground Caps   : 5987
+Number of Coupling Caps : 1450
 
-End spef parsing (MEM=2230.3 CPU=0:00:00.1 REAL=0:00:00.0).
-5 nets are missing in SPEF file. The names of these nets are saved in ./rc_nom.missing_nets.rpt.
+End spef parsing (MEM=2290.69 CPU=0:00:00.1 REAL=0:00:00.0).
+8 nets are missing in SPEF file. The names of these nets are saved in ./rc_nom.missing_nets.rpt.
 @file 16:
 @file 17: # ââ Power ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 @file 18: # Writes the per-instance currents that rail analysis reads
@@ -309,24 +308,24 @@ Start slew iteration
 # Parasitics Mode: SPEF/RCDB 
 # Signoff Settings: SI On 
 #################################################################################
-Start delay calculation (fullDC) (2 T). (MEM=3307.88)
-End delay calculation. (MEM=3554.12 CPU=0:00:00.1 REAL=0:00:00.0)
+Start delay calculation (fullDC) (2 T). (MEM=3371.27)
+End delay calculation. (MEM=3625.51 CPU=0:00:00.1 REAL=0:00:00.0)
 /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/mmmc/modes/func/func.sdc
 /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/mmmc/modes/func/func.sdc
-End delay calculation (fullDC). (MEM=3554.12 CPU=0:00:00.2 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=3625.51 CPU=0:00:00.2 REAL=0:00:00.0)
 update aggressor slew in non distributed run
 End Slew iteration 
-Start delay calculation (fullDC) (2 T). (MEM=3554.12)
-AAE_INFO-618: Total number of nets in the design is 1481,  100.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=3677.88 CPU=0:00:00.4 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=3677.88 CPU=0:00:00.4 REAL=0:00:00.0)
-Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2898.9M)
-Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2898.9M)
+Start delay calculation (fullDC) (2 T). (MEM=3625.51)
+AAE_INFO-618: Total number of nets in the design is 1107,  100.0 percent of the nets selected for SI analysis
+End delay calculation. (MEM=3750.84 CPU=0:00:00.3 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=3750.84 CPU=0:00:00.3 REAL=0:00:01.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2963.8M)
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2963.8M)
 Starting SI iteration 2
-Start delay calculation (fullDC) (2 T). (MEM=2816.88)
-AAE_INFO-618: Total number of nets in the design is 1481,  0.3 percent of the nets selected for SI analysis
-End delay calculation. (MEM=2949.24 CPU=0:00:00.0 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=2949.24 CPU=0:00:00.1 REAL=0:00:00.0)
+Start delay calculation (fullDC) (2 T). (MEM=2878.84)
+AAE_INFO-618: Total number of nets in the design is 1107,  0.5 percent of the nets selected for SI analysis
+End delay calculation. (MEM=3013.27 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=3013.27 CPU=0:00:00.1 REAL=0:00:00.0)
 Load RC corner of view view_tt
 
 Begin Power Analysis
@@ -336,82 +335,83 @@ Begin Power Analysis
 
 Begin Processing Timing Library for Power Calculation
 
-Ended Processing Timing Library for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2260.97MB/4224.10MB/2261.02MB)
+Ended Processing Timing Library for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2278.60MB/4288.11MB/2278.60MB)
 
 
 
 Begin Processing Power Net/Grid for Power Calculation
 
-Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2261.02MB/4224.10MB/2261.02MB)
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2278.60MB/4288.11MB/2278.60MB)
 
 Begin Processing Timing Window Data for Power Calculation
 
-clk(322.581MHz) CK: assigning clock clk to net clk
-Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2261.02MB/4224.10MB/2261.02MB)
+clk(317.46MHz) CK: assigning clock clk to net clk
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2278.60MB/4288.11MB/2278.60MB)
 
 Parsing VCD file
 /misc/scratch/ar76269/pe-apprentice/7-emir/../0-inputs/outputs/pe.vcd
 
 Starting Reading VCD variables
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT)
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT)
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 10%
 
 Finished Reading VCD variables
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT)
-   With this vcd command,  99383 value changes and 1.2288e-05 second
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT)
+   With this vcd command,  99354 value changes and 1.2288e-05 second
 simulation time were counted for power consumption calculation.
 
   Filename (activity)                    :
 /misc/scratch/ar76269/pe-apprentice/7-emir/../0-inputs/outputs/pe.vcd
-  Names in file that matched to design   : 120/651
+  Names in file that matched to design   : 119/651
   Annotation coverage for this file
-   (Unique nets matched/Total nets)       : 120/1477 = 8.12458%
+   (Unique nets matched/Total nets)       : 119/1102 = 10.7985%
 
-  531 nets were found in the VCD file(s) but were not in
+  532 nets were found in the VCD file(s) but were not in
   the design.  These nets are not reported because
   'set_power_analysis_mode' -report_missing_nets' is set to false
 (default).
 
-  Total annotation coverage for all files of type VCD: 120/1477 = 8.12458%
-  Percent of VCD annotated nets with zero toggles: 14/1477 = 0.947867%
+  Total annotation coverage for all files of type VCD: 119/1102 = 10.7985%
+  Percent of VCD annotated nets with zero toggles: 14/1102 = 1.27042%
 
 Begin Processing User Attributes
 
-Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2275.90MB/4228.11MB/2275.90MB)
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2291.64MB/4292.12MB/2291.64MB)
 
 Begin Processing Signal Activity
 
 
 Starting Levelizing
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT)
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 10%
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 20%
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 30%
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 40%
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 50%
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 60%
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 70%
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 80%
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 90%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT)
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 10%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 20%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 30%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 40%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 50%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 60%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 70%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 80%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 90%
 
 Finished Levelizing
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT)
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT)
 
 Starting Activity Propagation
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT)
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 10%
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 20%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT)
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 10%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 20%
 
 Finished Activity Propagation
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT)
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT)
 
 Activity annotation summary:
         Primary Inputs : 54/54 = 100%
-          Flop outputs : 25/140 = 17.8571%
+          Flop outputs : 34/222 = 15.3153%
   Memory/Macro outputs : 0/0 = 0%
       Tristate outputs : 0/0 = 0%
-            Total Nets : 120/1477 = 8.12458%
+            Total Nets : 119/1102 = 10.7985%
 
-Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2275.90MB/4228.11MB/2275.90MB)
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2291.64MB/4292.12MB/2291.64MB)
 
 Begin Power Computation
 
@@ -426,34 +426,34 @@ sky130_fd_sc_hd__conb_1                   internal power,
 
 
 Starting Calculating power
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT)
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 10%
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 20%
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 30%
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 40%
-2026-Nov-11 11:25:31 (2026-Nov-11 17:25:31 GMT): 50%
-2026-Nov-11 11:25:32 (2026-Nov-11 17:25:32 GMT): 60%
-2026-Nov-11 11:25:32 (2026-Nov-11 17:25:32 GMT): 70%
-2026-Nov-11 11:25:32 (2026-Nov-11 17:25:32 GMT): 80%
-2026-Nov-11 11:25:32 (2026-Nov-11 17:25:32 GMT): 90%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT)
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 10%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 20%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 30%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 40%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 50%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 60%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 70%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 80%
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT): 90%
 
 Finished Calculating power
-2026-Nov-11 11:25:32 (2026-Nov-11 17:25:32 GMT)
+2026-Nov-25 11:11:51 (2026-Nov-25 17:11:51 GMT)
       # of MSMV cell(s) missing power_level: 0
-Ended Power Computation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2278.23MB/4252.11MB/2278.23MB)
+Ended Power Computation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2293.22MB/4316.12MB/2293.22MB)
 
 Begin Processing User Attributes
 
 Begin Processing set_power
 Ended Processing set_power: (cpu=0:00:00, real=0:00:00,
-mem(process/total/peak)=2278.23MB/4252.11MB/2278.23MB)
-Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2278.23MB/4252.11MB/2278.23MB)
+mem(process/total/peak)=2293.22MB/4316.12MB/2293.22MB)
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2293.22MB/4316.12MB/2293.22MB)
 
-Ended Power Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2278.23MB/4252.11MB/2278.23MB)
+Ended Power Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2293.22MB/4316.12MB/2293.22MB)
 
 Begin Boundary Leakage Calculation
 Ended Boundary Leakage Calculation: (cpu=0:00:00, real=0:00:00,
-mem(process/total/peak)=2278.45MB/4252.11MB/2278.45MB)
+mem(process/total/peak)=2293.66MB/4316.12MB/2293.66MB)
 Begin Static Power Report Generation
 *
 
@@ -461,50 +461,50 @@ Begin Static Power Report Generation
 
 Total Power
 -----------------------------------------------------------------------------------------
-Total Internal Power:        3.42147705 	   51.5629%
-Total Switching Power:       3.21406146 	   48.4370%
-Total Leakage Power:         0.00000580 	    0.0001%
-Total Power:                 6.63554431
+Total Internal Power:        3.52613282 	   66.3196%
+Total Switching Power:       1.79074331 	   33.6803%
+Total Leakage Power:         0.00000506 	    0.0001%
+Total Power:                 5.31688119
 -----------------------------------------------------------------------------------------
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__nand3b_1 has no power pin defined in LEF/PGV.
-
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__or2_0 has no power pin defined in LEF/PGV.
-
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__inv_2 has no power pin defined in LEF/PGV.
-
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__o31ai_2 has no power pin defined in LEF/PGV.
-
 ** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__clkbuf_1 has no power pin defined in LEF/PGV.
 
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__mux2i_4 has no power pin defined in LEF/PGV.
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__ha_2 has no power pin defined in LEF/PGV.
 
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__a2bb2oi_1 has no power pin defined in LEF/PGV.
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__dfstp_1 has no power pin defined in LEF/PGV.
 
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__fa_1 has no power pin defined in LEF/PGV.
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__inv_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__o22a_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__xnor2_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__nand2b_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__clkinv_1 has no power pin defined in LEF/PGV.
 
 ** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__dfbbp_1 has no power pin defined in LEF/PGV.
 
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__and2_4 has no power pin defined in LEF/PGV.
-
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__o21a_1 has no power pin defined in LEF/PGV.
-
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__o21bai_1 has no power pin defined in LEF/PGV.
-
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__buf_12 has no power pin defined in LEF/PGV.
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__inv_2 has no power pin defined in LEF/PGV.
 
 ** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__maj3_2 has no power pin defined in LEF/PGV.
 
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__o2bb2ai_1 has no power pin defined in LEF/PGV.
-
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__mux2_2 has no power pin defined in LEF/PGV.
-
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__a21boi_1 has no power pin defined in LEF/PGV.
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__o21ai_1 has no power pin defined in LEF/PGV.
 
 ** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__buf_6 has no power pin defined in LEF/PGV.
 
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__nand2b_4 has no power pin defined in LEF/PGV.
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__fah_1 has no power pin defined in LEF/PGV.
 
-** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__clkinv_4 has no power pin defined in LEF/PGV.
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__nor2b_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__nor4b_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__and2_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__and3b_1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__buf_4 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell sky130_fd_sc_hd__maj3_1 has no power pin defined in LEF/PGV.
 
 ** WARN:  (EMS-27): Message (VOLTUS_POWR-3424) has exceeded the current message display limit of 20.
 To increase the message display limit, refer to the product command reference manual.
@@ -512,7 +512,7 @@ To increase the message display limit, refer to the product command reference ma
 ** INFO:  (VOLTUS_POWR-3465): There are 0 decaps and 0 fillers in the design
 
 Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
-mem(process/total/peak)=2279.03MB/4252.11MB/2279.03MB)
+mem(process/total/peak)=2294.32MB/4316.12MB/2294.32MB)
 
 
 Output file is /misc/scratch/ar76269/pe-apprentice/7-emir/reports/power/power
@@ -521,7 +521,7 @@ Output file is /misc/scratch/ar76269/pe-apprentice/7-emir/reports/power/power
 @file 26: # Tech only: wire and via resistance from the QRC file, no cell models
 @@file 27: set_pg_library_mode -cell_type techonly -default_power_voltage 1.8 -extraction_tech_file $qrc
 @@file 28: write_pg_library -out_dir $pgv_dir
-Started PGV Library Generator at 11:25:31 11/11/2026
+Started PGV Library Generator at 11:11:50 11/25/2026
 
 ** INFO:  (VOLTUS_LGEN-3599): Library generation settings: 
 	Mode: TECH 
@@ -573,7 +573,7 @@ pwell
 Power Grid View Generation Statistics:
         # Total number of cells: 437 
         # TECH view created: 437 (100%)
-Finished PGV Library Generator at 11:25:43 11/11/2026 (cpu=0:00:01, real=0:00:12, peak mem=0.00MB)
+Finished PGV Library Generator at 11:11:57 11/25/2026 (cpu=0:00:01, real=0:00:07, peak mem=0.00MB)
 Current Voltus resource usage: (total cpu=0:00:00, real=0:00:00, mem=0.00MB)
 @file 29:
 @file 30: # ââ Rail analysis ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
@@ -597,7 +597,7 @@ view_tt
 voltus_rail: WARNING: 32bit executable version of "voltus_rail" not found... the 64bit version will  be used instead.
 
 
-Started Rail Analysis at 11:25:42 11/11/2026
+Started Rail Analysis at 11:11:57 11/25/2026
 
  
 Opening dproc sockets
@@ -606,23 +606,23 @@ connection complete
 Multi-CPU Configuration:
 	#CPU: 2
 	Mode: local
-	Host: yoshi.ece.utexas.edu
+	Host: daisy.ece.utexas.edu
 
 
 Start distributed processes ...
 INFO (PRL-36): The timeout for a remote job to respond is 3600 seconds.
 
 Submit command for task runs will be: local
-INFO (PRL-725): EDP: start server on yoshi.ece.utexas.edu:52527
+INFO (PRL-725): EDP: start server on daisy.ece.utexas.edu:36547
 
-INFO (PRL-819): Connected to yoshi.ece.utexas.edu 58609 1 ( PID=2468433 ). Wait time was 1 seconds
+INFO (PRL-819): Connected to daisy.ece.utexas.edu 43269 1 ( PID=2144081 ). Wait time was 1 seconds
 
-INFO (PRL-819): Connected to yoshi.ece.utexas.edu 46453 0 ( PID=2468425 ). Wait time was 1 seconds
+INFO (PRL-819): Connected to daisy.ece.utexas.edu 34577 0 ( PID=2144074 ). Wait time was 1 seconds
 
 INFO (PRL-742): EDP: all 2 edp slave(s) are launched
 
 
-Running OCI  extraction for /tmp/ssv_tmpdir_2461037_oha9hq/eps_out_2461037.def.gz ...
+Running OCI  extraction for /tmp/ssv_tmpdir_2136743_yloW9P/eps_out_2136743.def.gz ...
 
 Extraction option setup as:
 setenv gray_data NONE
@@ -639,7 +639,7 @@ R(w,s) Effects   : n/a
 R(sw,st) Effects : n/a
 TC(w) Effects    : n/a
 Some effects indicate n/a because of non-availability of relevant input data (or) requested to be off.
-Ended Preparing Data for Parasitic Extraction: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=38.70MB/23210.23MB/3108.67MB)
+Ended Preparing Data for Parasitic Extraction: (cpu=0:00:01, real=0:00:00, mem(process/total/peak)=36.44MB/23274.26MB/3129.84MB)
 
 Extraction option setup as:
 setenv gray_data NONE
@@ -647,44 +647,44 @@ setenv enable_cluster_overhang_via false
 setenv enable_dfm_mask_conflict_shape false
 Begin Parasitic Extraction
 Extracting Progress:
-    0% at 11:25:49 11/11/2026
-   50% at 11:25:55 11/11/2026
-  100% at 11:25:55 11/11/2026
-Ended Parasitic Extraction: (cpu=0:00:07, real=0:00:05, mem(process/total/peak)=23.99MB/21660.96MB/3108.67MB)
+    0% at 11:12:02 11/25/2026
+   50% at 11:12:08 11/25/2026
+  100% at 11:12:08 11/25/2026
+Ended Parasitic Extraction: (cpu=0:00:07, real=0:00:05, mem(process/total/peak)=20.67MB/21724.99MB/3129.84MB)
 
 
 Analyze Rail Settings:
-	Temp directory: /tmp/ssv_tmpdir_2461037_oha9hq
+	Temp directory: /tmp/ssv_tmpdir_2136743_yloW9P
 	Output directory: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail
 	Run directory: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/
 
 
 (proc 1) Invoking: "/usr/local/packages/cadence_2022/SSV221/tools.lnx86/ssvtools/bin/64bit/voltus_rail_smg -cmd /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/voltus_rail_smg.VDD.cmd -l /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/voltus_rail_smg.VDD.log" ...
 (proc 0) Invoking: "/usr/local/packages/cadence_2022/SSV221/tools.lnx86/ssvtools/bin/64bit/voltus_rail_smg -cmd /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/voltus_rail_smg.VSS.cmd -l /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/voltus_rail_smg.VSS.log" ...
-(proc 0) Begin Merging power grid
 (proc 1) Begin Merging power grid
-(proc 1) Tech reference temperature: 30
-(proc 1) Target temperature: 25
-(proc 1) 
+(proc 0) Begin Merging power grid
 (proc 0) Tech reference temperature: 30
 (proc 0) Target temperature: 25
 (proc 0) 
+(proc 1) Tech reference temperature: 30
+(proc 1) Target temperature: 25
+(proc 1) 
 (proc 0) Set Layer via4 for the Auto Ploc Vsrc feature
 (proc 1) Set Layer via4 for the Auto Ploc Vsrc feature
 (proc 0) Grid Statistics of Net VSS:
 (proc 0) - NODE
-(proc 0)   Total node: 4828
-(proc 0)     Top Level grid node: 4828
-(proc 0)       Top level interface node: 3235
+(proc 0)   Total node: 5306
+(proc 0)     Top Level grid node: 5306
+(proc 0)       Top level interface node: 3126
 (proc 0)     Missing interface node: 0
 (proc 0)     Cell internal node: 0
 (proc 0) - ELEM
-(proc 0)   Total element: 5133
-(proc 0)     Top Level grid element: 5133
+(proc 0)   Total element: 5905
+(proc 0)     Top Level grid element: 5905
 (proc 0)     Cell internal element: 0
 (proc 0) - INST
-(proc 0)   Instance logically connected: 3235
-(proc 0)     Tech: 3235
+(proc 0)   Instance logically connected: 3126
+(proc 0)     Tech: 3126
 (proc 0)     StdCell: 0
 (proc 0)     Macro:
 (proc 0)       Early: 0
@@ -692,23 +692,23 @@ Analyze Rail Settings:
 (proc 0)     Current Region:  0
 (proc 0)   Dropped instance due to missing/incomplete cell library: 0
 (proc 0) - TAP
-(proc 0)   Total tap: 3235
+(proc 0)   Total tap: 3126
 (proc 0) 
-(proc 0) Ended Merging power grid: (cpu=0:00:01, real=0:00:00, mem(process/total/peak)=27.84MB/21708.56MB/3108.67MB)
+(proc 0) Ended Merging power grid: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=34.10MB/21772.60MB/3129.84MB)
 (proc 1) Grid Statistics of Net VDD:
 (proc 1) - NODE
-(proc 1)   Total node: 4847
-(proc 1)     Top Level grid node: 4847
-(proc 1)       Top level interface node: 3235
+(proc 1)   Total node: 5283
+(proc 1)     Top Level grid node: 5283
+(proc 1)       Top level interface node: 3126
 (proc 1)     Missing interface node: 0
 (proc 1)     Cell internal node: 0
 (proc 1) - ELEM
-(proc 1)   Total element: 5152
-(proc 1)     Top Level grid element: 5152
+(proc 1)   Total element: 5882
+(proc 1)     Top Level grid element: 5882
 (proc 1)     Cell internal element: 0
 (proc 1) - INST
-(proc 1)   Instance logically connected: 3235
-(proc 1)     Tech: 3235
+(proc 1)   Instance logically connected: 3126
+(proc 1)     Tech: 3126
 (proc 1)     StdCell: 0
 (proc 1)     Macro:
 (proc 1)       Early: 0
@@ -716,40 +716,40 @@ Analyze Rail Settings:
 (proc 1)     Current Region:  0
 (proc 1)   Dropped instance due to missing/incomplete cell library: 0
 (proc 1) - TAP
-(proc 1)   Total tap: 3235
+(proc 1)   Total tap: 3126
 (proc 1) 
-(proc 1) Ended Merging power grid: (cpu=0:00:01, real=0:00:00, mem(process/total/peak)=34.28MB/20875.64MB/3108.67MB)
+(proc 1) Ended Merging power grid: (cpu=0:00:01, real=0:00:00, mem(process/total/peak)=27.26MB/20939.68MB/3129.84MB)
 
 Begin Preparing Data for Rail Analysis
 
 Net VSS
   Power Pin Location File: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/VSS/VSS_vsrcs.rpt
-  # Voltage Source Added/Total (%): 14/14 (100.00%)
+  # Voltage Source Added/Total (%): 36/36 (100.00%)
 
   Power Database: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/power/static_VSS.ptiavg
-  # Current Taps Matched/Total (%): 2838/2838 (100.00%)
-  # Instances Matched: 2838
+  # Current Taps Matched/Total (%): 2018/2018 (100.00%)
+  # Instances Matched: 2018
 
 Net VDD
   Power Pin Location File: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/VDD/VDD_vsrcs.rpt
-  # Voltage Source Added/Total (%): 14/14 (100.00%)
+  # Voltage Source Added/Total (%): 36/36 (100.00%)
 
   Power Database: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/power/static_VDD.ptiavg
-  # Current Taps Matched/Total (%): 2838/2838 (100.00%)
-  # Instances Matched: 2838
+  # Current Taps Matched/Total (%): 2018/2018 (100.00%)
+  # Instances Matched: 2018
 
 Begin PowerGrid Integrity Analysis
 
 Begin Redistribute Disconnected Cap
-Ended Redistribute Disconnected Cap: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=210.67MB/23130.79MB/3108.67MB)
+Ended Redistribute Disconnected Cap: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=210.47MB/23194.82MB/3129.84MB)
 
-Ended PowerGrid Integrity Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=210.92MB/23130.79MB/3108.67MB)
+Ended PowerGrid Integrity Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=211.03MB/23194.82MB/3129.84MB)
 
-Ended Preparing Data for Rail Analysis: (cpu=0:00:00, real=0:00:01, mem(process/total/peak)=211.09MB/23130.79MB/3108.67MB)
+Ended Preparing Data for Rail Analysis: (cpu=0:00:00, real=0:00:01, mem(process/total/peak)=210.95MB/23194.82MB/3129.84MB)
 
 
 Begin Steady-State Analysis
-Ended Steady-State Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=218.17MB/25445.54MB/3108.67MB)
+Ended Steady-State Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=219.64MB/25509.57MB/3129.84MB)
 
 
 Begin Report Generation
@@ -765,48 +765,48 @@ Circuit profile:
                                                       Current    Voltage
 Layer Name                       Nodes   Resistors    Sources    Sources
 ----- --------------------  ----------  ----------  ---------  ---------
-0     met5                          18          16          0         14
-1     via4                           0          14          0          0
-2     met4                         303         296          0          0
-3     via3                           0         225          0          0
-4     met3                         575         400          0          0
-5     via2                           0         225          0          0
-6     met2                         675         500          0          0
-7     via                            0         225          0          0
-8     met1                        3257        3232       2982          0
+0     met5                          48          42          0         36
+1     via4                           0          36          0          0
+2     met4                         498         492          0          0
+3     via3                           0         300          0          0
+4     met3                         600         450          0          0
+5     via2                           0         300          0          0
+6     met2                         900         750          0          0
+7     via                            0         300          0          0
+8     met1                        3260        3235       2916          0
                             ----------  ----------  ---------  ---------
-9     Circuit total               4829        5133       2982         14
-Ended Preparing Database for Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=427.89MB/30511.97MB/3909.19MB)
+9     Circuit total               5307        5905       2916         36
+Ended Preparing Database for Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=429.66MB/30576.01MB/3934.71MB)
 
-Initializing Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=427.89MB/30511.97MB/3909.19MB)
+Initializing Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=429.66MB/30576.01MB/3934.71MB)
 
 Begin IR Drop (Linear) Report Generation
   Voltage: 0
   Threshold: 0.09
-  Minimum, Average, Maximum IR Drop: 0.000V, 0.423mV, 1.012mV
-    Range 1(   0.885mV  -     1.012mV ):        10 (  0.21%)
-    Range 2(   0.759mV  -     0.885mV ):        62 (  1.28%)
-    Range 3(   0.632mV  -     0.759mV ):       332 (  6.88%)
-    Range 4(   0.506mV  -     0.632mV ):      1241 ( 25.70%)
-    Range 5(   0.379mV  -     0.506mV ):      1135 ( 23.51%)
-    Range 6(   0.253mV  -     0.379mV ):      1303 ( 26.99%)
-    Range 7(   0.126mV  -     0.253mV ):       670 ( 13.88%)
-    Range 8(    0.000V  -     0.126mV ):        75 (  1.55%)
+  Minimum, Average, Maximum IR Drop: 0.000V, 82.953uV, 0.609mV
+    Range 1(   0.533mV  -     0.609mV ):         6 (  0.11%)
+    Range 2(   0.456mV  -     0.533mV ):         9 (  0.17%)
+    Range 3(   0.380mV  -     0.456mV ):        10 (  0.19%)
+    Range 4(   0.304mV  -     0.380mV ):        34 (  0.64%)
+    Range 5(   0.228mV  -     0.304mV ):        68 (  1.28%)
+    Range 6(   0.152mV  -     0.228mV ):       149 (  2.81%)
+    Range 7(  76.073uV  -     0.152mV ):      2277 ( 42.91%)
+    Range 8(    0.000V  -    76.073uV ):      2753 ( 51.88%)
     Layer with maximum IR Drop:  met1
-      met5: 1.5709e-12 [0 - 0]
-      met4: 0.00047216 [7.4807e-05 - 0.00054697]
-      met3: 0.00049388 [0.0001181 - 0.00061199]
-      met2: 0.00060328 [0.0001211 - 0.00072438]
-      met1: 0.00088739 [0.0001243 - 0.0010117]
+      met5: 1.9113e-12 [0 - 0]
+      met4: 0.00010468 [7.9035e-06 - 0.00011258]
+      met3: 0.00016761 [1.4951e-05 - 0.00018256]
+      met2: 0.00024875 [1.6597e-05 - 0.00026535]
+      met1: 0.00059023 [1.8351e-05 - 0.00060859]
   IR Report: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/VSS.main.rpt
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/ir_linear.gif
-Ended IR Drop (Linear) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=467.21MB/30511.97MB/3997.33MB)
+Ended IR Drop (Linear) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=469.73MB/30576.01MB/4021.65MB)
 
 
 Begin IR Drop (Limit) Report Generation
   Voltage: 0
   Threshold: 0.09
-  Minimum, Average, Maximum IR Drop: 0.000V, 0.423mV, 1.012mV
+  Minimum, Average, Maximum IR Drop: 0.000V, 82.953uV, 0.609mV
     Range 1(  90.000mV  -    90.009mV ):         0 (  0.00%)
     Range 2(  82.500mV  -    90.000mV ):         0 (  0.00%)
     Range 3(  75.000mV  -    82.500mV ):         0 (  0.00%)
@@ -814,35 +814,35 @@ Begin IR Drop (Limit) Report Generation
     Range 5(  60.000mV  -    67.500mV ):         0 (  0.00%)
     Range 6(  52.500mV  -    60.000mV ):         0 (  0.00%)
     Range 7(  45.000mV  -    52.500mV ):         0 (  0.00%)
-    Range 8(  -1.000uV  -    45.000mV ):      4828 (100.00%)
+    Range 8(  -1.000uV  -    45.000mV ):      5306 (100.00%)
     Layer with maximum IR Drop:  met1
-      met5: 1.5709e-12 [0 - 0]
-      met4: 0.00047216 [7.4807e-05 - 0.00054697]
-      met3: 0.00049388 [0.0001181 - 0.00061199]
-      met2: 0.00060328 [0.0001211 - 0.00072438]
-      met1: 0.00088739 [0.0001243 - 0.0010117]
+      met5: 1.9113e-12 [0 - 0]
+      met4: 0.00010468 [7.9035e-06 - 0.00011258]
+      met3: 0.00016761 [1.4951e-05 - 0.00018256]
+      met2: 0.00024875 [1.6597e-05 - 0.00026535]
+      met1: 0.00059023 [1.8351e-05 - 0.00060859]
   IR Report: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/VSS.main.rpt
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/ir_limit.gif
-Ended IR Drop (Limit) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=471.21MB/30511.97MB/4005.33MB)
+Ended IR Drop (Limit) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=471.73MB/30576.01MB/4025.65MB)
 
 
 Begin Tap Current Report Generation
-  Minimum, Average, Maximum Tap Current: -0.140mA, -1.236uA, 0.000A
-  Total Current: -3.686mA
+  Minimum, Average, Maximum Tap Current: -0.156mA, -1.013uA, 0.000A
+  Total Current: -2.954mA
     Range 1(  -1.000GA  -    -1.000mA ):         0 (  0.00%)
-    Range 2(  -1.000mA  -  -100.000uA ):         2 (  0.07%)
-    Range 3(-100.000uA  -   -10.000uA ):        48 (  1.61%)
-    Range 4( -10.000uA  -    -1.000uA ):       821 ( 27.53%)
-    Range 5(  -1.000uA  -  -100.000nA ):       412 ( 13.82%)
-    Range 6(-100.000nA  -   -10.000nA ):        17 (  0.57%)
+    Range 2(  -1.000mA  -  -100.000uA ):         3 (  0.10%)
+    Range 3(-100.000uA  -   -10.000uA ):         7 (  0.24%)
+    Range 4( -10.000uA  -    -1.000uA ):       539 ( 18.48%)
+    Range 5(  -1.000uA  -  -100.000nA ):       288 (  9.88%)
+    Range 6(-100.000nA  -   -10.000nA ):        92 (  3.16%)
     Range 7( -10.000nA  -    -1.000nA ):         0 (  0.00%)
-    Range 8(  -1.000nA  -      0.000A ):      1682 ( 56.41%)
+    Range 8(  -1.000nA  -      0.000A ):      1987 ( 68.14%)
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/tc.gif
-Ended Tap Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=471.21MB/30511.97MB/4005.40MB)
+Ended Tap Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=471.80MB/30576.01MB/4025.78MB)
 
 
 Begin Instance Based IR Drop Report Generation
-  Minimum, Average, Maximum Instance Based IR Drop: 0.133mV, 0.479mV, 1.012mV
+  Minimum, Average, Maximum Instance Based IR Drop: 23.325uV, 0.103mV, 0.609mV
     Range 1(  90.000mV  -    90.009mV ):         0 (  0.00%)
     Range 2(  82.500mV  -    90.000mV ):         0 (  0.00%)
     Range 3(  75.000mV  -    82.500mV ):         0 (  0.00%)
@@ -850,70 +850,70 @@ Begin Instance Based IR Drop Report Generation
     Range 5(  60.000mV  -    67.500mV ):         0 (  0.00%)
     Range 6(  52.500mV  -    60.000mV ):         0 (  0.00%)
     Range 7(  45.000mV  -    52.500mV ):         0 (  0.00%)
-    Range 8(  -1.000uV  -    45.000mV ):      2982 (100.00%)
+    Range 8(  -1.000uV  -    45.000mV ):      2916 (100.00%)
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/iv.gif
-Ended Instance Based IR Drop Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=471.82MB/30511.97MB/4006.50MB)
+Ended Instance Based IR Drop Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=472.55MB/30576.01MB/4027.16MB)
 
 
 Begin Effective Instance Voltage Report Generation
-Ended Effective Instance Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=471.82MB/30511.97MB/4006.50MB)
+Ended Effective Instance Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=472.55MB/30576.01MB/4027.16MB)
 
 
 Begin Voltage Source Current Report Generation
-  Minimum, Average, Maximum Voltage Source Current: 0.199mA, 0.263mA, 0.356mA
-  Total Current: 3.686mA
-    Range 1(   0.336mA  -     0.356mA ):         2 ( 14.29%)
-    Range 2(   0.316mA  -     0.336mA ):         0 (  0.00%)
-    Range 3(   0.297mA  -     0.316mA ):         2 ( 14.29%)
-    Range 4(   0.277mA  -     0.297mA ):         2 ( 14.29%)
-    Range 5(   0.258mA  -     0.277mA ):         1 (  7.14%)
-    Range 6(   0.238mA  -     0.258mA ):         1 (  7.14%)
-    Range 7(   0.218mA  -     0.238mA ):         2 ( 14.29%)
-    Range 8(   0.199mA  -     0.218mA ):         4 ( 28.57%)
+  Minimum, Average, Maximum Voltage Source Current: 20.985uA, 82.051uA, 0.212mA
+  Total Current: 2.954mA
+    Range 1(   0.188mA  -     0.212mA ):         1 (  2.78%)
+    Range 2(   0.164mA  -     0.188mA ):         2 (  5.56%)
+    Range 3(   0.140mA  -     0.164mA ):         0 (  0.00%)
+    Range 4(   0.117mA  -     0.140mA ):         3 (  8.33%)
+    Range 5(  92.660uA  -     0.117mA ):         5 ( 13.89%)
+    Range 6(  68.768uA  -    92.660uA ):         9 ( 25.00%)
+    Range 7(  44.876uA  -    68.768uA ):        11 ( 30.56%)
+    Range 8(  20.982uA  -    44.876uA ):         5 ( 13.89%)
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/vc.gif
-Ended Voltage Source Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=473.82MB/30511.97MB/4020.70MB)
+Ended Voltage Source Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=474.68MB/30576.01MB/4045.30MB)
 
 
 Begin Resistor Current Report Generation
-  Minimum, Average, Maximum Resistor Current: 0.000A, 17.235uA, 0.361mA
+  Minimum, Average, Maximum Resistor Current: 0.000A, 7.991uA, 0.212mA
     Range 1(   1.000mA  -     1.000GA ):         0 (  0.00%)
-    Range 2( 100.000uA  -     1.000mA ):       137 (  2.67%)
-    Range 3(  10.000uA  -   100.000uA ):      2295 ( 44.71%)
-    Range 4(   1.000uA  -    10.000uA ):      1696 ( 33.04%)
-    Range 5(   0.100uA  -     1.000uA ):       186 (  3.62%)
-    Range 6(  10.000nA  -     0.100uA ):        38 (  0.74%)
+    Range 2( 100.000uA  -     1.000mA ):        26 (  0.44%)
+    Range 3(  10.000uA  -   100.000uA ):      1314 ( 22.25%)
+    Range 4(   1.000uA  -    10.000uA ):      3320 ( 56.22%)
+    Range 5(   0.100uA  -     1.000uA ):       433 (  7.33%)
+    Range 6(  10.000nA  -     0.100uA ):       107 (  1.81%)
     Range 7(   1.000nA  -    10.000nA ):         1 (  0.02%)
-    Range 8(    0.000A  -     1.000nA ):       780 ( 15.20%)
+    Range 8(    0.000A  -     1.000nA ):       704 ( 11.92%)
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/rc.gif
-Ended Resistor Current Report Generation: (cpu=0:00:00, real=0:00:01, mem(process/total/peak)=554.02MB/30511.97MB/4170.97MB)
+Ended Resistor Current Report Generation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=554.68MB/30576.01MB/4193.48MB)
 
 
 Begin Resistor Voltage Report Generation
-  Minimum, Average, Maximum Resistor Voltage: 0.000V, 6.734uV, 0.134mV
-    Range 1(   0.117mV  -     0.134mV ):         3 (  0.06%)
-    Range 2(   0.100mV  -     0.117mV ):        13 (  0.25%)
-    Range 3(  83.733uV  -     0.100mV ):         5 (  0.10%)
-    Range 4(  66.986uV  -    83.733uV ):        17 (  0.33%)
-    Range 5(  50.240uV  -    66.986uV ):        25 (  0.49%)
-    Range 6(  33.493uV  -    50.240uV ):       107 (  2.08%)
-    Range 7(  16.747uV  -    33.493uV ):       458 (  8.92%)
-    Range 8(    0.000V  -    16.747uV ):      4505 ( 87.77%)
+  Minimum, Average, Maximum Resistor Voltage: 0.000V, 3.910uV, 0.141mV
+    Range 1(   0.124mV  -     0.141mV ):         1 (  0.02%)
+    Range 2(   0.106mV  -     0.124mV ):         3 (  0.05%)
+    Range 3(  88.327uV  -     0.106mV ):         1 (  0.02%)
+    Range 4(  70.662uV  -    88.327uV ):        11 (  0.19%)
+    Range 5(  52.996uV  -    70.662uV ):        26 (  0.44%)
+    Range 6(  35.331uV  -    52.996uV ):        29 (  0.49%)
+    Range 7(  17.665uV  -    35.331uV ):       237 (  4.01%)
+    Range 8(    0.000V  -    17.665uV ):      5597 ( 94.78%)
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/rv.gif
-Ended Resistor Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=556.02MB/30511.97MB/4174.97MB)
+Ended Resistor Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=556.68MB/30576.01MB/4197.48MB)
 
 
 Begin Power Gate I/Idsat Report Generation
   No data found
-Ended Power Gate I/Idsat Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=556.04MB/30511.97MB/4174.98MB)
+Ended Power Gate I/Idsat Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=556.68MB/30576.01MB/4197.48MB)
 
 
 Begin Power Gate Voltage Report Generation
   No data found.
-Ended Power Gate Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=556.04MB/30511.97MB/4174.98MB)
+Ended Power Gate Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=556.68MB/30576.01MB/4197.48MB)
 
 
 Begin Current Density (J/JMAX) Report Generation
-  Minimum, Average, Maximum Current Density (J/JMAX): 0.000, 9.875m, 0.143
+  Minimum, Average, Maximum Current Density (J/JMAX): 0.000, 5.582m, 85.188m
     Range 1(    1.000  -     1.000G ):         0 (  0.00%)
     Range 2(    0.857  -      1.000 ):         0 (  0.00%)
     Range 3(    0.714  -      0.857 ):         0 (  0.00%)
@@ -921,18 +921,18 @@ Begin Current Density (J/JMAX) Report Generation
     Range 5(    0.429  -      0.571 ):         0 (  0.00%)
     Range 6(    0.286  -      0.429 ):         0 (  0.00%)
     Range 7(    0.143  -      0.286 ):         0 (  0.00%)
-    Range 8(    0.000  -      0.143 ):      4749 (100.00%)
+    Range 8(    0.000  -      0.143 ):      5312 (100.00%)
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VSS/rj.gif
-*** Note:384 resistors skipped by EM rules.
-Ended Current Density (J/JMAX) Report Generation: (cpu=0:00:02, real=0:00:02, mem(process/total/peak)=930.20MB/33074.39MB/4926.60MB)
+*** Note:593 resistors skipped by EM rules.
+Ended Current Density (J/JMAX) Report Generation: (cpu=0:00:02, real=0:00:02, mem(process/total/peak)=933.30MB/33138.43MB/4948.30MB)
 
 
 Begin Voltage Across Vias and Contacts Report Generation
-Ended Voltage Across Vias and Contacts Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.20MB/33074.39MB/4926.60MB)
+Ended Voltage Across Vias and Contacts Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=933.30MB/33138.43MB/4948.30MB)
 
 
 Begin Weak Grid Connectivity Report
-Ended Weak Grid Connectivity Report: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.20MB/33074.39MB/4926.60MB)
+Ended Weak Grid Connectivity Report: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=933.30MB/33138.43MB/4948.30MB)
 
 
 Begin Grid Integrity Report Generation
@@ -942,7 +942,7 @@ Begin Grid Integrity Report Generation
   # Disconnected Wire Segments: 0
   # Weakly Connected Metal Segments: 0
   # Dropped Voltage Sources: 0
-Ended Grid Integrity Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.32MB/33074.39MB/4926.73MB)
+Ended Grid Integrity Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=933.45MB/33138.43MB/4948.46MB)
 
 ** WARN: (VOLTUS_RAIL-2074): The layer li1 has no EM model parameters defined.
 EM checks will be disabled for this layer.
@@ -1015,42 +1015,42 @@ Circuit profile:
                                                       Current    Voltage
 Layer Name                       Nodes   Resistors    Sources    Sources
 ----- --------------------  ----------  ----------  ---------  ---------
-0     met5                          18          16          0         14
-1     via4                           0          14          0          0
-2     met4                         303         296          0          0
-3     via3                           0         225          0          0
-4     met3                         575         400          0          0
-5     via2                           0         225          0          0
-6     met2                         675         500          0          0
-7     via                            0         225          0          0
-8     met1                        3276        3251       3001          0
+0     met5                          48          42          0         36
+1     via4                           0          36          0          0
+2     met4                         498         492          0          0
+3     via3                           0         300          0          0
+4     met3                         600         450          0          0
+5     via2                           0         300          0          0
+6     met2                         900         750          0          0
+7     via                            0         300          0          0
+8     met1                        3237        3212       2887          0
                             ----------  ----------  ---------  ---------
-9     Circuit total               4848        5152       3001         14
-Ended Preparing Database for Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=428.15MB/30511.97MB/3929.64MB)
+9     Circuit total               5284        5882       2887         36
+Ended Preparing Database for Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=428.29MB/30576.01MB/3952.57MB)
 
-Initializing Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=428.15MB/30511.97MB/3929.64MB)
+Initializing Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=428.29MB/30576.01MB/3952.57MB)
 
 Begin IR Drop (Linear) Report Generation
   Voltage: 1.8
   Threshold: 1.71
   Minimum, Average, Maximum IR Drop: 1.799V, 1.800V, 1.800V
-    Range 1(    1.799V  -      1.799V ):         7 (  0.14%)
-    Range 2(    1.799V  -      1.799V ):        66 (  1.36%)
-    Range 3(    1.799V  -      1.799V ):       496 ( 10.23%)
-    Range 4(    1.799V  -      1.800V ):      1118 ( 23.07%)
-    Range 5(    1.800V  -      1.800V ):      1054 ( 21.75%)
-    Range 6(    1.800V  -      1.800V ):      1280 ( 26.41%)
-    Range 7(    1.800V  -      1.800V ):       720 ( 14.85%)
-    Range 8(    1.800V  -      1.800V ):       106 (  2.19%)
+    Range 1(    1.799V  -      1.799V ):         4 (  0.08%)
+    Range 2(    1.799V  -      1.800V ):         9 (  0.17%)
+    Range 3(    1.800V  -      1.800V ):        16 (  0.30%)
+    Range 4(    1.800V  -      1.800V ):        18 (  0.34%)
+    Range 5(    1.800V  -      1.800V ):        55 (  1.04%)
+    Range 6(    1.800V  -      1.800V ):       121 (  2.29%)
+    Range 7(    1.800V  -      1.800V ):      2029 ( 38.41%)
+    Range 8(    1.800V  -      1.800V ):      3031 ( 57.37%)
     Layer with maximum IR Drop:  met1
       met5: 0 [1.8 - 1.8]
-      met4: 0.00042665 [1.7995 - 1.7999]
-      met3: 0.00045609 [1.7994 - 1.7999]
-      met2: 0.00057113 [1.7993 - 1.7999]
-      met1: 0.00082743 [1.7991 - 1.7999]
+      met4: 9.1791e-05 [1.7999 - 1.8]
+      met3: 0.00014782 [1.7998 - 1.8]
+      met2: 0.00021565 [1.7998 - 1.8]
+      met1: 0.00059748 [1.7994 - 1.8]
   IR Report: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/VDD.main.rpt
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/ir_linear.gif
-Ended IR Drop (Linear) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=464.52MB/30511.97MB/3997.33MB)
+Ended IR Drop (Linear) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=467.15MB/30576.01MB/4021.65MB)
 
 
 Begin IR Drop (Limit) Report Generation
@@ -1064,31 +1064,31 @@ Begin IR Drop (Limit) Report Generation
     Range 5(    1.733V  -      1.740V ):         0 (  0.00%)
     Range 6(    1.740V  -      1.748V ):         0 (  0.00%)
     Range 7(    1.748V  -      1.755V ):         0 (  0.00%)
-    Range 8(    1.755V  -      1.800V ):      4847 (100.00%)
+    Range 8(    1.755V  -      1.800V ):      5283 (100.00%)
     Layer with maximum IR Drop:  met1
       met5: 0 [1.8 - 1.8]
-      met4: 0.00042665 [1.7995 - 1.7999]
-      met3: 0.00045609 [1.7994 - 1.7999]
-      met2: 0.00057113 [1.7993 - 1.7999]
-      met1: 0.00082743 [1.7991 - 1.7999]
+      met4: 9.1791e-05 [1.7999 - 1.8]
+      met3: 0.00014782 [1.7998 - 1.8]
+      met2: 0.00021565 [1.7998 - 1.8]
+      met1: 0.00059748 [1.7994 - 1.8]
   IR Report: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/VDD.main.rpt
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/ir_limit.gif
-Ended IR Drop (Limit) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=468.52MB/30511.97MB/4005.33MB)
+Ended IR Drop (Limit) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=469.15MB/30576.01MB/4025.65MB)
 
 
 Begin Tap Current Report Generation
-  Minimum, Average, Maximum Tap Current: 0.000A, 1.228uA, 0.140mA
-  Total Current: 3.686mA
+  Minimum, Average, Maximum Tap Current: 0.000A, 1.023uA, 0.156mA
+  Total Current: 2.954mA
     Range 1(   1.000mA  -     1.000GA ):         0 (  0.00%)
-    Range 2( 100.000uA  -     1.000mA ):         2 (  0.07%)
-    Range 3(  10.000uA  -   100.000uA ):        47 (  1.57%)
-    Range 4(   1.000uA  -    10.000uA ):       824 ( 27.46%)
-    Range 5( 100.000nA  -     1.000uA ):       412 ( 13.73%)
-    Range 6(  10.000nA  -   100.000nA ):        17 (  0.57%)
+    Range 2( 100.000uA  -     1.000mA ):         3 (  0.10%)
+    Range 3(  10.000uA  -   100.000uA ):         4 (  0.14%)
+    Range 4(   1.000uA  -    10.000uA ):       541 ( 18.74%)
+    Range 5( 100.000nA  -     1.000uA ):       288 (  9.98%)
+    Range 6(  10.000nA  -   100.000nA ):        93 (  3.22%)
     Range 7(   1.000nA  -    10.000nA ):         0 (  0.00%)
-    Range 8(    0.000A  -     1.000nA ):      1699 ( 56.61%)
+    Range 8(    0.000A  -     1.000nA ):      1958 ( 67.82%)
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/tc.gif
-Ended Tap Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=468.59MB/30511.97MB/4006.01MB)
+Ended Tap Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=469.21MB/30576.01MB/4025.78MB)
 
 
 Begin Instance Based IR Drop Report Generation
@@ -1100,103 +1100,103 @@ Begin Instance Based IR Drop Report Generation
     Range 5(    1.732V  -      1.740V ):         0 (  0.00%)
     Range 6(    1.740V  -      1.747V ):         0 (  0.00%)
     Range 7(    1.747V  -      1.755V ):         0 (  0.00%)
-    Range 8(    1.755V  -      1.800V ):      3001 (100.00%)
+    Range 8(    1.755V  -      1.800V ):      2887 (100.00%)
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/iv.gif
-Ended Instance Based IR Drop Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=469.07MB/30511.97MB/4006.50MB)
+Ended Instance Based IR Drop Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=469.85MB/30576.01MB/4027.16MB)
 
 
 Begin Effective Instance Voltage Report Generation
 
  Avg EIV:
-  Minimum, Average, Maximum Effective Instance Voltage: 1.798V, 1.799V, 1.800V
-    Range 1(    1.798V  -      1.798V ):         4 (  0.12%)
-    Range 2(    1.798V  -      1.798V ):        46 (  1.42%)
-    Range 3(    1.798V  -      1.799V ):       126 (  3.89%)
-    Range 4(    1.799V  -      1.799V ):       834 ( 25.78%)
-    Range 5(    1.799V  -      1.799V ):       796 ( 24.61%)
-    Range 6(    1.799V  -      1.799V ):       746 ( 23.06%)
-    Range 7(    1.799V  -      1.800V ):       437 ( 13.51%)
-    Range 8(    1.800V  -      1.800V ):       246 (  7.60%)
+  Minimum, Average, Maximum Effective Instance Voltage: 1.799V, 1.800V, 1.800V
+    Range 1(    1.799V  -      1.799V ):         4 (  0.13%)
+    Range 2(    1.799V  -      1.799V ):         5 (  0.16%)
+    Range 3(    1.799V  -      1.799V ):        12 (  0.38%)
+    Range 4(    1.799V  -      1.799V ):        16 (  0.51%)
+    Range 5(    1.799V  -      1.800V ):        49 (  1.57%)
+    Range 6(    1.800V  -      1.800V ):        79 (  2.53%)
+    Range 7(    1.800V  -      1.800V ):      1005 ( 32.15%)
+    Range 8(    1.800V  -      1.800V ):      1956 ( 62.57%)
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD_VSS.avg_div.gif
   GIF Limit plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD_VSS.avg_limit_div.gif
   **** Note: Histogram and gif file are generated based on elapsed EIV results.
-Ended Effective Instance Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=483.28MB/30511.97MB/4090.91MB)
+Ended Effective Instance Voltage Report Generation: (cpu=0:00:01, real=0:00:00, mem(process/total/peak)=487.97MB/30576.01MB/4115.42MB)
 
 
 Begin Voltage Source Current Report Generation
-  Minimum, Average, Maximum Voltage Source Current: -0.357mA, -0.263mA, -0.206mA
-  Total Current: -3.687mA
-    Range 1(  -0.357mA  -    -0.338mA ):         2 ( 14.29%)
-    Range 2(  -0.338mA  -    -0.319mA ):         0 (  0.00%)
-    Range 3(  -0.319mA  -    -0.300mA ):         2 ( 14.29%)
-    Range 4(  -0.300mA  -    -0.281mA ):         2 ( 14.29%)
-    Range 5(  -0.281mA  -    -0.262mA ):         0 (  0.00%)
-    Range 6(  -0.262mA  -    -0.243mA ):         1 (  7.14%)
-    Range 7(  -0.243mA  -    -0.225mA ):         2 ( 14.29%)
-    Range 8(  -0.225mA  -    -0.206mA ):         5 ( 35.71%)
+  Minimum, Average, Maximum Voltage Source Current: -0.170mA, -82.069uA, -23.603uA
+  Total Current: -2.954mA
+    Range 1(  -0.170mA  -    -0.152mA ):         3 (  8.33%)
+    Range 2(  -0.152mA  -    -0.133mA ):         1 (  2.78%)
+    Range 3(  -0.133mA  -    -0.115mA ):         2 (  5.56%)
+    Range 4(  -0.115mA  -   -96.745uA ):         3 (  8.33%)
+    Range 5( -96.745uA  -   -78.459uA ):         8 ( 22.22%)
+    Range 6( -78.459uA  -   -60.174uA ):         8 ( 22.22%)
+    Range 7( -60.174uA  -   -41.889uA ):         7 ( 19.44%)
+    Range 8( -41.889uA  -   -23.601uA ):         4 ( 11.11%)
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/vc.gif
-Ended Voltage Source Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=483.34MB/30511.97MB/4094.97MB)
+Ended Voltage Source Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=488.03MB/30576.01MB/4119.48MB)
 
 
 Begin Resistor Current Report Generation
-  Minimum, Average, Maximum Resistor Current: 0.000A, 17.400uA, 1.818mA
-    Range 1(   1.000mA  -     1.000GA ):         1 (  0.02%)
-    Range 2( 100.000uA  -     1.000mA ):       139 (  2.70%)
-    Range 3(  10.000uA  -   100.000uA ):      2335 ( 45.32%)
-    Range 4(   1.000uA  -    10.000uA ):      1552 ( 30.12%)
-    Range 5(   0.100uA  -     1.000uA ):       149 (  2.89%)
-    Range 6(  10.000nA  -     0.100uA ):         0 (  0.00%)
+  Minimum, Average, Maximum Resistor Current: 0.000A, 8.957uA, 1.996mA
+    Range 1(   1.000mA  -     1.000GA ):         3 (  0.05%)
+    Range 2( 100.000uA  -     1.000mA ):        23 (  0.39%)
+    Range 3(  10.000uA  -   100.000uA ):      1233 ( 20.96%)
+    Range 4(   1.000uA  -    10.000uA ):      3085 ( 52.45%)
+    Range 5(   0.100uA  -     1.000uA ):       256 (  4.35%)
+    Range 6(  10.000nA  -     0.100uA ):         1 (  0.02%)
     Range 7(   1.000nA  -    10.000nA ):         0 (  0.00%)
-    Range 8(    0.000A  -     1.000nA ):       976 ( 18.94%)
+    Range 8(    0.000A  -     1.000nA ):      1281 ( 21.78%)
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/rc.gif
-Ended Resistor Current Report Generation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=555.34MB/31793.18MB/4448.69MB)
+Ended Resistor Current Report Generation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=558.03MB/31857.22MB/4551.59MB)
 
 
 Begin Resistor Voltage Report Generation
-  Minimum, Average, Maximum Resistor Voltage: 0.000V, 6.421uV, 0.134mV
-    Range 1(   0.118mV  -     0.134mV ):         6 (  0.12%)
-    Range 2(   0.101mV  -     0.118mV ):         7 (  0.14%)
-    Range 3(  83.968uV  -     0.101mV ):         5 (  0.10%)
-    Range 4(  67.174uV  -    83.968uV ):        14 (  0.27%)
-    Range 5(  50.381uV  -    67.174uV ):        18 (  0.35%)
-    Range 6(  33.587uV  -    50.381uV ):       102 (  1.98%)
-    Range 7(  16.794uV  -    33.587uV ):       430 (  8.35%)
-    Range 8(    0.000V  -    16.794uV ):      4570 ( 88.70%)
+  Minimum, Average, Maximum Resistor Voltage: 0.000V, 3.853uV, 0.134mV
+    Range 1(   0.118mV  -     0.134mV ):         1 (  0.02%)
+    Range 2(   0.101mV  -     0.118mV ):         1 (  0.02%)
+    Range 3(  83.968uV  -     0.101mV ):         3 (  0.05%)
+    Range 4(  67.174uV  -    83.968uV ):        10 (  0.17%)
+    Range 5(  50.381uV  -    67.174uV ):        26 (  0.44%)
+    Range 6(  33.587uV  -    50.381uV ):        30 (  0.51%)
+    Range 7(  16.794uV  -    33.587uV ):       252 (  4.28%)
+    Range 8(    0.000V  -    16.794uV ):      5559 ( 94.51%)
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/rv.gif
-Ended Resistor Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=557.34MB/31793.18MB/4527.14MB)
+Ended Resistor Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=562.03MB/31857.22MB/4556.09MB)
 
 
 Begin Power Gate I/Idsat Report Generation
   No data found
-Ended Power Gate I/Idsat Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=557.34MB/31793.18MB/4527.14MB)
+Ended Power Gate I/Idsat Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=562.03MB/31857.22MB/4556.09MB)
 
 
 Begin Power Gate Voltage Report Generation
   No data found.
-Ended Power Gate Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=557.34MB/31793.18MB/4527.14MB)
+Ended Power Gate Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=562.03MB/31857.22MB/4556.09MB)
 
 
 Begin Current Density (J/JMAX) Report Generation
-  Minimum, Average, Maximum Current Density (J/JMAX): 0.000, 10.143m, 0.143
+  Minimum, Average, Maximum Current Density (J/JMAX): 0.000, 5.960m, 85.998m
     Range 1(    1.000  -     1.000G ):         0 (  0.00%)
     Range 2(    0.857  -      1.000 ):         0 (  0.00%)
     Range 3(    0.714  -      0.857 ):         0 (  0.00%)
     Range 4(    0.571  -      0.714 ):         0 (  0.00%)
     Range 5(    0.429  -      0.571 ):         0 (  0.00%)
     Range 6(    0.286  -      0.429 ):         0 (  0.00%)
-    Range 7(    0.143  -      0.286 ):         1 (  0.02%)
-    Range 8(    0.000  -      0.143 ):      4591 ( 99.98%)
+    Range 7(    0.143  -      0.286 ):         0 (  0.00%)
+    Range 8(    0.000  -      0.143 ):      4933 (100.00%)
   GIF plot: /misc/scratch/ar76269/pe-apprentice/7-emir/reports/rail/core_25C_avg_1/Reports/VDD/rj.gif
-*** Note:560 resistors skipped by EM rules.
-Ended Current Density (J/JMAX) Report Generation: (cpu=0:00:02, real=0:00:02, mem(process/total/peak)=930.85MB/33074.39MB/4926.85MB)
+*** Note:949 resistors skipped by EM rules.
+Ended Current Density (J/JMAX) Report Generation: (cpu=0:00:02, real=0:00:02, mem(process/total/peak)=930.89MB/33138.43MB/4949.18MB)
 
 
 Begin Voltage Across Vias and Contacts Report Generation
-Ended Voltage Across Vias and Contacts Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.85MB/33074.39MB/4926.85MB)
+Ended Voltage Across Vias and Contacts Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.89MB/33138.43MB/4949.18MB)
 
 
 Begin Weak Grid Connectivity Report
-Ended Weak Grid Connectivity Report: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.85MB/33074.39MB/4926.85MB)
+Ended Weak Grid Connectivity Report: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=931.10MB/33138.43MB/4949.39MB)
 
 
 Begin Grid Integrity Report Generation
@@ -1206,7 +1206,7 @@ Begin Grid Integrity Report Generation
   # Disconnected Wire Segments: 0
   # Weakly Connected Metal Segments: 0
   # Dropped Voltage Sources: 0
-Ended Grid Integrity Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=930.85MB/33074.39MB/4926.85MB)
+Ended Grid Integrity Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=931.10MB/33138.43MB/4949.39MB)
 
 ** WARN: (VOLTUS_RAIL-2074): The layer li1 has no EM model parameters defined.
 EM checks will be disabled for this layer.
@@ -1268,7 +1268,7 @@ to specify this variable.
 *** Info: model parameter "vcwidth" has been used to
           calculate the area of one or more via resistors.
 
-Ended Report Generation: (cpu=0:00:00, real=0:00:11, mem(process/total/peak)=776.92MB/33074.39MB/4927.12MB)
+Ended Report Generation: (cpu=0:00:00, real=0:00:10, mem(process/total/peak)=776.89MB/33138.43MB/4949.57MB)
 
 
 Rail Analysis Statistics:
@@ -1277,13 +1277,13 @@ Error messages:        0
 
 Rail Analysis completed successfully.
 
-Finished Rail Analysis at 11:26:11 11/11/2026 (cpu=0:00:10, real=0:00:29, peak mem=4927.51MB)
-Current Voltus IC Power Integrity Solution resource usage: (total cpu=0:00:41, real=0:01:06, mem=3065.96MB)
+Finished Rail Analysis at 11:12:26 11/25/2026 (cpu=0:00:09, real=0:00:29, peak mem=4949.92MB)
+Current Voltus IC Power Integrity Solution resource usage: (total cpu=0:00:41, real=0:01:00, mem=3085.18MB)
 @file 44: exit
 
 --------------------------------------------------------------------------------
-Exiting Voltus IC Power Integrity Solution on Wed Nov 11 11:26:11 2026
+Exiting Voltus IC Power Integrity Solution on Wed Nov 25 11:12:27 2026
   Total CPU time:     0:00:41
-  Total real time:    0:01:06
-  Peak memory (main): 4927.51MB
+  Total real time:    0:01:01
+  Peak memory (main): 4949.92MB
 

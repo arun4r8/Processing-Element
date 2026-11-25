@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sun Nov 22 11:13:26 2026                
+#  Created on Wed Nov 25 11:01:49 2026                
 #                                                     
 #######################################################
 
@@ -29,7 +29,7 @@ set_db route_design_with_timing_driven 1
 route_design
 set_db extract_rc_engine post_route
 opt_design -post_route -setup -hold
-set_db opt_setup_target_slack 0.02
+set_db opt_setup_target_slack 0.05
 opt_design -post_route -setup -hold
 time_design -post_route       -report_dir $rpt_dir/timing -report_prefix route_setup
 time_design -post_route -hold -report_dir $rpt_dir/timing -report_prefix route_hold

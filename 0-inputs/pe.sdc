@@ -1,5 +1,5 @@
 # ── Clock ───────────────────────────────────────────────────────────
-set clock_period 3.1
+set clock_period 3.15
 create_clock -name clk -period $clock_period [get_ports clk]
 set_clock_uncertainty [expr {$clock_period * 0.05}] [get_clocks clk]
 

@@ -4,19 +4,19 @@ Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v22.12-s082_1, built Thu May 4 21:55:47 PDT 2023
 Options:	-stylus -no_gui -files ../sta.tcl -log sta 
-Date:		Wed Nov 11 11:05:05 2026
-Host:		yoshi.ece.utexas.edu (x86_64 w/Linux 4.18.0-553.183.1.el8_10.x86_64) (16cores*64cpus*Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz 22528KB)
+Date:		Wed Nov 25 11:09:23 2026
+Host:		daisy.ece.utexas.edu (x86_64 w/Linux 4.18.0-553.183.1.el8_10.x86_64) (16cores*64cpus*Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz 22528KB)
 OS:		Red Hat Enterprise Linux 8.10 (Ootpa)
 
 License:
-		[11:05:05.446305] Configured Lic search path (21.01-s002): /usr/local/packages/cadence_2022/license.dat
+		[11:09:23.446337] Configured Lic search path (21.01-s002): /usr/local/packages/cadence_2022/license.dat
 
 		tpsxl	Tempus Timing Signoff Solution XL	22.1	checkout succeeded
 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
 
 
 Change the soft stacksize limit to 0.2%RAM (771 mbytes). Set global soft_stack_size_limit to change the value.
-environment variable TMPDIR is '/tmp/ssv_tmpdir_2397600_p1DcxR'.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_2122007_sgE2Tf'.
 #@ Processing -execute option
 @tempus 1> 
 #@ Processing -files option
@@ -71,21 +71,21 @@ Reading   timing library /misc/scratch/sky130/ciel/sky130/versions/1e931c9417df0
 Read 428 cells in library sky130_fd_sc_hd__tt_025C_1v80.
 Library reading multithread flow ended.
 @@file 16: read_netlist $route_out/pe.v
-#% Begin Load netlist data ... (date=11/11 11:05:25, mem=1209.4M)
+#% Begin Load netlist data ... (date=11/25 11:09:43, mem=1209.7M)
 *** Begin netlist parsing (mem=1283.5M) ***
 Reading verilog netlist '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.v'
 
-*** Memory Usage v#1 (Current mem = 1441.547M, initial mem = 646.520M) ***
+*** Memory Usage v#1 (Current mem = 1441.547M, initial mem = 638.520M) ***
 *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1441.5M) ***
-#% End Load netlist data ... (date=11/11 11:05:26, total cpu=0:00:00.4, real=0:00:01.0, peak res=1323.0M, current mem=1315.2M)
+#% End Load netlist data ... (date=11/25 11:09:43, total cpu=0:00:00.4, real=0:00:00.0, peak res=1321.2M, current mem=1313.4M)
 Top level cell is pe.
 Building hierarchical netlist for Cell pe ...
 ***** UseNewTieNetMode *****.
 *** Netlist is unique.
 ** info: there are 431 modules.
-** info: there are 1370 stdCell insts.
+** info: there are 960 stdCell insts.
 
-*** Memory Usage v#1 (Current mem = 1781.992M, initial mem = 646.520M) ***
+*** Memory Usage v#1 (Current mem = 1781.992M, initial mem = 638.520M) ***
 @@file 17: init_design
 Set Default Input Pin Transition as 0.1 ps.
 Extraction setup Started 
@@ -104,11 +104,11 @@ Summary of Active RC-Corners :
 Multithreaded Timing Analysis is initialized with 2 threads
 
 Reading timing constraints file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.sdc' ...
-Current (total cpu=0:00:19.2, real=0:00:22.0, peak res=1977.8M, current mem=1977.8M)
+Current (total cpu=0:00:19.5, real=0:00:21.0, peak res=1974.0M, current mem=1974.0M)
 pe
 INFO (CTE): Constraints read successfully.
-Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1992.5M, current mem=1992.5M)
-Current (total cpu=0:00:19.3, real=0:00:22.0, peak res=1992.5M, current mem=1992.5M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1988.8M, current mem=1988.8M)
+Current (total cpu=0:00:19.6, real=0:00:21.0, peak res=1988.8M, current mem=1988.8M)
 Total number of combinational cells: 317
 Total number of sequential cells: 68
 Total number of tristate cells: 13
@@ -146,14 +146,13 @@ Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef'
 Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef' reading completed:: 70 %
 Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef' reading completed:: 80 %
 Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef' reading completed:: 90 %
-Spef file '/misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef' reading completed:: 100 %
 SPEF file /misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.spef.
-Number of Resistors     : 6030
-Number of Ground Caps   : 7280
-Number of Coupling Caps : 1284
+Number of Resistors     : 5043
+Number of Ground Caps   : 5987
+Number of Coupling Caps : 1450
 
-End spef parsing (MEM=2392.38 CPU=0:00:00.1 REAL=0:00:00.0).
-5 nets are missing in SPEF file. The names of these nets are saved in ./rc_nom.missing_nets.rpt.
+End spef parsing (MEM=2383.38 CPU=0:00:00.1 REAL=0:00:01.0).
+8 nets are missing in SPEF file. The names of these nets are saved in ./rc_nom.missing_nets.rpt.
 @file 19:
 @@file 20: set_db timing_analysis_type ocv
 @@file 21: set_db timing_analysis_cppr both
@@ -164,7 +163,7 @@ AAE_INFO: The setting is changed from false to true in setDelayCalMode -SIAware
 @file 24: # ââ Reports ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 @@file 25: report_timing -max_paths 10 -path_type full_clock > $rpt_dir/setup.rpt
 AAE_INFO: opIsDesignInPostRouteState() is 0
-AAE DB initialization (MEM=2415.28 CPU=0:00:00.0 REAL=0:00:00.0) 
+AAE DB initialization (MEM=2406.28 CPU=0:00:00.0 REAL=0:00:00.0) 
 AAE_INFO: resetNetProps viewIdx 0 
 Starting SI iteration 1 using Infinite Timing Windows
 Start slew iteration 
@@ -175,34 +174,34 @@ Start slew iteration
 # Parasitics Mode: SPEF/RCDB 
 # Signoff Settings: SI On 
 #################################################################################
-Start delay calculation (fullDC) (2 T). (MEM=3239.91)
-End delay calculation. (MEM=3469.62 CPU=0:00:00.1 REAL=0:00:00.0)
+Start delay calculation (fullDC) (2 T). (MEM=3231.91)
+End delay calculation. (MEM=3486.16 CPU=0:00:00.1 REAL=0:00:00.0)
 /misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.sdc
 /misc/scratch/ar76269/pe-apprentice/6-sta/../5-route/outputs/pe.sdc
-End delay calculation (fullDC). (MEM=3469.62 CPU=0:00:00.3 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=3486.16 CPU=0:00:00.2 REAL=0:00:01.0)
 update aggressor slew in non distributed run
 End Slew iteration 
-Start delay calculation (fullDC) (2 T). (MEM=3469.62)
-AAE_INFO-618: Total number of nets in the design is 1479,  100.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=3570.39 CPU=0:00:00.3 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=3570.39 CPU=0:00:00.3 REAL=0:00:00.0)
-Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2791.4M)
-Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2791.4M)
+Start delay calculation (fullDC) (2 T). (MEM=3486.16)
+AAE_INFO-618: Total number of nets in the design is 1105,  100.0 percent of the nets selected for SI analysis
+End delay calculation. (MEM=3587.45 CPU=0:00:00.3 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=3587.45 CPU=0:00:00.3 REAL=0:00:00.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2800.4M)
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2800.4M)
 Starting SI iteration 2
-Start delay calculation (fullDC) (2 T). (MEM=2697.39)
-AAE_INFO-618: Total number of nets in the design is 1479,  0.3 percent of the nets selected for SI analysis
-End delay calculation. (MEM=2831.83 CPU=0:00:00.0 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=2831.83 CPU=0:00:00.1 REAL=0:00:00.0)
+Start delay calculation (fullDC) (2 T). (MEM=2697.45)
+AAE_INFO-618: Total number of nets in the design is 1105,  0.5 percent of the nets selected for SI analysis
+End delay calculation. (MEM=2831.88 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2831.88 CPU=0:00:00.1 REAL=0:00:00.0)
 @@file 26: report_timing -early -max_paths 10 -path_type full_clock > $rpt_dir/hold.rpt
 @@file 27: report_analysis_summary > $rpt_dir/summary.rpt
 @@file 28: report_constraint -all_violators > $rpt_dir/all_violators.rpt
 @file 29: exit
 
-*** Memory Usage v#1 (Current mem = 2723.602M, initial mem = 646.520M) ***
+*** Memory Usage v#1 (Current mem = 2723.656M, initial mem = 638.520M) ***
 
 *** Summary of all messages that are not suppressed in this session:
 Severity  ID               Count  Summary                                  
 WARNING   TECHLIB-302         12  No function defined for cell '%s'. The c...
 *** Message Summary: 12 warning(s), 0 error(s)
 
---- Ending "Tempus Timing Solution" (totcpu=0:00:21.9, real=0:00:25.0, mem=2723.6M) ---
+--- Ending "Tempus Timing Solution" (totcpu=0:00:22.2, real=0:00:25.0, mem=2723.7M) ---

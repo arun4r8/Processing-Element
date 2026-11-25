@@ -2,29 +2,51 @@ Voltage source current:
       Range  Source       Source        Location    Layer
       Index  Current      Name          (um)
       -----  --------     -------------------------------
-         8   -2.2309e-04A   VDDVsrcT2   147.70, 7.06  met5
-         8   -2.0828e-04A   VDDVsrcT4   138.37, 7.06  met5
-         3   -3.1732e-04A   VDDVsrcT6   108.37, 7.06  met5
-         1   -3.5469e-04A   VDDVsrcT8   78.37, 7.06  met5
-         1   -3.5698e-04A   VDDVsrcT10   48.37, 7.06  met5
-         7   -2.4054e-04A   VDDVsrcT12   18.37, 7.06  met5
-         6   -2.4529e-04A   VDDVsrcT14   7.32, 7.06  met5
-         7   -2.2593e-04A   VDDVsrcT1   147.70, 145.94  met5
-         8   -2.1301e-04A   VDDVsrcT3   138.37, 145.94  met5
-         4   -2.9379e-04A   VDDVsrcT5   108.37, 145.94  met5
-         3   -3.0520e-04A   VDDVsrcT7   78.37, 145.94  met5
-         4   -2.8308e-04A   VDDVsrcT9   48.37, 145.94  met5
-         8   -2.0564e-04A   VDDVsrcT11   18.37, 145.94  met5
-         8   -2.1376e-04A   VDDVsrcT13   7.32, 145.94  met5
+         8   -4.0323e-05A   VDDVsrcT6   147.70, 7.06  met5
+         6   -7.0322e-05A   VDDVsrcT12   121.12, 7.06  met5
+         6   -7.6184e-05A   VDDVsrcT18   91.12, 7.06  met5
+         5   -9.0661e-05A   VDDVsrcT24   61.12, 7.06  met5
+         5   -8.9173e-05A   VDDVsrcT30   31.12, 7.06  met5
+         7   -4.6563e-05A   VDDVsrcT36   7.32, 7.06  met5
+         8   -3.4572e-05A   VDDVsrcT1   147.70, 145.94  met5
+         7   -5.8376e-05A   VDDVsrcT7   121.12, 145.94  met5
+         7   -5.8664e-05A   VDDVsrcT13   91.12, 145.94  met5
+         7   -5.2403e-05A   VDDVsrcT19   61.12, 145.94  met5
+         7   -4.5874e-05A   VDDVsrcT25   31.12, 145.94  met5
+         8   -2.3603e-05A   VDDVsrcT31   7.32, 145.94  met5
+         6   -6.6769e-05A   VDDVsrcT5   147.70, 30.86  met5
+         4   -1.0940e-04A   VDDVsrcT11   121.12, 30.86  met5
+         3   -1.1764e-04A   VDDVsrcT17   91.12, 30.86  met5
+         1   -1.5243e-04A   VDDVsrcT23   61.12, 30.86  met5
+         1   -1.6116e-04A   VDDVsrcT29   31.12, 30.86  met5
+         5   -8.0824e-05A   VDDVsrcT35   7.32, 30.86  met5
+         6   -7.6072e-05A   VDDVsrcT4   147.70, 60.86  met5
+         3   -1.1668e-04A   VDDVsrcT10   121.12, 60.86  met5
+         4   -1.0836e-04A   VDDVsrcT16   91.12, 60.86  met5
+         2   -1.4850e-04A   VDDVsrcT22   61.12, 60.86  met5
+         1   -1.6989e-04A   VDDVsrcT28   31.12, 60.86  met5
+         5   -8.8130e-05A   VDDVsrcT34   7.32, 60.86  met5
+         6   -6.6791e-05A   VDDVsrcT3   147.70, 90.86  met5
+         4   -1.0707e-04A   VDDVsrcT9   121.12, 90.86  met5
+         5   -8.2245e-05A   VDDVsrcT15   91.12, 90.86  met5
+         5   -8.6131e-05A   VDDVsrcT21   61.12, 90.86  met5
+         5   -8.5776e-05A   VDDVsrcT27   31.12, 90.86  met5
+         7   -4.6851e-05A   VDDVsrcT33   7.32, 90.86  met5
+         7   -5.6910e-05A   VDDVsrcT2   147.70, 120.86  met5
+         5   -9.2237e-05A   VDDVsrcT8   121.12, 120.86  met5
+         6   -7.7094e-05A   VDDVsrcT14   91.12, 120.86  met5
+         6   -7.0344e-05A   VDDVsrcT20   61.12, 120.86  met5
+         6   -6.4526e-05A   VDDVsrcT26   31.12, 120.86  met5
+         8   -3.5927e-05A   VDDVsrcT32   7.32, 120.86  met5
 *
 * Data filtering results for voltage source current:
-  Minimum, Average, Maximum Voltage Source Current: -0.357mA, -0.263mA, -0.206mA
-  Total Current: -3.687mA
-    Range 1(  -0.357mA  -    -0.338mA ):         2 ( 14.29%)
-    Range 2(  -0.338mA  -    -0.319mA ):         0 (  0.00%)
-    Range 3(  -0.319mA  -    -0.300mA ):         2 ( 14.29%)
-    Range 4(  -0.300mA  -    -0.281mA ):         2 ( 14.29%)
-    Range 5(  -0.281mA  -    -0.262mA ):         0 (  0.00%)
-    Range 6(  -0.262mA  -    -0.243mA ):         1 (  7.14%)
-    Range 7(  -0.243mA  -    -0.225mA ):         2 ( 14.29%)
-    Range 8(  -0.225mA  -    -0.206mA ):         5 ( 35.71%)
+  Minimum, Average, Maximum Voltage Source Current: -0.170mA, -82.069uA, -23.603uA
+  Total Current: -2.954mA
+    Range 1(  -0.170mA  -    -0.152mA ):         3 (  8.33%)
+    Range 2(  -0.152mA  -    -0.133mA ):         1 (  2.78%)
+    Range 3(  -0.133mA  -    -0.115mA ):         2 (  5.56%)
+    Range 4(  -0.115mA  -   -96.745uA ):         3 (  8.33%)
+    Range 5( -96.745uA  -   -78.459uA ):         8 ( 22.22%)
+    Range 6( -78.459uA  -   -60.174uA ):         8 ( 22.22%)
+    Range 7( -60.174uA  -   -41.889uA ):         7 ( 19.44%)
+    Range 8( -41.889uA  -   -23.601uA ):         4 ( 11.11%)

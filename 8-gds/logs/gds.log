@@ -4,18 +4,18 @@ Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v21.18-s099_1, built Tue Jul 18 13:03:50 PDT 2023
 Options:	-stylus -batch -no_gui -files ../gds.tcl -log gds 
-Date:		Wed Nov 11 11:28:14 2026
-Host:		yoshi.ece.utexas.edu (x86_64 w/Linux 4.18.0-553.183.1.el8_10.x86_64) (16cores*64cpus*Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz 22528KB)
+Date:		Wed Nov 25 11:13:41 2026
+Host:		daisy.ece.utexas.edu (x86_64 w/Linux 4.18.0-553.183.1.el8_10.x86_64) (16cores*64cpus*Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz 22528KB)
 OS:		Red Hat Enterprise Linux 8.10 (Ootpa)
 
 License:
-		[11:28:14.446345] Configured Lic search path (21.01-s002): /usr/local/packages/cadence_2022/license.dat
+		[11:13:41.446297] Configured Lic search path (21.01-s002): /usr/local/packages/cadence_2022/license.dat
 
 		invs	Innovus Implementation System	21.1	checkout succeeded
 		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
 
 
-Create and set the environment variable TMPDIR to /tmp/innovus_temp_2479723_yoshi.ece.utexas.edu_ar76269_FpiCQ8.
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_2149577_daisy.ece.utexas.edu_ar76269_RUW0gC.
 
 Change the soft stacksize limit to 0.2%RAM (771 mbytes). Set global soft_stack_size_limit to change the value.
 
@@ -40,7 +40,7 @@ Change the soft stacksize limit to 0.2%RAM (771 mbytes). Set global soft_stack_s
 @@file 14: set_multi_cpu_usage -local_cpu 2
 @file 15:
 @@file 16: read_db $route_out/pe.route.db
-#% Begin load design ... (date=11/11 11:28:31, mem=911.7M)
+#% Begin load design ... (date=11/25 11:13:58, mem=910.1M)
 Set Default Net Delay as 1000 ps.
 Set Default Net Load as 0.5 pF. 
 AAE_INFO: switching -siAware from false to true ...
@@ -52,7 +52,7 @@ Set Using Default Delay Limit as 1000.
 **WARN: (IMPDBTCL-321):	The attribute 'timing_enable_separate_device_slew_effect_sensitivities' still works but will be obsolete in a future major release. You should remove it from your script before the next major release to avoid errors.
 **WARN: (IMPUDM-33):	Global variable "timing_enable_separate_device_slew_effect_sensitivities" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
 Set Default Input Pin Transition as 0.1 ps.
-Loading design 'pe' saved by 'Innovus' '21.18-s099_1' on 'Wed Nov 11 10:26:18 2026'.
+Loading design 'pe' saved by 'Innovus' '21.18-s099_1' on 'Wed Nov 25 11:04:19 2026'.
 Starting library reading in 'Multi-threaded flow' (with '2' threads)
 
 Threads Configured:2
@@ -97,17 +97,17 @@ Type 'man IMPLF-201' for more detail.
 ##  Both design process and tech node are not set.
 
 Loading view definition file from /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/viewDefinition.tcl
-% Begin Load netlist data ... (date=11/11 11:28:32, mem=938.5M)
-*** Begin netlist parsing (mem=1041.5M) ***
+% Begin Load netlist data ... (date=11/25 11:13:59, mem=936.1M)
+*** Begin netlist parsing (mem=1038.0M) ***
 Created 428 new cells from 1 timing libraries.
 Reading netlist ...
 Backslashed names will retain backslash and a trailing blank character.
 Reading verilogBinary netlist '/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/vbin/pe.v.bin'
 Reading binary database version 2 in multi-threaded mode
 
-*** Memory Usage v#1 (Current mem = 1057.508M, initial mem = 494.969M) ***
-*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1057.5M) ***
-% End Load netlist data ... (date=11/11 11:28:32, total cpu=0:00:00.0, real=0:00:00.0, peak res=947.9M, current mem=947.9M)
+*** Memory Usage v#1 (Current mem = 1055.992M, initial mem = 494.969M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1056.0M) ***
+% End Load netlist data ... (date=11/25 11:13:59, total cpu=0:00:00.0, real=0:00:00.0, peak res=946.1M, current mem=946.1M)
 Top level cell is pe.
 Hooked 428 DB cells to tlib cells.
 Starting recursive module instantiation check.
@@ -115,9 +115,9 @@ No recursion found.
 Building hierarchical netlist for Cell pe ...
 *** Netlist is unique.
 ** info: there are 440 modules.
-** info: there are 1370 stdCell insts.
+** info: there are 960 stdCell insts.
 
-*** Memory Usage v#1 (Current mem = 1076.922M, initial mem = 494.969M) ***
+*** Memory Usage v#1 (Current mem = 1076.406M, initial mem = 494.969M) ***
 *info: set bottom ioPad orient R0
 Adjust met3 preferred direction offset from 0.34 to 0.17.
 Adjust met4 preferred direction offset from 0.46 to 0.23.
@@ -158,9 +158,9 @@ List of identified usable delay cells: sky130_fd_sc_hd__bufbuf_16 sky130_fd_sc_h
 Total number of identified usable delay cells: 15
 List of identified unusable delay cells:
 Total number of identified unusable delay cells: 0
-Reading floorplan file - /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.fp.gz (mem = 1387.5M).
-% Begin Load floorplan data ... (date=11/11 11:28:33, mem=1284.8M)
-*info: reset 1481 existing net BottomPreferredLayer and AvoidDetour
+Reading floorplan file - /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.fp.gz (mem = 1384.4M).
+% Begin Load floorplan data ... (date=11/25 11:14:00, mem=1281.4M)
+*info: reset 1107 existing net BottomPreferredLayer and AvoidDetour
 Deleting old partition specification.
 Set FPlanBox to (0 0 155020 154700)
 Adjust met3 preferred direction offset from 0.34 to 0.17.
@@ -171,43 +171,43 @@ Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in
 Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
 Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
  ... processed partition successfully.
-Reading binary special route file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.fp.spr.gz (Created by Innovus v21.18-s099_1 on Wed Nov 11 10:26:11 2026, version: 1)
-Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1286.2M, current mem=1286.2M)
-There are 5 nets with weight being set
-There are 5 nets with bottomPreferredRoutingLayer being set
-There are 22 nets with avoidDetour being set
+Reading binary special route file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.fp.spr.gz (Created by Innovus v21.18-s099_1 on Wed Nov 25 11:04:11 2026, version: 1)
+Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1282.4M, current mem=1282.4M)
+There are 7 nets with weight being set
+There are 7 nets with bottomPreferredRoutingLayer being set
+There are 20 nets with avoidDetour being set
 Extracting standard cell pins and blockage ...... 
 Pin and blockage extraction finished
 Delete all existing relative floorplan constraints.
-% End Load floorplan data ... (date=11/11 11:28:34, total cpu=0:00:00.0, real=0:00:01.0, peak res=1287.3M, current mem=1287.3M)
+% End Load floorplan data ... (date=11/25 11:14:00, total cpu=0:00:00.1, real=0:00:00.0, peak res=1284.3M, current mem=1284.3M)
 Reading congestion map file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.route.congmap.gz ...
-% Begin Load SymbolTable ... (date=11/11 11:28:34, mem=1287.8M)
+% Begin Load SymbolTable ... (date=11/25 11:14:00, mem=1284.4M)
 Suppress "**WARN ..." messages.
 Un-suppress "**WARN ..." messages.
-% End Load SymbolTable ... (date=11/11 11:28:34, total cpu=0:00:00.0, real=0:00:00.0, peak res=1288.6M, current mem=1288.6M)
+% End Load SymbolTable ... (date=11/25 11:14:01, total cpu=0:00:00.0, real=0:00:01.0, peak res=1285.6M, current mem=1285.6M)
 Loading place ...
-% Begin Load placement data ... (date=11/11 11:28:34, mem=1287.9M)
+% Begin Load placement data ... (date=11/25 11:14:01, mem=1285.0M)
 Reading placement file - /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.place.gz.
-** Reading stdCellPlacement_binary (Created by Innovus v21.18-s099_1 on Wed Nov 11 10:26:11 2026, version# 2) ...
+** Reading stdCellPlacement_binary (Created by Innovus v21.18-s099_1 on Wed Nov 25 11:04:12 2026, version# 2) ...
 Read Views for adaptive view pruning ...
 Read 0 views from Binary DB for adaptive view pruning
 *** Checked 4 GNC rules.
 *** applyConnectGlobalNets disabled.
-*** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=1390.5M) ***
-Total net length = 2.776e+04 (1.572e+04 1.204e+04) (ext = 7.205e+03)
-% End Load placement data ... (date=11/11 11:28:34, total cpu=0:00:00.0, real=0:00:00.0, peak res=1289.6M, current mem=1289.6M)
-Reading PG file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.pg.gz, version#2, (Created by Innovus v21.18-s099_1 on       Wed Nov 11 10:26:11 2026)
-*** Completed restorePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=1387.5M) ***
-% Begin Load routing data ... (date=11/11 11:28:34, mem=1290.0M)
+*** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=1388.4M) ***
+Total net length = 2.493e+04 (1.381e+04 1.112e+04) (ext = 7.312e+03)
+% End Load placement data ... (date=11/25 11:14:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=1286.4M, current mem=1286.4M)
+Reading PG file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.pg.gz, version#2, (Created by Innovus v21.18-s099_1 on       Wed Nov 25 11:04:12 2026)
+*** Completed restorePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=1385.4M) ***
+% Begin Load routing data ... (date=11/25 11:14:01, mem=1286.7M)
 Reading routing file - /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.route.gz.
-Reading Innovus routing data (Created by Innovus v21.18-s099_1 on Wed Nov 11 10:26:11 2026 Format: 20.1) ...
-*** Total 1479 nets are successfully restored.
-*** Completed restoreRoute (cpu=0:00:00.0 real=0:00:01.0 mem=1389.5M) ***
-% End Load routing data ... (date=11/11 11:28:35, total cpu=0:00:00.0, real=0:00:01.0, peak res=1292.2M, current mem=1292.2M)
-TAT_INFO: restoreCongMap REAL = 0 : CPU = 0 : MEM = 0.
+Reading Innovus routing data (Created by Innovus v21.18-s099_1 on Wed Nov 25 11:04:12 2026 Format: 20.1) ...
+*** Total 1104 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1387.4M) ***
+% End Load routing data ... (date=11/25 11:14:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=1290.0M, current mem=1289.0M)
+TAT_INFO: restoreCongMap REAL = 1 : CPU = 0 : MEM = 0.
 Reading property file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.prop
-*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1393.5M) ***
-Reading dirtyarea snapshot file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.db.da.gz (Create by Innovus v21.18-s099_1 on Wed Nov 11 10:26:12 2026, version: 4).
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1390.4M) ***
+Reading dirtyarea snapshot file /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe.db.da.gz (Create by Innovus v21.18-s099_1 on Wed Nov 25 11:04:12 2026, version: 4).
 Change floorplan default-technical-site to 'unithd'.
 Loading preRoute extraction data from directory '/misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/extraction/' ...
 Extraction setup Started 
@@ -242,20 +242,20 @@ Start generating vias ..
 Extracting standard cell pins and blockage ...... 
 Pin and blockage extraction finished
 Via generation completed.
-% Begin Load power constraints ... (date=11/11 11:28:36, mem=1326.1M)
+% Begin Load power constraints ... (date=11/25 11:14:02, mem=1322.7M)
 source /misc/scratch/ar76269/pe-apprentice/5-route/outputs/pe.route.db/pe_power_constraints.tcl
 'set_default_switching_activity' finished successfully.
-% End Load power constraints ... (date=11/11 11:28:36, total cpu=0:00:00.0, real=0:00:00.0, peak res=1332.9M, current mem=1332.9M)
+% End Load power constraints ... (date=11/25 11:14:02, total cpu=0:00:00.0, real=0:00:00.0, peak res=1329.6M, current mem=1329.6M)
 dc_tt
-% Begin load AAE data ... (date=11/11 11:28:36, mem=1348.6M)
-AAE DB initialization (MEM=1466.73 CPU=0:00:00.0 REAL=0:00:00.0) 
-% End load AAE data ... (date=11/11 11:28:36, total cpu=0:00:00.5, real=0:00:00.0, peak res=1354.5M, current mem=1354.5M)
+% Begin load AAE data ... (date=11/25 11:14:02, mem=1345.2M)
+AAE DB initialization (MEM=1462.6 CPU=0:00:00.0 REAL=0:00:00.0) 
+% End load AAE data ... (date=11/25 11:14:03, total cpu=0:00:00.5, real=0:00:01.0, peak res=1351.1M, current mem=1351.1M)
 Restoring CCOpt config...
   Extracting original clock gating for clk...
-    clock_tree clk contains 112 sinks and 2 clock gates.
+    clock_tree clk contains 193 sinks and 2 clock gates.
   Extracting original clock gating for clk done.
-  The skew group clk/func was created. It contains 112 sinks and 1 sources.
-  The skew group clk/func was created. It contains 112 sinks and 1 sources.
+  The skew group clk/func was created. It contains 193 sinks and 1 sources.
+  The skew group clk/func was created. It contains 193 sinks and 1 sources.
 Restoring CCOpt config done.
 Total number of combinational cells: 319
 Total number of sequential cells: 68
@@ -282,7 +282,7 @@ List of identified unusable delay cells:
 Total number of identified unusable delay cells: 0
 **WARN: (IMPCTE-107):	The following globals have been obsoleted since version . They will be removed in the next release. 
 timing_enable_separate_device_slew_effect_sensitivities
-#% End load design ... (date=11/11 11:28:36, total cpu=0:00:03.2, real=0:00:05.0, peak res=1380.1M, current mem=1359.5M)
+#% End load design ... (date=11/25 11:14:03, total cpu=0:00:03.2, real=0:00:05.0, peak res=1376.8M, current mem=1356.2M)
 
 *** Summary of all messages that are not suppressed in this session:
 Severity  ID               Count  Summary                                  
@@ -324,7 +324,7 @@ Output for physical terminals
 Output for logical terminals
 Output for regular nets
 Output for special nets and metal fills
-Output for via structure generation total number 15
+Output for via structure generation total number 16
 Statistics for GDS generated (version 3)
 ----------------------------------------
 Stream Out Layer Mapping Information:
@@ -351,27 +351,29 @@ Units: 1000 DBU
 
 Object                             Count
 ----------------------------------------
-Instances                           3235
+Instances                           3126
 
-Ports/Pins                           208
+Ports/Pins                           272
     metal layer met3                 208
+    metal layer met4                  32
+    metal layer met5                  32
 
-Nets                               13028
-    metal layer li1                  648
-    metal layer met1                6335
-    metal layer met2                4775
-    metal layer met3                 919
-    metal layer met4                 317
-    metal layer met5                  34
+Nets                               11086
+    metal layer li1                  420
+    metal layer met1                5034
+    metal layer met2                4456
+    metal layer met3                 907
+    metal layer met4                 233
+    metal layer met5                  36
 
-    Via Instances                   9044
+    Via Instances                   7125
 
-Special Nets                         168
+Special Nets                         174
     metal layer met1                 150
-    metal layer met4                  14
-    metal layer met5                   4
+    metal layer met4                  12
+    metal layer met5                  12
 
-    Via Instances                   1078
+    Via Instances                    972
 
 Metal Fills                            0
 
@@ -457,10 +459,102 @@ Multithreaded Timing Analysis is initialized with 2 threads
 @file 70:
 @file 71: set ppa_activity "VCD 0-inputs/outputs/pe.vcd, Voltus at tt"
 @file 72: source $in_dir/ppa.tcl
+#@ Begin verbose source /misc/scratch/ar76269/pe-apprentice/8-gds/../0-inputs/ppa.tcl (pre)
+@file 1: # ââ PPA report ââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+@file 2: # FOM = perf^alpha / (power^beta * area)
+@file 3:
+@file 4: # Area limit, um^2
+@file 5: set ppa_area_cap_um2 30000.0
+@file 6:
+@file 7: # FOM exponents
+@file 8: set ppa_alpha 3.0
+@file 9: set ppa_beta  0.5
+@file 10:
+@file 11: # Baseline
+@file 12: set ppa_base_f_mhz 125.0
+@file 13: set ppa_base_p_mw  1.28690
+@file 14: set ppa_base_a_um2 8386.794
+@file 15: set ppa_base_desc  "reference pe.sv, pe.sdc 8 ns, hd"
+@file 16:
+@file 17: # Power activity source
+@file 18: if {![info exists ppa_activity]} {...}
+@file 19:
+@file 20: proc ppa_read {path} {
+  set fh [open $path]
+  set txt [read $fh]
+  close $fh
+  return $txt
+}
+@file 26:
+@file 27: proc ppa_report {qor_rpt power_rpt out_rpt {macs 1}} {
+  global ppa_area_cap_um2 ppa_activity ppa_alpha ppa_beta
+  global ppa_base_f_mhz ppa_base_p_mw ppa_base_a_um2 ppa_base_desc
+  set alpha $ppa_alpha
+  set beta  $ppa_beta
+  set base_fom [expr {pow($ppa_base_f_mhz, $alpha) / (pow($ppa_base_p_mw, $beta) * $ppa_base_a_um2)}]
+  set qor [ppa_read $qor_rpt]
+  set pwr [ppa_read $power_rpt]
+
+  # ââ Parse ââ
+  if {![regexp {Clock Period\s*\n-+\s*\n\S+\s+([0-9.]+)\s*\n} $qor -> period_ps]} {
+    error "ppa: clock period not found in $qor_rpt"
+  }
+  if {![regexp {\nclk\s+(-?[0-9.]+)\s+(-?[0-9.]+)\s+([0-9]+)} $qor -> wns tns nvio]} {
+    error "ppa: clk cost group not found in $qor_rpt"
+  }
+  if {![regexp {Total Cell Area \(Cell\+Physical\)\s+([0-9.]+)} $qor -> area_um2]} {
+    error "ppa: cell area not found in $qor_rpt"
+  }
+  if {![regexp {Subtotal\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)} $pwr -> leak_w int_w sw_w tot_w]} {
+    error "ppa: power subtotal not found in $power_rpt"
+  }
+
+  # ââ Score ââ
+  set f_mhz    [expr {1.0e6 / $period_ps}]
+  set perf     [expr {$f_mhz * $macs}]
+  set p_mw     [expr {$tot_w * 1.0e3}]
+  set t_pass   [expr {$wns >= 0 && $nvio == 0}]
+  set a_pass   [expr {$area_um2 <= $ppa_area_cap_um2}]
+  set fom      [expr {($t_pass && $a_pass) ? pow($perf, $alpha) / (pow($p_mw, $beta) * $area_um2) : 0.0}]
+
+  # ââ Write ââ
+  set fh [open $out_rpt w]
+  puts $fh "PPA report"
+  puts $fh [string repeat - 56]
+  puts $fh [format "%-22s %14.1f ps" "Clock period"    $period_ps]
+  puts $fh [format "%-22s %14.2f MHz" "Frequency"      $f_mhz]
+  puts $fh [format "%-22s %14d" "MACs per cycle"       $macs]
+  puts $fh [format "%-22s %14.2f MMAC/s" "Performance" $perf]
+  puts $fh [format "%-22s %14.1f ps" "WNS"             $wns]
+  puts $fh [format "%-22s %14.1f ps" "TNS"             $tns]
+  puts $fh [format "%-22s %14d" "Violating paths"      $nvio]
+  puts $fh [format "%-22s %14.3f um^2" "Cell area"     $area_um2]
+  puts $fh [format "%-22s %14.3f um^2" "Area limit"    $ppa_area_cap_um2]
+  puts $fh [format "%-22s %14.4f mW" "Power total"     $p_mw]
+  puts $fh [format "%-22s %14.4f mW" "  internal"      [expr {$int_w * 1.0e3}]]
+  puts $fh [format "%-22s %14.4f mW" "  switching"     [expr {$sw_w * 1.0e3}]]
+  puts $fh [format "%-22s %14.4f uW" "  leakage"       [expr {$leak_w * 1.0e6}]]
+  puts $fh [format "%-22s %s" "Power activity"         $ppa_activity]
+  puts $fh [string repeat - 56]
+  puts $fh [format "%-22s %14s" "Timing gate"          [expr {$t_pass ? "PASS" : "FAIL"}]]
+  puts $fh [format "%-22s %14s" "Area gate"            [expr {$a_pass ? "PASS" : "FAIL"}]]
+  puts $fh [format "%-22s %14.2f" "Perf exponent"      $alpha]
+  puts $fh [format "%-22s %14.2f" "Power exponent"     $beta]
+  puts $fh [format "%-22s %14.6g" "FOM"                $fom]
+  puts $fh [format "%-22s %14.6g" "Baseline FOM"       $base_fom]
+  puts $fh [format "%-22s %14.3f" "FOM / baseline"     [expr {$fom / $base_fom}]]
+  puts $fh [format "%-22s %s" "Baseline"               $ppa_base_desc]
+  puts $fh ""
+  puts $fh "FOM = perf_MMACs^$alpha / (power_mW^$beta * cell_area_um2)"
+  puts $fh "FOM is 0 if timing fails or cell area exceeds the limit"
+  close $fh
+  return $fom
+}
+#@ End verbose source /misc/scratch/ar76269/pe-apprentice/8-gds/../0-inputs/ppa.tcl
 @file 73: ppa_report $rpt_dir/final_qor.rpt $rpt_dir/final_power.rpt $rpt_dir/pe_ppa_final.rpt
 @file 74: exit
 
-*** Memory Usage v#1 (Current mem = 1584.203M, initial mem = 494.969M) ***
+*** Memory Usage v#1 (Current mem = 1581.078M, initial mem = 494.969M) ***
 *** Message Summary: 36 warning(s), 0 error(s)
 
---- Ending "Innovus" (totcpu=0:00:19.1, real=0:00:23.0, mem=1584.2M) ---
+--- Ending "Innovus" (totcpu=0:00:18.4, real=0:00:22.0, mem=1581.1M) ---

@@ -18,7 +18,7 @@ catch { setOptMode -drcMargin 0 }
 catch { setOptMode -fixDrc true }
 catch { setOptMode -optimizeFF true }
 catch { setOptMode -preserveAllSequential false }
-catch { setOptMode -setupTargetSlack 0.02 }
+catch { setOptMode -setupTargetSlack 0.05 }
 catch { setOptMode -timeDesignCompressReports false }
 catch { setPathGroupOptions reg2cgate -effortLevel high -weight 1 }
 catch { setPathGroupOptions reg2cgate -late -slackAdjustment -0 }
@@ -31,7 +31,7 @@ catch {setNanoRouteMode -quiet -droutePostRouteSpreadWire "auto"}
 catch {setNanoRouteMode -quiet -drouteStartIteration 0}
 catch {setNanoRouteMode -quiet -drouteUseLefPinTaperRule true}
 catch {setNanoRouteMode -quiet -drouteUseMinSpacingForBlockage auto}
-catch {setNanoRouteMode -quiet -extractDesignSignature 121813643}
+catch {setNanoRouteMode -quiet -extractDesignSignature 128491450}
 catch {setNanoRouteMode -quiet -extractRcModelFile "${::IMEX::libVar}/misc/rc_model.bin"}
 catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
 catch {setNanoRouteMode -quiet -grouteExpTdStdDelay 47.100000}
@@ -41,7 +41,7 @@ catch {setNanoRouteMode -quiet -routeReInsertFillerCellListFromFile false}
 catch {setNanoRouteMode -quiet -routeStrictlyHonorNonDefaultRule "false"}
 catch {setNanoRouteMode -quiet -routeWithSiPostRouteFix false}
 catch {setNanoRouteMode -quiet -routeWithTimingDriven true}
-catch {setNanoRouteMode -quiet -timingEngine ".timing_file_3259028.tif.gz"}
+catch {setNanoRouteMode -quiet -timingEngine ".timing_file_2069685.tif.gz"}
 
 catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }
 catch { setActiveLogicViewMode -keepHighFanoutCriticalInsts false }

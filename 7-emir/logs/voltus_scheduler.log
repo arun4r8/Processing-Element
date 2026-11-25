@@ -4,11 +4,11 @@
 *  Version: v22.12-s078_1 (04/27/2023 13:52:28)
 *  Excecutable: /usr/local/packages/cadence_2022/SSV221/tools.lnx86/ssvtools/bin/64bit/voltus_scheduler
 *  Command Line: -nt 2 -usecellid -session_file ./work/sfe.session -cmd ./work/voltus_scheduler.cmd 
-*  Run by ar76269 on Wed Nov 11 11:25:48 2026
-*  Hostname: yoshi.ece.utexas.edu
+*  Run by ar76269 on Wed Nov 25 11:12:01 2026
+*  Hostname: daisy.ece.utexas.edu
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-Started Voltus Scheduler at 11:25:47 11/11/2026
+Started Voltus Scheduler at 11:11:59 11/25/2026
 
 Extraction option setup as:
 setenv gray_data NONE
@@ -16,19 +16,19 @@ setenv enable_cluster_overhang_via false
 setenv enable_dfm_mask_conflict_shape false
 Begin Preparing Data for Parasitic Extraction
  * Begin Load cell library
- * Ended Load cell library: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=29.91MB/21660.96MB/2576.58MB) TimeFromStart: 1.49s Mem: 29.91MB
+ * Ended Load cell library: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=28.59MB/21725.00MB/2598.28MB) TimeFromStart: 2.83s Mem: 28.59MB
 
  * Begin Pre-parse DEF and build hierachy
- * Ended Pre-parse DEF and build hierachy: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=45.13MB/21671.81MB/2591.80MB) TimeFromStart: 1.94s Mem: 45.13MB
+ * Ended Pre-parse DEF and build hierachy: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=43.30MB/21735.84MB/2612.99MB) TimeFromStart: 3.17s Mem: 43.30MB
 
  * Begin Flatten, partition and dump design
  * Begin Create cell name DB
- * Ended Create cell name DB: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=562.00MB/23210.23MB/3108.67MB) TimeFromStart: 2.08s Mem: 562.00MB
+ * Ended Create cell name DB: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=560.15MB/23274.26MB/3129.84MB) TimeFromStart: 3.29s Mem: 560.15MB
 
  * Begin Write cell name DB
- * Ended Write cell name DB: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=562.00MB/23210.23MB/3108.67MB) TimeFromStart: 2.10s Mem: 562.00MB
+ * Ended Write cell name DB: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=560.15MB/23274.26MB/3129.84MB) TimeFromStart: 3.29s Mem: 560.15MB
 
- * Ended Flatten, partition and dump design: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=559.71MB/23210.23MB/3108.67MB) TimeFromStart: 2.47s Mem: 559.71MB
+ * Ended Flatten, partition and dump design: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=557.87MB/23274.26MB/3129.84MB) TimeFromStart: 3.38s Mem: 557.87MB
 
 Extracting following DFM effects:
 MetalFill        : n/a
@@ -40,10 +40,10 @@ R(w,s) Effects   : n/a
 R(sw,st) Effects : n/a
 TC(w) Effects    : n/a
 Some effects indicate n/a because of non-availability of relevant input data (or) requested to be off.
-Ended Preparing Data for Parasitic Extraction: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=38.70MB/23210.23MB/3108.67MB)
+Ended Preparing Data for Parasitic Extraction: (cpu=0:00:01, real=0:00:00, mem(process/total/peak)=36.44MB/23274.26MB/3129.84MB)
 
-Finished Voltus Scheduler at 11:25:49 11/11/2026 (cpu=0:00:01, real=0:00:02, peak mem=3108.67MB)
-Current Voltus IC Power Integrity Solution resource usage: (total cpu=0:00:26, real=0:00:44, mem=2585.37MB)
+Finished Voltus Scheduler at 11:12:02 11/25/2026 (cpu=0:00:01, real=0:00:03, peak mem=3129.84MB)
+Current Voltus IC Power Integrity Solution resource usage: (total cpu=0:00:26, real=0:00:36, mem=2606.13MB)
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 *  Voltus Scheduler (RC extraction scheduler)
@@ -51,11 +51,11 @@ Current Voltus IC Power Integrity Solution resource usage: (total cpu=0:00:26, r
 *  Version: v22.12-s078_1 (04/27/2023 13:52:28)
 *  Excecutable: /usr/local/packages/cadence_2022/SSV221/tools.lnx86/ssvtools/bin/64bit/voltus_scheduler
 *  Command Line: -skip_prep -nt 2 -usecellid -session_file ./work/sfe.session -cmd ./work/voltus_scheduler.cmd -zx /usr/local/packages/cadence_2022/SSV221/tools.lnx86/ssvtools/bin/64bit/voltus_extractor 
-*  Run by ar76269 on Wed Nov 11 11:25:49 2026
-*  Hostname: yoshi.ece.utexas.edu
+*  Run by ar76269 on Wed Nov 25 11:12:02 2026
+*  Hostname: daisy.ece.utexas.edu
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-Started Voltus Scheduler at 11:25:48 11/11/2026
+Started Voltus Scheduler at 11:12:01 11/25/2026
 
 Extraction option setup as:
 setenv gray_data NONE
@@ -63,12 +63,12 @@ setenv enable_cluster_overhang_via false
 setenv enable_dfm_mask_conflict_shape false
 Begin Parasitic Extraction
 Extracting Progress:
-    0% at 11:25:49 11/11/2026
-Extraction command for partition 0: /usr/local/packages/cadence_2022/SSV221/tools.lnx86/ssvtools/bin/64bit/voltus_extractor -vstorm -partition 0 -partition_bbox 0 -2147483648 1550200 2147483647 -sfedb ./work/SFEDB -cachedir /tmp/ssv_tmpdir_2461037_oha9hq/zx_tmp_yoshi.ece.utexas.edu_2467951/5eypMz -cmd ./work/VSS.cmd
-Extraction command for partition 0: /usr/local/packages/cadence_2022/SSV221/tools.lnx86/ssvtools/bin/64bit/voltus_extractor -vstorm -partition 0 -partition_bbox 0 -2147483648 1550200 2147483647 -sfedb ./work/SFEDB -cachedir /tmp/ssv_tmpdir_2461037_oha9hq/zx_tmp_yoshi.ece.utexas.edu_2467951/5eypMz -cmd ./work/VDD.cmd
-   50% at 11:25:55 11/11/2026
-  100% at 11:25:55 11/11/2026
-Ended Parasitic Extraction: (cpu=0:00:07, real=0:00:05, mem(process/total/peak)=23.99MB/21660.96MB/3108.67MB)
+    0% at 11:12:02 11/25/2026
+Extraction command for partition 0: /usr/local/packages/cadence_2022/SSV221/tools.lnx86/ssvtools/bin/64bit/voltus_extractor -vstorm -partition 0 -partition_bbox 0 -2147483648 1550200 2147483647 -sfedb ./work/SFEDB -cachedir /tmp/ssv_tmpdir_2136743_yloW9P/zx_tmp_daisy.ece.utexas.edu_2143481/Gqgkg1 -cmd ./work/VSS.cmd
+Extraction command for partition 0: /usr/local/packages/cadence_2022/SSV221/tools.lnx86/ssvtools/bin/64bit/voltus_extractor -vstorm -partition 0 -partition_bbox 0 -2147483648 1550200 2147483647 -sfedb ./work/SFEDB -cachedir /tmp/ssv_tmpdir_2136743_yloW9P/zx_tmp_daisy.ece.utexas.edu_2143481/Gqgkg1 -cmd ./work/VDD.cmd
+   50% at 11:12:08 11/25/2026
+  100% at 11:12:08 11/25/2026
+Ended Parasitic Extraction: (cpu=0:00:07, real=0:00:05, mem(process/total/peak)=20.67MB/21724.99MB/3129.84MB)
 
-Finished Voltus Scheduler at 11:25:55 11/11/2026 (cpu=0:00:07, real=0:00:07, peak mem=2911.19MB)
-Current Voltus IC Power Integrity Solution resource usage: (total cpu=0:00:30, real=0:00:50, mem=2570.76MB)
+Finished Voltus Scheduler at 11:12:08 11/25/2026 (cpu=0:00:07, real=0:00:07, peak mem=2930.51MB)
+Current Voltus IC Power Integrity Solution resource usage: (total cpu=0:00:30, real=0:00:42, mem=2590.37MB)

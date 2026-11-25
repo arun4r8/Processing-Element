@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sun Nov 22 10:50:18 2026                
+#  Created on Wed Nov 25 10:54:43 2026                
 #                                                     
 #######################################################
 
@@ -91,5 +91,6 @@ add_stripes -nets {VDD VSS} -layer met4 -direction vertical -width 2.0 -spacing 
 add_stripes -nets {VDD VSS} -layer met5 -direction horizontal -width 2.0 -spacing 1.6 -set_to_set_distance 30 -start_from bottom -start_offset 20 -extend_to design_boundary 
 check_floorplan -out_file $rpt_dir/check_floorplan.rpt
 check_connectivity -type special -nets {VDD VSS} -ignore_soft_pg_connects -out_file $rpt_dir/pg_connectivity.rpt
+write_def -floorplan -no_std_cells $out_dir/pe.floorplan.def
 write_db $out_dir/pe.floorplan.db
 exit

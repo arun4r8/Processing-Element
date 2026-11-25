@@ -87,6 +87,7 @@ check_floorplan -out_file $rpt_dir/check_floorplan.rpt
 check_connectivity -type special -nets {VDD VSS} -ignore_soft_pg_connects -out_file $rpt_dir/pg_connectivity.rpt
 
 # ── Outputs ──────────────────────────────────────────────────────────────────
+write_def -floorplan -no_std_cells $out_dir/pe.floorplan.def
 write_db $out_dir/pe.floorplan.db
 
 exit

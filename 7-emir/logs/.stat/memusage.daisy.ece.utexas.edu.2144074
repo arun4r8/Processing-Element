@@ -1,0 +1,10 @@
+CMD: /usr/local/packages/cadence_2022/SSV221/tools.lnx86/ssvtools/bin/64bit/voltus_rail -nhbPort 41171 -procInfoHost daisy.ece.utexas.edu:48989 -temp_directory_name /tmp/ssv_tmpdir_2136743_yloW9P -eps -clienttimeout 3600 -machine daisy.ece.utexas.edu -port 36547 -hbPort -1 -id 0 
+CWD: /misc/scratch/ar76269/pe-apprentice/7-emir/logs
+PID: 2144074
+Host: daisy.ece.utexas.edu
+Number of CPU(s): 64
+System total memory: 385559MB
+date_time max RSS memory(MB) RSS memory(MB) virtual memory(MB) shared memory(MB)
+2026-11-25 11:12:10 55 55 4958 41
+2026-11-25 11:12:20 665 552 6592 51
+end

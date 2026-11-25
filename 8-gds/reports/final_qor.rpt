@@ -1,6 +1,6 @@
 Clock Period
 ------------
-clk 3100.0
+clk 3150.0
 
-clk 9.0 0 0
-Total Cell Area (Cell+Physical) 11649.9232
+clk 43.0 0 0
+Total Cell Area (Cell+Physical) 11198.24

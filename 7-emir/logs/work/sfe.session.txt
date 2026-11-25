@@ -15,7 +15,7 @@ extraction_config {
     eqpotential_region_length: "0"
     gray_data: "NONE"
   }
-  layout_file_md5: "789116116288199159771001391293959143138221"
+  layout_file_md5: "6010138180402454245131601696821147150230"
   extracted_nets_md5: "246791408522920722269326355163748624057"
   library_name: "/misc/scratch/ar76269/pe-apprentice/7-emir/logs/pgv/techonly.cl"
   use_cellid: true

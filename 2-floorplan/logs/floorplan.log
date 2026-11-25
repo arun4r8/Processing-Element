@@ -4,18 +4,18 @@ Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v21.18-s099_1, built Tue Jul 18 13:03:50 PDT 2023
 Options:	-stylus -batch -no_gui -files ../floorplan.tcl -log floorplan 
-Date:		Sun Nov 22 10:50:03 2026
+Date:		Wed Nov 25 10:54:27 2026
 Host:		daisy.ece.utexas.edu (x86_64 w/Linux 4.18.0-553.183.1.el8_10.x86_64) (16cores*64cpus*Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz 22528KB)
 OS:		Red Hat Enterprise Linux 8.10 (Ootpa)
 
 License:
-		[10:50:03.446281] Configured Lic search path (21.01-s002): /usr/local/packages/cadence_2022/license.dat
+		[10:54:27.446361] Configured Lic search path (21.01-s002): /usr/local/packages/cadence_2022/license.dat
 
 		invs	Innovus Implementation System	21.1	checkout succeeded
 		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
 
 
-Create and set the environment variable TMPDIR to /tmp/innovus_temp_3105316_daisy.ece.utexas.edu_ar76269_Rp3fLx.
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_2001153_daisy.ece.utexas.edu_ar76269_l4o0DP.
 
 Change the soft stacksize limit to 0.2%RAM (771 mbytes). Set global soft_stack_size_limit to change the value.
 
@@ -98,16 +98,16 @@ Type 'man IMPLF-201' for more detail.
 ##  Both design process and tech node are not set.
 
 @@file 18: read_netlist $syn_out/pe.v
-#% Begin Load netlist data ... (date=11/22 10:50:19, mem=929.6M)
-*** Begin netlist parsing (mem=1034.5M) ***
+#% Begin Load netlist data ... (date=11/25 10:54:44, mem=930.8M)
+*** Begin netlist parsing (mem=1033.5M) ***
 Created 428 new cells from 1 timing libraries.
 Reading netlist ...
 Backslashed names will retain backslash and a trailing blank character.
 Reading verilog netlist '/misc/scratch/ar76269/pe-apprentice/2-floorplan/../1-syn/outputs/pe.v'
 
-*** Memory Usage v#1 (Current mem = 1034.516M, initial mem = 494.969M) ***
-*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1034.5M) ***
-#% End Load netlist data ... (date=11/22 10:50:19, total cpu=0:00:00.0, real=0:00:00.0, peak res=939.4M, current mem=939.4M)
+*** Memory Usage v#1 (Current mem = 1033.523M, initial mem = 494.969M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1033.5M) ***
+#% End Load netlist data ... (date=11/25 10:54:44, total cpu=0:00:00.0, real=0:00:00.0, peak res=940.7M, current mem=940.7M)
 Top level cell is pe.
 Hooked 428 DB cells to tlib cells.
 Starting recursive module instantiation check.
@@ -115,9 +115,9 @@ No recursion found.
 Building hierarchical netlist for Cell pe ...
 *** Netlist is unique.
 ** info: there are 440 modules.
-** info: there are 1043 stdCell insts.
+** info: there are 913 stdCell insts.
 
-*** Memory Usage v#1 (Current mem = 1069.930M, initial mem = 494.969M) ***
+*** Memory Usage v#1 (Current mem = 1069.938M, initial mem = 494.969M) ***
 @@file 19: set_db init_power_nets  VDD
 @@file 20: set_db init_ground_nets VSS
 @@file 21: init_design
@@ -135,7 +135,7 @@ Generating auto layer map file.
 Importing multi-corner technology file(s) for preRoute extraction...
 /misc/scratch/ar76269/pe-apprentice/2-floorplan/../pdk/sky130/qrc/qrcTechFile
 Generating auto layer map file.
-Completed (cpu: 0:00:01.5 real: 0:00:01.0)
+Completed (cpu: 0:00:01.6 real: 0:00:01.0)
 Set Shrink Factor to 1.00000
 Summary of Active RC-Corners : 
  
@@ -160,15 +160,15 @@ Initializing multi-corner resistance tables ...
 Default value for post_route extraction mode's extract_rc_effort_level (extract_rc_effort_level option of set_db) changed to 'medium'.
 *Info: initialize multi-corner CTS.
 Reading timing constraints file '/misc/scratch/ar76269/pe-apprentice/2-floorplan/../1-syn/outputs/pe.sdc' ...
-Current (total cpu=0:00:17.5, real=0:00:19.0, peak res=1274.1M, current mem=1274.1M)
+Current (total cpu=0:00:18.0, real=0:00:20.0, peak res=1274.0M, current mem=1274.0M)
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File /misc/scratch/ar76269/pe-apprentice/2-floorplan/../1-syn/outputs/pe.sdc, Line 9).
 
 **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File /misc/scratch/ar76269/pe-apprentice/2-floorplan/../1-syn/outputs/pe.sdc, Line 10).
 
 pe
 INFO (CTE): Reading of timing constraints file /misc/scratch/ar76269/pe-apprentice/2-floorplan/../1-syn/outputs/pe.sdc completed, with 2 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1293.2M, current mem=1293.2M)
-Current (total cpu=0:00:17.6, real=0:00:19.0, peak res=1293.2M, current mem=1293.2M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1293.8M, current mem=1293.8M)
+Current (total cpu=0:00:18.0, real=0:00:20.0, peak res=1293.8M, current mem=1293.8M)
 **WARN: (TA-976):	Path groups asserted by the group_path constraint are considered by the software to be global in nature - they cannot be restricted to specific constraint modes. Due to this restriction, the group_path constraint is not supported directly in the constraint files which are configured in mode-specific commands such as create_constraint_mode. The current group_path entry will be ignored. You can enter the group_path constraint interactively or as part of a general command script -  where it will be interpreted as global and will be in effect for all modes.
 Total number of combinational cells: 319
 Total number of sequential cells: 68
@@ -264,29 +264,29 @@ Generated pitch 0.61 in met3 is different from 0.68 defined in technology file i
 @file 48:
 @@file 49: edit_pin -pin $CtrlIn   -side left -spread_type start -start {0 20} -spacing 4.08 -layer met3 -spread_direction clockwise -fixed_pin 1
 Successfully spread [6] pins.
-editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1430.5M).
 @@file 50: edit_pin -pin $PsumIn   -side left -spread_type start -start {0 50} -spacing 1.36 -layer met3 -spread_direction clockwise -fixed_pin 1
 Successfully spread [16] pins.
-editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1430.5M).
 @@file 51: edit_pin -pin $WeightIn -side left -spread_type start -start {0 80} -spacing 1.36 -layer met3 -spread_direction clockwise -fixed_pin 1
 Successfully spread [16] pins.
-editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1430.5M).
 @@file 52: edit_pin -pin $InputIn  -side left -spread_type start -start {0 110} -spacing 1.36 -layer met3 -spread_direction clockwise -fixed_pin 1
 Successfully spread [16] pins.
-editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1430.5M).
 @file 53:
 @@file 54: edit_pin -pin $PsumOut   -side right -spread_type start -start {0 72} -spacing 1.36 -layer met3 -spread_direction clockwise -fixed_pin 1
 Successfully spread [16] pins.
-editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1430.5M).
 @@file 55: edit_pin -pin $WeightOut -side right -spread_type start -start {0 102} -spacing 1.36 -layer met3 -spread_direction clockwise -fixed_pin 1
 Successfully spread [16] pins.
-editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1430.5M).
 @@file 56: edit_pin -pin $InputOut  -side right -spread_type start -start {0 132} -spacing 1.36 -layer met3 -spread_direction clockwise -fixed_pin 1
 Successfully spread [16] pins.
-editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1430.5M).
 @@file 57: edit_pin -pin $CtrlOut   -side right -spread_type start -start {0 24} -spacing 4.08 -layer met3 -spread_direction clockwise -fixed_pin 1
 Successfully spread [2] pins.
-editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1427.5M).
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1430.5M).
 @file 58:
 @@file 59: set_db assign_pins_edit_in_batch false
 @file 60:
@@ -330,12 +330,12 @@ For 280 new insts, Inserted 280 well-taps <sky130_fd_sc_hd__tapvpwrvgnd_1> cells
 @file 79: # set your power rail metal width in um
 @file 80:
 @@file 81: add_rings -nets {VDD VSS} -type core_rings -follow core -layer {top met5 bottom met5 left met4 right met4} -width $power_metal_width -spacing 1.8 -offset 1.8
-#% Begin add_rings (date=11/22 10:50:22, mem=1425.4M)
+#% Begin add_rings (date=11/25 10:54:47, mem=1424.8M)
 
 
-viaInitial starts at Sun Nov 22 10:50:22 2026
-viaInitial ends at Sun Nov 22 10:50:22 2026
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1715.9M)
+viaInitial starts at Wed Nov 25 10:54:47 2026
+viaInitial ends at Wed Nov 25 10:54:47 2026
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1717.9M)
 Ring generation is complete.
 vias are now being generated.
 add_rings created 8 wires.
@@ -347,10 +347,10 @@ ViaGen created 8 vias, deleted 0 via to avoid violation.
 |  via4  |        8       |        0       |
 |  met5  |        4       |       NA       |
 +--------+----------------+----------------+
-#% End add_rings (date=11/22 10:50:22, total cpu=0:00:00.0, real=0:00:00.0, peak res=1428.7M, current mem=1428.7M)
+#% End add_rings (date=11/25 10:54:47, total cpu=0:00:00.0, real=0:00:00.0, peak res=1428.1M, current mem=1428.1M)
 @@file 82: route_special -connect core_pin -nets {VDD VSS}
-#% Begin route_special (date=11/22 10:50:22, mem=1428.7M)
-*** Begin SPECIAL ROUTE on Sun Nov 22 10:50:22 2026 ***
+#% Begin route_special (date=11/25 10:54:47, mem=1428.1M)
+*** Begin SPECIAL ROUTE on Wed Nov 25 10:54:47 2026 ***
 SPECIAL ROUTE ran on directory: /misc/scratch/ar76269/pe-apprentice/2-floorplan/logs
 SPECIAL ROUTE ran on machine: daisy.ece.utexas.edu (Linux 4.18.0-553.183.1.el8_10.x86_64 Xeon 3.90Ghz)
 
@@ -368,7 +368,7 @@ srouteJogControl set to "preferWithChanges differentLayer"
 sroutePadPinAllPorts set to true
 sroutePreserveExistingRoutes set to true
 srouteRoutePowerBarPortOnBothDir set to true
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3065.00 megs.
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3067.00 megs.
 
 Reading DB technology information...
 Finished reading DB technology information.
@@ -376,14 +376,14 @@ Reading floorplan and netlist information...
 Finished reading floorplan and netlist information.
 **WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
 Read in 12 layers, 6 routing layers, 0 overlap layer
-Read in 437 macros, 92 used
-Read in 467 components
-  467 core components: 89 unplaced, 0 placed, 378 fixed
+Read in 437 macros, 72 used
+Read in 447 components
+  447 core components: 69 unplaced, 0 placed, 378 fixed
 Read in 104 physical pins
   104 physical pins: 0 unplaced, 0 placed, 104 fixed
 Read in 104 nets
 Read in 2 special nets, 2 routed
-Read in 1412 terminals
+Read in 1332 terminals
 2 nets selected.
 
 Begin power routing ...
@@ -391,7 +391,7 @@ CPU time for VDD FollowPin 0 seconds
 CPU time for VSS FollowPin 0 seconds
   Number of Core ports routed: 100
   Number of Followpin connections: 50
-End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3068.00 megs.
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3070.00 megs.
 
 
 
@@ -410,11 +410,11 @@ ViaGen created 300 vias, deleted 0 via to avoid violation.
 |  via2  |       100      |        0       |
 |  via3  |       100      |        0       |
 +--------+----------------+----------------+
-#% End route_special (date=11/22 10:50:22, total cpu=0:00:00.2, real=0:00:00.0, peak res=1446.3M, current mem=1438.4M)
+#% End route_special (date=11/25 10:54:47, total cpu=0:00:00.2, real=0:00:00.0, peak res=1445.7M, current mem=1437.7M)
 @@file 83: add_stripes -nets {VDD VSS} -layer met4 -direction vertical -width 2.0 -spacing 1.6 -set_to_set_distance 30 -start_from left -start_offset 20 -extend_to design_boundary
-#% Begin add_stripes (date=11/22 10:50:22, mem=1438.4M)
+#% Begin add_stripes (date=11/25 10:54:47, mem=1437.7M)
 
-Initialize fgc environment(mem: 1716.2M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1716.2M)
+Initialize fgc environment(mem: 1718.2M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1718.2M)
 **WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_1' instance was increased to (10.120000 9.860000) (11.500000 12.820000) because the VGND pin (10.120000 12.340000) (11.500000 12.820000) on layer met1 was outside the original block boundary.
 Type 'man IMPPP-133' for more detail.
 **WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_2' instance was increased to (143.520004 9.860000) (144.899994 12.820000) because the VGND pin (143.520004 12.340000) (144.899994 12.820000) on layer met1 was outside the original block boundary.
@@ -457,9 +457,9 @@ Type 'man IMPPP-133' for more detail.
 Type 'man IMPPP-133' for more detail.
 **WARN: (EMS-27):	Message (IMPPP-133) has exceeded the current message display limit of 20.
 To increase the message display limit, refer to the product command reference manual.
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1716.2M)
-Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1716.2M)
-Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1716.2M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1718.2M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1718.2M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1718.2M)
 Starting stripe generation ...
 Non-Default Mode Option Settings :
   NONE
@@ -478,11 +478,11 @@ ViaGen created 616 vias, deleted 0 via to avoid violation.
 |  met4  |        8       |       NA       |
 |  via4  |       16       |        0       |
 +--------+----------------+----------------+
-#% End add_stripes (date=11/22 10:50:22, total cpu=0:00:00.1, real=0:00:00.0, peak res=1439.6M, current mem=1439.6M)
+#% End add_stripes (date=11/25 10:54:47, total cpu=0:00:00.1, real=0:00:00.0, peak res=1438.9M, current mem=1438.9M)
 @@file 84: add_stripes -nets {VDD VSS} -layer met5 -direction horizontal -width 2.0 -spacing 1.6 -set_to_set_distance 30 -start_from bottom -start_offset 20 -extend_to design_boundary 
-#% Begin add_stripes (date=11/22 10:50:22, mem=1439.6M)
+#% Begin add_stripes (date=11/25 10:54:47, mem=1438.9M)
 
-Initialize fgc environment(mem: 1717.2M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1717.2M)
+Initialize fgc environment(mem: 1719.2M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1719.2M)
 **WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_1' instance was increased to (10.120000 9.860000) (11.500000 12.820000) because the VGND pin (10.120000 12.340000) (11.500000 12.820000) on layer met1 was outside the original block boundary.
 Type 'man IMPPP-133' for more detail.
 **WARN: (IMPPP-133):	The block boundary of the 'ENDCAP_2' instance was increased to (143.520004 9.860000) (144.899994 12.820000) because the VGND pin (143.520004 12.340000) (144.899994 12.820000) on layer met1 was outside the original block boundary.
@@ -525,9 +525,9 @@ Type 'man IMPPP-133' for more detail.
 Type 'man IMPPP-133' for more detail.
 **WARN: (EMS-27):	Message (IMPPP-133) has exceeded the current message display limit of 20.
 To increase the message display limit, refer to the product command reference manual.
-Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1717.2M)
-Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1717.2M)
-Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1717.2M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1719.2M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1719.2M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1719.2M)
 Starting stripe generation ...
 Non-Default Mode Option Settings :
   NONE
@@ -555,7 +555,7 @@ ViaGen created 48 vias, deleted 0 via to avoid violation.
 |  via4  |       48       |        0       |
 |  met5  |        8       |       NA       |
 +--------+----------------+----------------+
-#% End add_stripes (date=11/22 10:50:22, total cpu=0:00:00.0, real=0:00:00.0, peak res=1439.6M, current mem=1439.6M)
+#% End add_stripes (date=11/25 10:54:47, total cpu=0:00:00.0, real=0:00:00.0, peak res=1438.9M, current mem=1438.9M)
 @file 85: # ââ Reports ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 @@file 86: check_floorplan -out_file $rpt_dir/check_floorplan.rpt
 Checking routing tracks.....
@@ -579,7 +579,7 @@ No. of regular pre-routes not on tracks : 0
 VERIFY_CONNECTIVITY use new engine.
 
 ******** Start: VERIFY CONNECTIVITY ********
-Start Time: Sun Nov 22 10:50:22 2026
+Start Time: Wed Nov 25 10:54:47 2026
 
 Design Name: pe
 Database Units: 1000
@@ -592,7 +592,7 @@ Begin Summary
   Found no problems or warnings.
 End Summary
 
-End Time: Sun Nov 22 10:50:22 2026
+End Time: Wed Nov 25 10:54:47 2026
 Time Elapsed: 0:00:00.0
 
 ******** End: VERIFY CONNECTIVITY ********
@@ -601,56 +601,60 @@ Time Elapsed: 0:00:00.0
 
 @file 88:
 @file 89: # ââ Outputs ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
-@@file 90: write_db $out_dir/pe.floorplan.db
+@@file 90: write_def -floorplan -no_std_cells $out_dir/pe.floorplan.def
+Writing DEF file '/misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.def', current time is Wed Nov 25 10:54:47 2026 ...
+unitPerMicron=1000, dbgMicronPerDBU=0.001000, unitPerDBU=1.000000
+DEF file '/misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.def' is written, current time is Wed Nov 25 10:54:47 2026 ...
+@@file 91: write_db $out_dir/pe.floorplan.db
 tc_tt
-#% Begin save design ... (date=11/22 10:50:22, mem=1444.3M)
-% Begin Save ccopt configuration ... (date=11/22 10:50:22, mem=1444.3M)
-% End Save ccopt configuration ... (date=11/22 10:50:23, total cpu=0:00:00.0, real=0:00:00.0, peak res=1446.1M, current mem=1446.1M)
-% Begin Save netlist data ... (date=11/22 10:50:23, mem=1446.1M)
+#% Begin save design ... (date=11/25 10:54:48, mem=1444.8M)
+% Begin Save ccopt configuration ... (date=11/25 10:54:48, mem=1444.8M)
+% End Save ccopt configuration ... (date=11/25 10:54:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=1446.4M, current mem=1446.4M)
+% Begin Save netlist data ... (date=11/25 10:54:48, mem=1446.5M)
 Writing Binary DB to /misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/vbin/pe.v.bin in multi-threaded mode...
-% End Save netlist data ... (date=11/22 10:50:23, total cpu=0:00:00.0, real=0:00:00.0, peak res=1454.5M, current mem=1446.4M)
+% End Save netlist data ... (date=11/25 10:54:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=1452.7M, current mem=1446.7M)
 Saving symbol-table file ...
 Saving congestion map file /misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/pe.route.congmap.gz ...
-% Begin Save AAE data ... (date=11/22 10:50:23, mem=1446.4M)
+% Begin Save AAE data ... (date=11/25 10:54:48, mem=1446.7M)
 Saving AAE Data ...
-% End Save AAE data ... (date=11/22 10:50:23, total cpu=0:00:00.0, real=0:00:00.0, peak res=1446.4M, current mem=1446.4M)
+% End Save AAE data ... (date=11/25 10:54:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=1446.7M, current mem=1446.7M)
 Saving preference file /misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/gui.pref.tcl ...
 Saving mode setting ...
 Saving root attributes to be loaded post write_db ...
 Saving global file ...
 Saving root attributes to be loaded previous write_db ...
-% Begin Save floorplan data ... (date=11/22 10:50:24, mem=1452.1M)
+% Begin Save floorplan data ... (date=11/25 10:54:49, mem=1452.5M)
 Saving floorplan file ...
-% End Save floorplan data ... (date=11/22 10:50:24, total cpu=0:00:00.0, real=0:00:00.0, peak res=1452.2M, current mem=1452.2M)
-Saving PG file /misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/pe.pg.gz, version#2, (Created by Innovus v21.18-s099_1 on Sun Nov 22 10:50:24 2026)
-*** Completed savePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=1723.8M) ***
+% End Save floorplan data ... (date=11/25 10:54:50, total cpu=0:00:00.0, real=0:00:01.0, peak res=1452.6M, current mem=1452.6M)
+Saving PG file /misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/pe.pg.gz, version#2, (Created by Innovus v21.18-s099_1 on Wed Nov 25 10:54:50 2026)
+*** Completed savePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=1726.8M) ***
 Saving Drc markers ...
 ... No Drc file written since there is no markers found.
-% Begin Save placement data ... (date=11/22 10:50:24, mem=1452.2M)
+% Begin Save placement data ... (date=11/25 10:54:50, mem=1452.9M)
 ** Saving stdCellPlacement_binary (version# 2) ...
 Save Adaptive View Pruning View Names to Binary file
-% End Save placement data ... (date=11/22 10:50:24, total cpu=0:00:00.0, real=0:00:00.0, peak res=1452.7M, current mem=1452.7M)
-% Begin Save routing data ... (date=11/22 10:50:24, mem=1452.7M)
+% End Save placement data ... (date=11/25 10:54:50, total cpu=0:00:00.0, real=0:00:00.0, peak res=1453.1M, current mem=1453.1M)
+% Begin Save routing data ... (date=11/25 10:54:50, mem=1453.1M)
 Saving route file ...
-*** Completed saveRoute (cpu=0:00:00.0 real=0:00:01.0 mem=1724.8M) ***
-% End Save routing data ... (date=11/22 10:50:25, total cpu=0:00:00.0, real=0:00:01.0, peak res=1452.9M, current mem=1452.9M)
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1727.8M) ***
+% End Save routing data ... (date=11/25 10:54:50, total cpu=0:00:00.0, real=0:00:00.0, peak res=1453.3M, current mem=1453.3M)
 Saving property file /misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/pe.prop
-*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1727.8M) ***
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1730.8M) ***
 Saving preRoute extracted patterns in file '/misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/pe.techData.gz' ...
 Saving preRoute extraction data in directory '/misc/scratch/ar76269/pe-apprentice/2-floorplan/outputs/pe.floorplan.db/extraction/' ...
-% Begin Save power constraints data ... (date=11/22 10:50:25, mem=1453.9M)
-% End Save power constraints data ... (date=11/22 10:50:25, total cpu=0:00:00.0, real=0:00:00.0, peak res=1453.9M, current mem=1453.9M)
+% Begin Save power constraints data ... (date=11/25 10:54:51, mem=1454.4M)
+% End Save power constraints data ... (date=11/25 10:54:51, total cpu=0:00:00.0, real=0:00:00.0, peak res=1454.4M, current mem=1454.4M)
 rc_nom
 rc_nom
 rc_nom
 Generated self-contained design pe.floorplan.db
-#% End save design ... (date=11/22 10:50:25, total cpu=0:00:01.2, real=0:00:03.0, peak res=1482.9M, current mem=1456.6M)
+#% End save design ... (date=11/25 10:54:58, total cpu=0:00:01.3, real=0:00:10.0, peak res=1483.3M, current mem=1455.9M)
 *** Message Summary: 0 warning(s), 0 error(s)
 
-@file 91:
-@file 92: exit
+@file 92:
+@file 93: exit
 
-*** Memory Usage v#1 (Current mem = 1746.109M, initial mem = 494.969M) ***
+*** Memory Usage v#1 (Current mem = 1749.102M, initial mem = 494.969M) ***
 *** Message Summary: 241 warning(s), 0 error(s)
 
---- Ending "Innovus" (totcpu=0:00:19.6, real=0:00:22.0, mem=1746.1M) ---
+--- Ending "Innovus" (totcpu=0:00:20.1, real=0:00:31.0, mem=1749.1M) ---

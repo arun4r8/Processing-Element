@@ -7,7 +7,7 @@
 ::db::check_and_set_root_attr assign_pins_edit_in_batch false
 ::db::check_and_set_root_attr delaycal_enable_high_fanout true
 ::db::check_and_set_root_attr delaycal_ignore_net_load false
-::db::check_and_set_root_attr extract_design_signature 121813643
+::db::check_and_set_root_attr extract_design_signature 128491450
 ::db::check_and_set_root_attr extract_rc_coupled true
 ::db::check_and_set_root_attr extract_rc_model_file ${::IMEX::libVar}/misc/rc_model.bin
 ::db::check_and_set_root_attr extract_rc_net_count_in_memory 100000
@@ -24,7 +24,7 @@
 ::db::check_and_set_root_attr opt_hier_trial_route_honor_read_only false
 ::db::check_and_set_root_attr opt_preserve_all_sequential false
 ::db::check_and_set_root_attr opt_resize_flip_flops true
-::db::check_and_set_root_attr opt_setup_target_slack 0.02
+::db::check_and_set_root_attr opt_setup_target_slack 0.05
 ::db::check_and_set_root_attr opt_time_design_compress_reports false
 ::db::check_and_set_root_attr opt_useful_skew_eco_route false
 ::db::check_and_set_root_attr opt_view_pruning_setup_views_active_list { view_tt }

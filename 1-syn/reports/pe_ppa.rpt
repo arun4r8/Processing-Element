@@ -1,27 +1,27 @@
 PPA report
 --------------------------------------------------------
-Clock period                   3100.0 ps
-Frequency                      322.58 MHz
+Clock period                   3150.0 ps
+Frequency                      317.46 MHz
 MACs per cycle                      1
-Performance                    322.58 MMAC/s
+Performance                    317.46 MMAC/s
 WNS                               0.2 ps
 TNS                               0.0 ps
 Violating paths                     0
-Cell area                   10196.029 um^2
+Cell area                   11548.576 um^2
 Area limit                  30000.000 um^2
-Power total                    5.8667 mW
-  internal                     3.4726 mW
-  switching                    2.3941 mW
-  leakage                      0.0047 uW
+Power total                    6.8791 mW
+  internal                     4.4713 mW
+  switching                    2.4078 mW
+  leakage                      0.0051 uW
 Power activity         VCD 0-inputs/outputs/pe.vcd
 --------------------------------------------------------
 Timing gate                      PASS
 Area gate                        PASS
 Perf exponent                    3.00
 Power exponent                   0.50
-FOM                           1359.21
+FOM                           1056.27
 Baseline FOM                  205.287
-FOM / baseline                  6.621
+FOM / baseline                  5.145
 Baseline               reference pe.sv, pe.sdc 8 ns, hd
 
 FOM = perf_MMACs^3.0 / (power_mW^0.5 * cell_area_um2)

@@ -29,8 +29,9 @@ route_design
 # Optional add your post-route optimization here
 set_db extract_rc_engine post_route
 opt_design -post_route -setup -hold
-set_db opt_setup_target_slack 0.02
+set_db opt_setup_target_slack 0.05
 opt_design -post_route -setup -hold
+
 # ── Reports ──────────────────────────────────────────────────────────────────
 time_design -post_route       -report_dir $rpt_dir/timing -report_prefix route_setup
 time_design -post_route -hold -report_dir $rpt_dir/timing -report_prefix route_hold

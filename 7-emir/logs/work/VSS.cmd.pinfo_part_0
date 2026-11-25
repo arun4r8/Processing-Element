@@ -1,7 +1,7 @@
 
 Begin Preparing Data for Parasitic Extraction
 .
-Ended Preparing Data for Parasitic Extraction: (cpu=0:00:00, real=0:00:01, mem(process/total/peak)=166.18MB/22157.11MB/3108.67MB)
+Ended Preparing Data for Parasitic Extraction: (cpu=0:00:00, real=0:00:01, mem(process/total/peak)=165.95MB/22221.14MB/3129.84MB)
 
 Begin Parasitic Extraction
 
@@ -20,16 +20,16 @@ VSS
 Some effects indicate n/a because of non-availability of relevant input
 data (or) requested to be off.
 
-   0% at 11:25:55 11/11/2026 
+   0% at 11:12:07 11/25/2026 
 
- 100% at 11:25:55 11/11/2026 
+ 100% at 11:12:08 11/25/2026 
 
-Ended Parasitic Extraction: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=170.48MB/22157.11MB/3108.67MB)
+Ended Parasitic Extraction: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=170.07MB/22221.21MB/3129.84MB)
 
-Hostname yoshi.ece.utexas.edu
+Hostname daisy.ece.utexas.edu
 
-Wall clock 5.450186
+Wall clock 5.504343
 
-CPU time 0.421814
+CPU time 0.448953
 
-Peak memory (process): 260128768
+Peak memory (process): 260120576

@@ -9,7 +9,7 @@ setvar nga_enabled true
 nga_dp_hosts max_cpu=2 mode=local time_out=3600
 
 #Layout Files
-layout_file /tmp/ssv_tmpdir_2461037_oha9hq/eps_out_2461037.def.gz
+layout_file /tmp/ssv_tmpdir_2136743_yloW9P/eps_out_2136743.def.gz
 
 #Cell Library
 cell_library /misc/scratch/ar76269/pe-apprentice/7-emir/logs/pgv/techonly.cl
